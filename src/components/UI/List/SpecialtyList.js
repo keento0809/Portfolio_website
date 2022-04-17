@@ -1,9 +1,9 @@
 import { Fragment } from "react";
 import styled from "styled-components";
 
-// const UlStyle = styled.ul`
-//   color: #;
-// `
+const SpecialtyListWrapper = styled.div`
+  padding: 20px 0;
+`;
 
 const SpecialtyList = (props) => {
   // test
@@ -12,12 +12,10 @@ const SpecialtyList = (props) => {
   ));
 
   return (
-    <Fragment>
-      <div className="">
-        <h4>{props.title}</h4>
-        <ul>{list}</ul>
-      </div>
-    </Fragment>
+    <SpecialtyListWrapper className="">
+      <h4>{props.title}</h4>
+      <ul>{list}</ul>
+    </SpecialtyListWrapper>
   );
 };
 
