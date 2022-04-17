@@ -1,7 +1,6 @@
 import { Fragment } from "react";
-import styled from "styled-components";
 
-const MyProject = () => {
+const Home = () => {
   return (
     <Fragment>
       <p>Good morning.</p>
@@ -9,4 +8,4 @@ const MyProject = () => {
   );
 };
 
-export default MyProject;
+export default Home;

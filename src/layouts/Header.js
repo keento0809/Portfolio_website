@@ -32,13 +32,15 @@ const MenuButtonStyle = styled.div`
   justify-content: flex-end;
   align-items: flex-end;
   z-index: 20;
+  padding-bottom: 4px;
 
   & span {
     text-align: right;
     display: inline-block;
     width: 30px;
-    height: 4px;
+    height: 3px;
     margin-bottom: 4px;
+    border-radius: 4px;
     background-color: #fff;
   }
   & span:first-child {

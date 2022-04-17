@@ -45,3 +45,9 @@ a {
   text-decoration: none;
   color: #8bfdfe;
 }
+
+h3,
+h4,
+p {
+  margin: 0;
+}
