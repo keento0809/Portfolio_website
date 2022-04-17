@@ -1,9 +1,6 @@
 import { Fragment } from "react";
 import styled from "styled-components";
-
-// const UlStyle = styled.ul`
-//   color: #;
-// `
+import ProjectSectionWrapper from "../Wrapper/ProjectSectionWrapper";
 
 const SpecialtyList = (props) => {
   // test
@@ -12,12 +9,10 @@ const SpecialtyList = (props) => {
   ));
 
   return (
-    <Fragment>
-      <div className="">
-        <h4>{props.title}</h4>
-        <ul>{list}</ul>
-      </div>
-    </Fragment>
+    <ProjectSectionWrapper className="">
+      <h4>{props.title}</h4>
+      <ul>{list}</ul>
+    </ProjectSectionWrapper>
   );
 };
 
