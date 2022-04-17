@@ -1,9 +1,6 @@
 import { Fragment } from "react";
 import styled from "styled-components";
-
-const SkillSetListWrapper = styled.div`
-  padding: 20px 0;
-`;
+import ProjectSectionWrapper from "../Wrapper/ProjectSectionWrapper";
 
 const SkillIconsStyle = styled.div`
   color: #fff;
@@ -12,7 +9,7 @@ const SkillIconsStyle = styled.div`
 
 const SkillSetList = () => {
   return (
-    <SkillSetListWrapper>
+    <ProjectSectionWrapper>
       <h4>SKILL SET</h4>
       <SkillIconsStyle className="aboutMe__skillicons">
         <i className="devicon-html5-plain"></i>
@@ -29,7 +26,7 @@ const SkillSetList = () => {
         <i className="devicon-figma-plain"></i>
         <i className="devicon-tailwindcss-plain"></i>
       </SkillIconsStyle>
-    </SkillSetListWrapper>
+    </ProjectSectionWrapper>
   );
 };
 

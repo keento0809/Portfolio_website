@@ -1,9 +1,6 @@
 import { Fragment } from "react";
 import styled from "styled-components";
-
-const SpecialtyListWrapper = styled.div`
-  padding: 20px 0;
-`;
+import ProjectSectionWrapper from "../Wrapper/ProjectSectionWrapper";
 
 const SpecialtyList = (props) => {
   // test
@@ -12,10 +9,10 @@ const SpecialtyList = (props) => {
   ));
 
   return (
-    <SpecialtyListWrapper className="">
+    <ProjectSectionWrapper className="">
       <h4>{props.title}</h4>
       <ul>{list}</ul>
-    </SpecialtyListWrapper>
+    </ProjectSectionWrapper>
   );
 };
 
