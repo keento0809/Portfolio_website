@@ -1,9 +1,10 @@
 import { Fragment } from "react";
+import Header from "../layouts/Header";
 
 const Main = () => {
   return (
     <Fragment>
-      <p>Good morning.</p>
+      <Header />
     </Fragment>
   );
 };
