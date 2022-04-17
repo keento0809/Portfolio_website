@@ -22,9 +22,10 @@ const AsideStyle = styled.aside`
   }
 `;
 
-const Aside = () => {
+const Aside = (props) => {
+  const shown = props.isAsideShown ? "show" : "";
   return (
-    <AsideStyle>
+    <AsideStyle className={shown}>
       <div className="aside-container">
         <div class="">
           <h4>Menu</h4>

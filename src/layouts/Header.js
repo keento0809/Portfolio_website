@@ -1,4 +1,4 @@
-import { Fragment } from "react";
+import { useState } from "react";
 import Aside from "./Aside";
 import styled from "styled-components";
 
@@ -8,9 +8,6 @@ const HeaderStyle = styled.header`
   width: 100%;
   padding: 0 24px;
   height: 80px;
-  /* display: flex;
-  justify-content: center;
-  align-items: center; */
   z-index: 11;
   opacity: 1;
   transform: none;
@@ -34,6 +31,7 @@ const MenuButtonStyle = styled.div`
   flex-direction: column;
   justify-content: flex-end;
   align-items: flex-end;
+  z-index: 20;
 
   & span {
     text-align: right;
@@ -52,6 +50,12 @@ const MenuButtonStyle = styled.div`
 `;
 
 const Header = () => {
+  const [isAsideShown, setIsAsideShown] = useState(false);
+
+  const handleToggleAside = () => {
+    setIsAsideShown(!isAsideShown);
+  };
+
   return (
     <HeaderStyle>
       <NavStyle className="header__nav">
@@ -60,13 +64,17 @@ const Header = () => {
             LOGO
           </span>
         </div>
-        <MenuButtonStyle id="menuBtn" className="header__nav__right menuButton">
+        <MenuButtonStyle
+          id="menuBtn"
+          className="header__nav__right menuButton"
+          onClick={handleToggleAside}
+        >
           <span></span>
           <span></span>
           <span></span>
         </MenuButtonStyle>
       </NavStyle>
-      <Aside />
+      <Aside isAsideShown={isAsideShown} />
     </HeaderStyle>
   );
 };
