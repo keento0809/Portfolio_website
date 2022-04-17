@@ -10,7 +10,7 @@ const AsideStyle = styled.aside`
   display: flex;
   justify-content: center;
   align-items: center;
-  width: min(65vw, 400px);
+  width: min(68vw, 400px);
   background-color: #0e1b35;
   transform: translateX(100%);
   transition: all 0.3s ease;

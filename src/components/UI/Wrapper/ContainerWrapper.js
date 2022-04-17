@@ -1,11 +1,12 @@
 import { Fragment } from "react";
+import styled from "styled-components";
 
-const ContainerWrapper = () => {
-  return (
-    <Fragment>
-      <p>Good morning.</p>
-    </Fragment>
-  );
+const ContainerWrapperStyle = styled.div`
+  padding: 0 24px;
+`;
+
+const ContainerWrapper = (props) => {
+  return <ContainerWrapperStyle>{props.children}</ContainerWrapperStyle>;
 };
 
 export default ContainerWrapper;

@@ -37,8 +37,9 @@ const MenuButtonStyle = styled.div`
     text-align: right;
     display: inline-block;
     width: 30px;
-    height: 4px;
+    height: 3px;
     margin-bottom: 4px;
+    border-radius: 4px;
     background-color: #fff;
   }
   & span:first-child {
