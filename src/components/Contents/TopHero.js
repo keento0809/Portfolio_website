@@ -15,7 +15,9 @@ const TopHeroStyle = styled.div`
 const TopHero = () => {
   return (
     <TopHeroStyle>
-      <div className={classes.flux}>KENTO</div>
+      <div>
+        <h4 className={classes.flux}>KENTO</h4>
+      </div>
       <p>Front-end Developer</p>
       <p>Based in Vancouver</p>
     </TopHeroStyle>

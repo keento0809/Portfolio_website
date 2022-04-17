@@ -27,10 +27,10 @@ const Aside = (props) => {
   return (
     <AsideStyle className={shown}>
       <div className="aside-container">
-        <div class="">
+        <div>
           <h4>Menu</h4>
         </div>
-        <ul class="aside-container__menuList">
+        <ul className="aside-container__menuList">
           <li className="menuBtns">
             <a href="#home">Home</a>
           </li>

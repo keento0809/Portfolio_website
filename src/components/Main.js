@@ -2,6 +2,7 @@ import { Fragment, useState, useEffect } from "react";
 import Header from "../layouts/Header";
 import Loader from "../layouts/Loader";
 import TopHero from "./Contents/TopHero";
+import AboutMe from "./Contents/AboutMe";
 
 const Main = () => {
   const [isLoading, setIsLoading] = useState(false);
@@ -18,6 +19,7 @@ const Main = () => {
       {isLoading && <Loader />}
       <Header />
       <TopHero />
+      <AboutMe />
     </Fragment>
   );
 };

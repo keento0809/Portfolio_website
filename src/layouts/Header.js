@@ -32,6 +32,7 @@ const MenuButtonStyle = styled.div`
   justify-content: flex-end;
   align-items: flex-end;
   z-index: 20;
+  padding-bottom: 4px;
 
   & span {
     text-align: right;
