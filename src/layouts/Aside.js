@@ -22,34 +22,96 @@ const AsideStyle = styled.aside`
   }
 `;
 
+const AsideContainerStyle = styled.div`
+  min-height: 75%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+
+  & .aside-container__title {
+    padding-bottom: 56px;
+  }
+
+  & h4 {
+    text-align: center;
+    font-size: 24px;
+  }
+
+  & li {
+    padding-bottom: 32px;
+  }
+
+  & a {
+    font-size: 20px;
+  }
+`;
+
+const AtagStyle = styled.a`
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  line-height: 20px;
+
+  & ion-icon {
+    font-size: 20px;
+    margin-right: 2rem;
+  }
+
+  & span {
+    padding-bottom: 1px;
+  }
+
+  & .resume {
+    width: 100%;
+    text-align: center;
+  }
+`;
+
 const Aside = (props) => {
   const shown = props.isAsideShown ? "show" : "";
   return (
     <AsideStyle className={shown}>
-      <div className="aside-container">
-        <div>
-          <h4>Menu</h4>
-        </div>
-        <ul className="aside-container__menuList">
-          <li className="menuBtns">
-            <a href="#home">Home</a>
-          </li>
-          <li className="menuBtns">
-            <a href="#aboutme">About me</a>
-          </li>
-          <li className="menuBtns">
-            <a href="#myproject">My project</a>
-          </li>
-          <li className="menuBtns">
-            <a href="#contactme">Contact</a>
-          </li>
-        </ul>
+      <AsideContainerStyle className="aside-container">
+        {/* test */}
         <div className="">
+          <div className="aside-container__title">
+            <h4>Menu</h4>
+          </div>
+          <ul className="aside-container__menuList">
+            <li className="menuBtns">
+              <AtagStyle href="#home">
+                <ion-icon name="home-outline"></ion-icon>
+                <span>Home</span>
+              </AtagStyle>
+            </li>
+            <li className="menuBtns">
+              <AtagStyle href="#aboutme">
+                <ion-icon name="help-outline"></ion-icon>
+                <span>About me</span>
+              </AtagStyle>
+            </li>
+            <li className="menuBtns">
+              <AtagStyle href="#myproject">
+                <ion-icon name="folder-outline"></ion-icon>
+                <span>My project</span>
+              </AtagStyle>
+            </li>
+            <li className="menuBtns">
+              <AtagStyle href="#contactme">
+                <ion-icon name="send-outline"></ion-icon>
+                <span>Contact</span>
+              </AtagStyle>
+            </li>
+          </ul>
+        </div>
+        <div className="resume">
           <a href="" className="resumeLink">
             Resume
           </a>
         </div>
-      </div>
+      </AsideContainerStyle>
     </AsideStyle>
   );
 };
