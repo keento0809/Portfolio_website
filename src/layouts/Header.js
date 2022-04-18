@@ -50,6 +50,10 @@ const MenuButtonStyle = styled.div`
   z-index: 20;
   padding-bottom: 2px;
 
+  .lightMode & {
+    background-color: red;
+  }
+
   & span {
     text-align: right;
     display: inline-block;

@@ -5,6 +5,7 @@ import Loader from "../layouts/Loader";
 import TopHero from "./Contents/TopHero";
 import AboutMe from "./Contents/AboutMe";
 import MyProject from "./Contents/MyProject";
+import ContactMe from "./Contents/ContactMe";
 import classes from "../styles/base.module.css";
 
 const Main = () => {
@@ -28,6 +29,7 @@ const Main = () => {
         <TopHero />
         <AboutMe />
         <MyProject />
+        <ContactMe />
       </ContainerWrapper>
     </div>
   );
