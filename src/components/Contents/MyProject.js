@@ -8,7 +8,7 @@ import ContentWrapper from "../UI/Wrapper/ContentWrapper";
 import Title from "../UI/Title/Title";
 
 const ListStyle = styled.li`
-  margin-bottom: 16px;
+  margin-bottom: 24px;
 `;
 
 const dummyPointsArr = [

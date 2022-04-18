@@ -4,20 +4,34 @@ import Title from "../UI/Title/Title";
 import ContentWrapper from "../UI/Wrapper/ContentWrapper";
 
 const UlStyle = styled.ul`
+  margin: 0 auto;
+  padding: 1rem 0;
+  width: 100%;
+  max-width: 270px;
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
+  line-height: 24px;
+`;
+
+const ContactMeDescriptionStyle = styled.div`
+  padding: 2rem 0;
+`;
+
+const ButtonContainerStyle = styled.div`
+  text-align: center;
+  padding: 1rem 0;
 `;
 
 const ButtonStyle = styled.button`
+  display: inline-block;
   background-color: transparent;
-  color: #8bfdfe;
-  border: none;
   cursor: pointer;
+  color: #8bfdfe;
+  padding: 0.6rem 1.7rem;
   border: 1px solid #8bfdfe;
-  border-radius: 4px;
-  padding: 0;
+  border-radius: 8px;
 `;
 
 const ContactMe = () => {
@@ -54,15 +68,15 @@ const ContactMe = () => {
             </li>
           </UlStyle>
         </div>
-        <div className="contactMe__description">
+        <ContactMeDescriptionStyle className="contactMe__description">
           <p>
             I'm always looking for opportunities to work as a front-end
             developer around Vancouver. Please free to contact me.
           </p>
-        </div>
-        <div className="contactMe__mailButton">
+        </ContactMeDescriptionStyle>
+        <ButtonContainerStyle className="contactMe__mailButton">
           <ButtonStyle>SAY HELLO</ButtonStyle>
-        </div>
+        </ButtonContainerStyle>
       </section>
     </ContentWrapper>
   );
