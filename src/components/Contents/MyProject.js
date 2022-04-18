@@ -3,27 +3,32 @@ import styled from "styled-components";
 import classes from "../../styles/NeonText.module.css";
 import MyProjectContainer from "../UI/Container/MyProjectContainer";
 import ProjectDescription from "../UI/Description/ProjectDescription";
-
-const ContentContainer = styled.div`
-  max-width: 700px;
-  margin: 0 auto;
-  padding: 60px 0;
-`;
+import LanguageList from "../UI/List/LanguageList";
+import LinkIconsList from "../UI/List/LinkIconsList";
+import ContainerWrapper from "../UI/Wrapper/ContainerWrapper";
+import ContentWrapper from "../UI/Wrapper/ContentWrapper";
 
 const ListStyle = styled.li`
   margin-bottom: 16px;
 `;
 
-const dummyPoints = [
+const dummyPointsArr = [
   { text: "Great UI" },
   { text: "Great UX" },
   { text: "Great Feature" },
   { text: "Great something" },
 ];
 
+const dummyLanguagesArr = [
+  { name: "javascript" },
+  { name: "react", type: "original" },
+  { name: "firebase" },
+  { name: "materialui" },
+];
+
 const MyProject = () => {
   return (
-    <ContentContainer>
+    <ContentWrapper>
       <section id="myproject" className="myProject section">
         <h4 className={`${classes.flux} section-title`}>My Projects</h4>
         <ul>
@@ -34,25 +39,16 @@ const MyProject = () => {
               </div>
               <ProjectDescription
                 summary="Description Summary is here."
-                points={dummyPoints}
+                points={dummyPointsArr}
               />
               <div className="project-image">
                 <img src="" alt="" />
               </div>
-              <div className="languages">
-                <p>Languages</p>
-                <div className="skill-icons">
-                  <i className="devicon-javascript-plain"></i>
-                  <i className="devicon-react-original"></i>
-                  <i className="devicon-firebase-plain"></i>
-                  <i className="devicon-materialui-plain"></i>
-                </div>
-              </div>
-              <div className="link-icons">
-                <p>Links</p>
-                <i className="devicon-github-original"></i>
-                <ion-icon name="link-outline"></ion-icon>
-              </div>
+              <LanguageList languages={dummyLanguagesArr} />
+              <LinkIconsList
+                gitHubUrl="freshmarche"
+                linkUrl="https://devicon.dev/"
+              />
             </MyProjectContainer>
           </ListStyle>
           <ListStyle>
@@ -62,25 +58,16 @@ const MyProject = () => {
               </div>
               <ProjectDescription
                 summary="Description Summary is here."
-                points={dummyPoints}
+                points={dummyPointsArr}
               />
               <div className="project-image">
                 <img src="" alt="" />
               </div>
-              <div className="skillset">
-                <p>Languages</p>
-                <div className="skill-icons">
-                  <i className="devicon-javascript-plain"></i>
-                  <i className="devicon-react-original"></i>
-                  <i className="devicon-firebase-plain"></i>
-                  <i className="devicon-materialui-plain"></i>
-                </div>
-              </div>
-              <div className="link-icons">
-                <p>Links</p>
-                <i className="devicon-github-original"></i>
-                <ion-icon name="link-outline"></ion-icon>
-              </div>
+              <LanguageList languages={dummyLanguagesArr} />
+              <LinkIconsList
+                gitHubUrl="freshmarche"
+                linkUrl="https://devicon.dev/"
+              />
             </MyProjectContainer>
           </ListStyle>
           <ListStyle>
@@ -90,30 +77,21 @@ const MyProject = () => {
               </div>
               <ProjectDescription
                 summary="Description Summary is here."
-                points={dummyPoints}
+                points={dummyPointsArr}
               />
               <div className="project-image">
                 <img src="" alt="" />
               </div>
-              <div className="skillset">
-                <p>Languages</p>
-                <div className="skill-icons">
-                  <i className="devicon-javascript-plain"></i>
-                  <i className="devicon-react-original"></i>
-                  <i className="devicon-firebase-plain"></i>
-                  <i className="devicon-materialui-plain"></i>
-                </div>
-              </div>
-              <div className="link-icons">
-                <p>Links</p>
-                <i className="devicon-github-original"></i>
-                <ion-icon name="link-outline"></ion-icon>
-              </div>
+              <LanguageList languages={dummyLanguagesArr} />
+              <LinkIconsList
+                gitHubUrl="freshmarche"
+                linkUrl="https://devicon.dev/"
+              />
             </MyProjectContainer>
           </ListStyle>
         </ul>
       </section>
-    </ContentContainer>
+    </ContentWrapper>
   );
 };
 

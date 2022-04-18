@@ -5,12 +5,7 @@ import AboutMeDescription from "../UI/Description/AboutMeDescription";
 import SkillSetList from "../UI/List/SkillSetList";
 import SpecialtyList from "../UI/List/SpecialtyList";
 import profileImage from "../../assets/images/prof-pic.jpg";
-
-const ContentContainer = styled.div`
-  max-width: 700px;
-  margin: 0 auto;
-  padding: 60px 0;
-`;
+import ContentWrapper from "../UI/Wrapper/ContentWrapper";
 
 const ProfileDivStyle = styled.div`
   width: 320px;
@@ -51,7 +46,7 @@ const AboutMe = () => {
   ];
 
   return (
-    <ContentContainer>
+    <ContentWrapper>
       <section id="aboutme" className="aboutMe section">
         <h4 className={classes.flux}>About Me</h4>
         <ProfileDivStyle className="aboutMe__picture">
@@ -76,7 +71,7 @@ const AboutMe = () => {
           <SpecialtyList specialties={othersArr} title="Others" />
         </div>
       </section>
-    </ContentContainer>
+    </ContentWrapper>
   );
 };
 
