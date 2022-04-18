@@ -1,0 +1,11 @@
+.global {
+  background-color: #050710;
+  color: #8bfdfe;
+  transition: all 0.3s ease;
+}
+
+.global.lightMode {
+  background-color: #eff3ff;
+  color: #19224e;
+  transition: all 0.3s ease;
+}

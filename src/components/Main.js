@@ -5,6 +5,7 @@ import Loader from "../layouts/Loader";
 import TopHero from "./Contents/TopHero";
 import AboutMe from "./Contents/AboutMe";
 import MyProject from "./Contents/MyProject";
+import classes from "../styles/base.module.css";
 
 const Main = () => {
   const [isLoading, setIsLoading] = useState(false);
@@ -18,7 +19,9 @@ const Main = () => {
   }, []);
 
   return (
-    <div className={`${isLightMode ? "lightMode" : ""} global-main`}>
+    <div
+      className={`${classes.global} ${isLightMode ? classes.lightMode : ""}`}
+    >
       {isLoading && <Loader />}
       <Header isLightMode={isLightMode} setIsLightMode={setIsLightMode} />
       <ContainerWrapper>
