@@ -7,13 +7,17 @@ const UlStyle = styled.ul`
   flex-direction: row;
   justify-content: flex-start;
   align-items: center;
+
+  & li {
+    padding: 0.8rem;
+  }
 `;
 
 const LinkIconsList = (props) => {
   return (
     <ProjectSectionWrapper>
       <div className="link-icons">
-        <h4>Links</h4>
+        <h3>Links</h3>
         <UlStyle>
           <li>
             <a href={`https://github.com/keento0809/${props.gitHubUrl}`}>

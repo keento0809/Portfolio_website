@@ -11,7 +11,6 @@ const AboutMeDescriptionWrapper = styled.div`
   & p {
     /* color: #CBD5E1; */
     color: #94a3b8;
-    line-height: 20px;
   }
 `;
 
