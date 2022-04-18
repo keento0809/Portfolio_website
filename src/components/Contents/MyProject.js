@@ -1,12 +1,11 @@
 import { Fragment } from "react";
 import styled from "styled-components";
-import classes from "../../styles/NeonText.module.css";
 import MyProjectContainer from "../UI/Container/MyProjectContainer";
 import ProjectDescription from "../UI/Description/ProjectDescription";
 import LanguageList from "../UI/List/LanguageList";
 import LinkIconsList from "../UI/List/LinkIconsList";
-import ContainerWrapper from "../UI/Wrapper/ContainerWrapper";
 import ContentWrapper from "../UI/Wrapper/ContentWrapper";
+import Title from "../UI/Title/Title";
 
 const ListStyle = styled.li`
   margin-bottom: 16px;
@@ -30,7 +29,7 @@ const MyProject = () => {
   return (
     <ContentWrapper>
       <section id="myproject" className="myProject section">
-        <h4 className={`${classes.flux} section-title`}>My Projects</h4>
+        <Title title="My Project" />
         <ul>
           <ListStyle>
             <MyProjectContainer>

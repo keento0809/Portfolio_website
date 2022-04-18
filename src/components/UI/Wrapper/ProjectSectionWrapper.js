@@ -1,15 +1,13 @@
 import { Fragment } from "react";
 import styled from "styled-components";
 
-const ProjectDescriptionWrapperStyle = styled.div`
+const ProjectSectionWrapperStyle = styled.div`
   padding: 20px 0;
 `;
 
 const ProjectSectionWrapper = (props) => {
   return (
-    <ProjectDescriptionWrapperStyle>
-      {props.children}
-    </ProjectDescriptionWrapperStyle>
+    <ProjectSectionWrapperStyle>{props.children}</ProjectSectionWrapperStyle>
   );
 };
 

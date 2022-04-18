@@ -25,6 +25,22 @@ const NavStyle = styled.nav`
   }
 `;
 
+const HeaderLeftStyle = styled.div`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+
+  & ion-icon {
+    padding-bottom: 1.6px;
+  }
+`;
+
+const LogoStyle = styled.span`
+  display: inline-block;
+  padding-right: 20px;
+`;
+
 const MenuButtonStyle = styled.div`
   text-align: right;
   display: flex;
@@ -32,7 +48,7 @@ const MenuButtonStyle = styled.div`
   justify-content: flex-end;
   align-items: flex-end;
   z-index: 20;
-  padding-bottom: 4px;
+  padding-bottom: 2px;
 
   & span {
     text-align: right;
@@ -51,20 +67,38 @@ const MenuButtonStyle = styled.div`
   }
 `;
 
-const Header = () => {
+const Header = (props) => {
   const [isAsideShown, setIsAsideShown] = useState(false);
 
   const handleToggleAside = () => {
     setIsAsideShown(!isAsideShown);
   };
 
+  const handleToggleMode = () => {
+    props.setIsLightMode(!props.isLightMode);
+  };
+
   return (
     <HeaderStyle>
       <NavStyle className="header__nav">
         <div className="header__nav__left">
-          <span id="logoBtn" className="header__nav__logo">
-            LOGO
-          </span>
+          <HeaderLeftStyle
+            className="test"
+            style={{
+              display: "flex",
+              flexDirection: "row",
+              alignItems: "center",
+              justifyContent: "flex-start",
+            }}
+          >
+            <LogoStyle id="logoBtn" className="header__nav__logo">
+              LOGO
+            </LogoStyle>
+            <ion-icon
+              name="contrast-outline"
+              onClick={handleToggleMode}
+            ></ion-icon>
+          </HeaderLeftStyle>
         </div>
         <MenuButtonStyle
           id="menuBtn"
