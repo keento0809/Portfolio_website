@@ -64,8 +64,8 @@ const MyProject = () => {
               </div>
               <LanguageList languages={dummyLanguagesArr} />
               <LinkIconsList
-                gitHubUrl="freshmarche"
-                linkUrl="https://devicon.dev/"
+                gitHubUrl="ReduxTodo"
+                linkUrl="https://redux-todo-i9cko6vjw-keento0809.vercel.app/"
               />
             </MyProjectContainer>
           </ListStyle>
@@ -83,8 +83,8 @@ const MyProject = () => {
               </div>
               <LanguageList languages={dummyLanguagesArr} />
               <LinkIconsList
-                gitHubUrl="freshmarche"
-                linkUrl="https://devicon.dev/"
+                gitHubUrl="my2048"
+                linkUrl="https://my2048-keento0809.netlify.app/"
               />
             </MyProjectContainer>
           </ListStyle>
