@@ -4,6 +4,12 @@ import classes from "../../../styles/NeonText.module.css";
 
 const TitleStyle = styled.div`
   padding: 24px 0;
+  text-align: center;
+
+  & h4 {
+    font-size: 8vw;
+    line-height: 8vw;
+  }
 `;
 
 const Title = (props) => {

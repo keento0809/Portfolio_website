@@ -8,8 +8,8 @@ import ContentWrapper from "../UI/Wrapper/ContentWrapper";
 import Title from "../UI/Title/Title";
 
 const ProfileDivStyle = styled.div`
-  width: 320px;
-  height: 320px;
+  width: 280px;
+  height: 280px;
   margin: 0 auto;
 `;
 

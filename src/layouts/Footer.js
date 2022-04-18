@@ -3,7 +3,9 @@ import { Fragment } from "react";
 const Footer = () => {
   return (
     <Fragment>
-      <p>Good morning.</p>
+      <div className="copyright">
+        <p>All rights reserved.</p>
+      </div>
     </Fragment>
   );
 };
