@@ -1,10 +1,12 @@
 import { Fragment } from "react";
+import styled from "styled-components";
+import ContentWrapper from "../UI/Wrapper/ContentWrapper";
 
 const ContactMe = () => {
   return (
-    <Fragment>
+    <ContentWrapper>
       <p>Good morning.</p>
-    </Fragment>
+    </ContentWrapper>
   );
 };
 
