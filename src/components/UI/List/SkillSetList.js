@@ -5,12 +5,22 @@ import ProjectSectionWrapper from "../Wrapper/ProjectSectionWrapper";
 const SkillIconsStyle = styled.div`
   color: #fff;
   font-size: 24px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding: 1rem 0;
+
+  & i {
+    padding: 1rem;
+    color: #cbd5e1;
+    color: #fff;
+  }
 `;
 
 const SkillSetList = () => {
   return (
     <ProjectSectionWrapper>
-      <h4>SKILL SET</h4>
+      <h2>SKILL SET</h2>
       <SkillIconsStyle className="aboutMe__skillicons">
         <i className="devicon-html5-plain"></i>
         <i className="devicon-css3-plain"></i>
