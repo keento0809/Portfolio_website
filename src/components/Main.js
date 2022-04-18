@@ -8,6 +8,7 @@ import MyProject from "./Contents/MyProject";
 
 const Main = () => {
   const [isLoading, setIsLoading] = useState(false);
+  const [isLightMode, setIsLightMode] = useState(false);
 
   useEffect(() => {
     setIsLoading(true);
@@ -17,15 +18,15 @@ const Main = () => {
   }, []);
 
   return (
-    <Fragment>
+    <div className={`${isLightMode ? "lightMode" : ""} global-main`}>
       {isLoading && <Loader />}
-      <Header />
+      <Header isLightMode={isLightMode} setIsLightMode={setIsLightMode} />
       <ContainerWrapper>
         <TopHero />
         <AboutMe />
         <MyProject />
       </ContainerWrapper>
-    </Fragment>
+    </div>
   );
 };
 

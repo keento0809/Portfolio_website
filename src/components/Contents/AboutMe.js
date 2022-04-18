@@ -1,11 +1,11 @@
 import { Fragment } from "react";
 import styled from "styled-components";
-import classes from "../../styles/NeonText.module.css";
 import AboutMeDescription from "../UI/Description/AboutMeDescription";
 import SkillSetList from "../UI/List/SkillSetList";
 import SpecialtyList from "../UI/List/SpecialtyList";
 import profileImage from "../../assets/images/prof-pic.jpg";
 import ContentWrapper from "../UI/Wrapper/ContentWrapper";
+import Title from "../UI/Title/Title";
 
 const ProfileDivStyle = styled.div`
   width: 320px;
@@ -48,7 +48,7 @@ const AboutMe = () => {
   return (
     <ContentWrapper>
       <section id="aboutme" className="aboutMe section">
-        <h4 className={classes.flux}>About Me</h4>
+        <Title title="About Me" />
         <ProfileDivStyle className="aboutMe__picture">
           <ImageStyle src={profileImage} alt="picture" />
         </ProfileDivStyle>
