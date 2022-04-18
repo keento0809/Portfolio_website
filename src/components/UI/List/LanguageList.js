@@ -7,6 +7,10 @@ const UlStyle = styled.ul`
   flex-direction: row;
   justify-content: flex-start;
   align-items: center;
+
+  & li {
+    padding: 0.8rem;
+  }
 `;
 
 const LanguageList = (props) => {
@@ -25,7 +29,7 @@ const LanguageList = (props) => {
   return (
     <ProjectSectionWrapper>
       <div className="languages">
-        <h4>Languages</h4>
+        <h3>Languages</h3>
         <UlStyle className="skill-icons">{languageList}</UlStyle>
       </div>
     </ProjectSectionWrapper>

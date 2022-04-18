@@ -34,10 +34,10 @@ const MyProject = () => {
           <ListStyle>
             <MyProjectContainer>
               <div className="project-title">
-                <h3>FreshMarche</h3>
+                <h2>FreshMarche</h2>
               </div>
               <ProjectDescription
-                summary="Description Summary is here."
+                summary="The E-commerce application for fresh groceries, including authentication form and dummy checkout section."
                 points={dummyPointsArr}
               />
               <div className="project-image">
@@ -53,10 +53,10 @@ const MyProject = () => {
           <ListStyle>
             <MyProjectContainer>
               <div className="project-title">
-                <h3>FreshMarche</h3>
+                <h2>ReduxTodo</h2>
               </div>
               <ProjectDescription
-                summary="Description Summary is here."
+                summary="A simple Todo list to manage your task, using React, React-Redux (Redux-toolkit)."
                 points={dummyPointsArr}
               />
               <div className="project-image">
@@ -72,10 +72,10 @@ const MyProject = () => {
           <ListStyle>
             <MyProjectContainer>
               <div className="project-title">
-                <h3>FreshMarche</h3>
+                <h2>My2048</h2>
               </div>
               <ProjectDescription
-                summary="Description Summary is here."
+                summary="The reproduction of 2048 (game) with my own styling and some additional features."
                 points={dummyPointsArr}
               />
               <div className="project-image">
