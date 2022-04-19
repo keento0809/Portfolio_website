@@ -20,6 +20,10 @@ const AsideStyle = styled.aside`
     transform: none;
     transition: all 0.3s ease;
   }
+
+  &.lightMode {
+    background-color: #e5ebff;
+  }
 `;
 
 const AsideContainerStyle = styled.div`
@@ -34,8 +38,8 @@ const AsideContainerStyle = styled.div`
   }
 
   & h4 {
-    text-align: center;
     font-size: 24px;
+    padding-left: 20px;
   }
 
   & li {
@@ -67,12 +71,28 @@ const AtagStyle = styled.a`
     width: 100%;
     text-align: center;
   }
+
+  &.lightMode {
+    color: #19224e;
+  }
+`;
+
+const ResumeDivStyle = styled.div`
+  padding-left: 20px;
+
+  &.lightMode a {
+    color: #19224e;
+  }
 `;
 
 const Aside = (props) => {
-  const shown = props.isAsideShown ? "show" : "";
+  // const shown = props.isAsideShown ? "show" : "";
   return (
-    <AsideStyle className={shown}>
+    <AsideStyle
+      className={`${props.isAsideShown ? "show" : ""} ${
+        props.isLightMode ? "lightMode" : ""
+      }`}
+    >
       <AsideContainerStyle className="aside-container">
         {/* test */}
         <div className="">
@@ -81,37 +101,49 @@ const Aside = (props) => {
           </div>
           <ul className="aside-container__menuList">
             <li className="menuBtns">
-              <AtagStyle href="#home">
+              <AtagStyle
+                className={props.isLightMode ? "lightMode" : ""}
+                href="#home"
+              >
                 <ion-icon name="home-outline"></ion-icon>
                 <span>Home</span>
               </AtagStyle>
             </li>
             <li className="menuBtns">
-              <AtagStyle href="#aboutme">
+              <AtagStyle
+                className={props.isLightMode ? "lightMode" : ""}
+                href="#aboutme"
+              >
                 <ion-icon name="person-outline"></ion-icon>
                 {/* <ion-icon name="help-outline"></ion-icon> */}
                 <span>About me</span>
               </AtagStyle>
             </li>
             <li className="menuBtns">
-              <AtagStyle href="#myproject">
+              <AtagStyle
+                className={props.isLightMode ? "lightMode" : ""}
+                href="#myproject"
+              >
                 <ion-icon name="folder-outline"></ion-icon>
                 <span>My project</span>
               </AtagStyle>
             </li>
             <li className="menuBtns">
-              <AtagStyle href="#contactme">
+              <AtagStyle
+                className={props.isLightMode ? "lightMode" : ""}
+                href="#contactme"
+              >
                 <ion-icon name="send-outline"></ion-icon>
                 <span>Contact</span>
               </AtagStyle>
             </li>
           </ul>
         </div>
-        <div className="resume">
+        <ResumeDivStyle className={props.isLightMode ? "lightMode" : ""}>
           <a href="" className="resumeLink">
             Resume
           </a>
-        </div>
+        </ResumeDivStyle>
       </AsideContainerStyle>
     </AsideStyle>
   );

@@ -128,7 +128,7 @@ const Header = (props) => {
           <span></span>
         </MenuButtonStyle>
       </NavStyle>
-      <Aside isAsideShown={isAsideShown} />
+      <Aside isAsideShown={isAsideShown} isLightMode={props.isLightMode} />
     </HeaderStyle>
   );
 };
