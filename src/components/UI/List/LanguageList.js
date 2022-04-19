@@ -29,7 +29,7 @@ const LanguageList = (props) => {
   return (
     <ProjectSectionWrapper>
       <div className="languages">
-        <h3>Languages</h3>
+        <h3>Tools</h3>
         <UlStyle className="skill-icons">{languageList}</UlStyle>
       </div>
     </ProjectSectionWrapper>

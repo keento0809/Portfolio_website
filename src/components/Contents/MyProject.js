@@ -18,7 +18,7 @@ const dummyPointsArr = [
   { text: "Great something" },
 ];
 
-const dummyLanguagesArr = [
+const freshMarcheToolsArr = [
   { name: "javascript" },
   { name: "react", type: "original" },
   { name: "firebase" },
@@ -32,7 +32,7 @@ const MyProject = (props) => {
         <Title title="My Project" />
         <ul>
           <ListStyle>
-            <MyProjectContainer>
+            <MyProjectContainer isLightMode={props.isLightMode}>
               <div className="project-title">
                 <h2>FreshMarche</h2>
               </div>
@@ -43,15 +43,16 @@ const MyProject = (props) => {
               <div className="project-image">
                 <img src="" alt="" />
               </div>
-              <LanguageList languages={dummyLanguagesArr} />
+              <LanguageList languages={freshMarcheToolsArr} />
               <LinkIconsList
+                isLightMode={props.isLightMode}
                 gitHubUrl="freshmarche"
                 linkUrl="https://devicon.dev/"
               />
             </MyProjectContainer>
           </ListStyle>
           <ListStyle>
-            <MyProjectContainer>
+            <MyProjectContainer isLightMode={props.isLightMode}>
               <div className="project-title">
                 <h2>ReduxTodo</h2>
               </div>
@@ -62,15 +63,16 @@ const MyProject = (props) => {
               <div className="project-image">
                 <img src="" alt="" />
               </div>
-              <LanguageList languages={dummyLanguagesArr} />
+              <LanguageList languages={freshMarcheToolsArr} />
               <LinkIconsList
+                isLightMode={props.isLightMode}
                 gitHubUrl="ReduxTodo"
                 linkUrl="https://redux-todo-i9cko6vjw-keento0809.vercel.app/"
               />
             </MyProjectContainer>
           </ListStyle>
           <ListStyle>
-            <MyProjectContainer>
+            <MyProjectContainer isLightMode={props.isLightMode}>
               <div className="project-title">
                 <h2>My2048</h2>
               </div>
@@ -81,8 +83,9 @@ const MyProject = (props) => {
               <div className="project-image">
                 <img src="" alt="" />
               </div>
-              <LanguageList languages={dummyLanguagesArr} />
+              <LanguageList languages={freshMarcheToolsArr} />
               <LinkIconsList
+                isLightMode={props.isLightMode}
                 gitHubUrl="my2048"
                 linkUrl="https://my2048-keento0809.netlify.app/"
               />
