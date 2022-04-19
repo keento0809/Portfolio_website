@@ -12,6 +12,12 @@ const HeaderStyle = styled.header`
   opacity: 1;
   transform: none;
   transition: all 0.3s ease;
+  background-color: #050710;
+
+  &.hidden {
+    transform: translateY(-100%);
+    transition: all 0.3s ease;
+  }
 `;
 
 const NavStyle = styled.nav`
@@ -50,9 +56,9 @@ const MenuButtonStyle = styled.div`
   z-index: 20;
   padding-bottom: 2px;
 
-  .lightMode & {
+  /* .lightMode & {
     background-color: red;
-  }
+  } */
 
   & span {
     text-align: right;
@@ -83,7 +89,7 @@ const Header = (props) => {
   };
 
   return (
-    <HeaderStyle>
+    <HeaderStyle className={props.isScrollingDown ? "hidden" : ""}>
       <NavStyle className="header__nav">
         <div className="header__nav__left">
           <HeaderLeftStyle
