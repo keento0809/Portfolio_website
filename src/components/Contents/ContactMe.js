@@ -13,6 +13,10 @@ const UlStyle = styled.ul`
   justify-content: space-between;
   align-items: center;
   line-height: 24px;
+
+  &.lightMode a {
+    color: #1b1f29;
+  }
 `;
 
 const ContactMeDescriptionStyle = styled.div`
@@ -32,6 +36,11 @@ const ButtonStyle = styled.button`
   padding: 0.6rem 1.7rem;
   border: 1px solid #8bfdfe;
   border-radius: 8px;
+
+  &.lightMode {
+    color: #1b1f29;
+    border-color: #1b1f29;
+  }
 `;
 
 const ContactMe = (props) => {
@@ -40,7 +49,7 @@ const ContactMe = (props) => {
       <section id="contactme" className="contactMe section">
         <Title title="Contact Me" />
         <div className="contactMe__iconsList">
-          <UlStyle>
+          <UlStyle className={props.isLightMode ? "lightMode" : ""}>
             <li>
               <a href="">
                 <ion-icon name="call-outline"></ion-icon>
@@ -52,12 +61,12 @@ const ContactMe = (props) => {
               </a>
             </li>
             <li>
-              <a href="">
+              <a href="https://www.linkedin.com/in/kento-honda-342a7a227/">
                 <i className="devicon-linkedin-plain"></i>
               </a>
             </li>
             <li>
-              <a href="">
+              <a href="https://github.com/keento0809">
                 <i className="devicon-github-original"></i>
               </a>
             </li>
@@ -75,7 +84,9 @@ const ContactMe = (props) => {
           </p>
         </ContactMeDescriptionStyle>
         <ButtonContainerStyle className="contactMe__mailButton">
-          <ButtonStyle>SAY HELLO</ButtonStyle>
+          <ButtonStyle className={props.isLightMode ? "lightMode" : ""}>
+            SAY HELLO
+          </ButtonStyle>
         </ButtonContainerStyle>
       </section>
     </ContentWrapper>
