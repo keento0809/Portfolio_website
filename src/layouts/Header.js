@@ -102,10 +102,10 @@ const MenuButtonStyle = styled.div`
 `;
 
 const Header = (props) => {
-  const [isAsideShown, setIsAsideShown] = useState(false);
+  // const [isAsideShown, setIsAsideShown] = useState(false);
 
   const handleToggleAside = () => {
-    setIsAsideShown(!isAsideShown);
+    props.setIsAsideShown(!props.isAsideShown);
   };
 
   const handleToggleMode = () => {
@@ -141,7 +141,7 @@ const Header = (props) => {
         <MenuButtonStyle
           id="menuBtn"
           className={`${props.isLightMode ? "lightMode" : ""} ${
-            isAsideShown ? "active" : ""
+            props.isAsideShown ? "active" : ""
           }`}
           onClick={handleToggleAside}
         >
@@ -150,7 +150,11 @@ const Header = (props) => {
           <span></span>
         </MenuButtonStyle>
       </NavStyle>
-      <Aside isAsideShown={isAsideShown} isLightMode={props.isLightMode} />
+      <Aside
+        isAsideShown={props.isAsideShown}
+        setIsAsideShown={props.setIsAsideShown}
+        isLightMode={props.isLightMode}
+      />
     </HeaderStyle>
   );
 };

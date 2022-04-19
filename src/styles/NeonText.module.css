@@ -16,6 +16,27 @@
   -o-animation: flux 2s linear infinite;
 }
 
+.flux.topHero {
+  font-family: neon;
+  color: #426dfb;
+  font-size: 9vw;
+  line-height: 9vw;
+  text-shadow: 0 0 3vw #2356ff;
+  animation: flux 2s linear infinite;
+  -moz-animation: flux 2s linear infinite;
+  -webkit-animation: flux 2s linear infinite;
+  -o-animation: flux 2s linear infinite;
+  font-size: 11vw;
+  line-height: 11vw;
+}
+
+@media screen and (min-width: 768px) {
+  .flux.topHero {
+    font-size: 6vw;
+    line-height: 6vw;
+  }
+}
+
 @keyframes flux {
   0%,
   100% {

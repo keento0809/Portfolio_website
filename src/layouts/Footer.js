@@ -2,7 +2,8 @@ import { Fragment } from "react";
 import styled from "styled-components";
 
 const FooterStyle = styled.footer`
-  padding: 0.5rem 0;
+  padding-top: 0.8rem;
+  padding-bottom: 0.5rem;
   text-align: center;
   font-size: 12px;
 `;

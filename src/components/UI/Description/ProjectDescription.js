@@ -25,7 +25,8 @@ const LiStyle = styled.li`
   }
 
   & span {
-    font-size: 20px;
+    font-size: 18px;
+    line-height: 26px;
   }
 `;
 

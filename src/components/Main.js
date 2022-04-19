@@ -13,6 +13,7 @@ const Main = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [isLightMode, setIsLightMode] = useState(false);
   const [isScrollingDown, setIsScrollingDown] = useState(false);
+  const [isAsideShown, setIsAsideShown] = useState(false);
 
   let lastScrollY;
   let timeout;
@@ -23,19 +24,12 @@ const Main = () => {
     timeout = setTimeout(() => {
       timeout = 0;
       let currentScrollY = window.scrollY;
-      console.log(currentScrollY);
 
       if (currentScrollY === 0) setIsScrollingDown(false);
       if (currentScrollY > lastScrollY) {
-        console.log("Scrolling down !!");
-        // original
-        // setIsScrollingDown(!isScrollingDown);
         setIsScrollingDown(true);
       }
       if (currentScrollY < lastScrollY) {
-        console.log("Scrolling Up !!");
-        // original
-        // setIsScrollingDown(!isScrollingDown);
         setIsScrollingDown(false);
       }
       lastScrollY = currentScrollY;
@@ -63,9 +57,11 @@ const Main = () => {
         isLightMode={isLightMode}
         setIsLightMode={setIsLightMode}
         isScrollingDown={isScrollingDown}
+        isAsideShown={isAsideShown}
+        setIsAsideShown={setIsAsideShown}
       />
-      <ContainerWrapper>
-        <TopHero />
+      <ContainerWrapper isAsideShown={isAsideShown}>
+        <TopHero isLightMode={isLightMode} />
         <AboutMe isLightMode={isLightMode} />
         <MyProject isLightMode={isLightMode} />
         <ContactMe isLightMode={isLightMode} />
