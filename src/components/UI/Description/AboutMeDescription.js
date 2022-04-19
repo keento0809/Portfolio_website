@@ -14,8 +14,12 @@ const AboutMeDescriptionWrapper = styled.div`
   }
 `;
 
+const DescriptionBodyStyle = styled.div`
+  padding: 1rem 0;
+`;
+
 const StrongStyle = styled.strong`
-  font-size: 20px;
+  font-size: 18px;
   color: #cbd5e1;
 `;
 
@@ -23,7 +27,7 @@ const AboutMeDescription = () => {
   return (
     <AboutMeDescriptionWrapper>
       <h2>"Always Be Resilient"</h2>
-      <div className="description-body">
+      <DescriptionBodyStyle className="description-body">
         <p className="description-body__firstParagraph">
           My name is <StrongStyle className="">KENTO HONDA</StrongStyle>;
           creative, hard-working, and resilient Front-End Web Developer from
@@ -38,7 +42,7 @@ const AboutMeDescription = () => {
           can persistently handle with any kind of problems or bugs with
           difficulties.
         </p>
-      </div>
+      </DescriptionBodyStyle>
     </AboutMeDescriptionWrapper>
   );
 };

@@ -11,6 +11,35 @@ import classes from "../styles/base.module.css";
 const Main = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [isLightMode, setIsLightMode] = useState(false);
+  const [isScrollingDown, setIsScrollingDown] = useState(false);
+
+  let lastScrollY;
+  let timeout;
+
+  function handleScroll() {
+    if (timeout) return;
+
+    timeout = setTimeout(() => {
+      timeout = 0;
+      let currentScrollY = window.scrollY;
+      console.log(currentScrollY);
+
+      if (currentScrollY === 0) setIsScrollingDown(false);
+      if (currentScrollY > lastScrollY) {
+        console.log("Scrolling down !!");
+        // original
+        // setIsScrollingDown(!isScrollingDown);
+        setIsScrollingDown(true);
+      }
+      if (currentScrollY < lastScrollY) {
+        console.log("Scrolling Up !!");
+        // original
+        // setIsScrollingDown(!isScrollingDown);
+        setIsScrollingDown(false);
+      }
+      lastScrollY = currentScrollY;
+    }, 800);
+  }
 
   useEffect(() => {
     setIsLoading(true);
@@ -19,12 +48,21 @@ const Main = () => {
     }, 2880);
   }, []);
 
+  useEffect(() => {
+    // original code
+    window.addEventListener("scroll", handleScroll);
+  }, [isScrollingDown]);
+
   return (
     <div
       className={`${classes.global} ${isLightMode ? classes.lightMode : ""}`}
     >
       {isLoading && <Loader />}
-      <Header isLightMode={isLightMode} setIsLightMode={setIsLightMode} />
+      <Header
+        isLightMode={isLightMode}
+        setIsLightMode={setIsLightMode}
+        isScrollingDown={isScrollingDown}
+      />
       <ContainerWrapper>
         <TopHero />
         <AboutMe />

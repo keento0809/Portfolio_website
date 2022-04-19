@@ -4,7 +4,7 @@ import ProjectSectionWrapper from "../Wrapper/ProjectSectionWrapper";
 
 const LiStyle = styled.li`
   display: inline-block;
-  padding: 0.6rem 1.7rem;
+  padding: 0.6rem 1.5rem;
   margin: 0.4rem;
   border: 1px solid #8bfdfe;
   border-radius: 8px;
