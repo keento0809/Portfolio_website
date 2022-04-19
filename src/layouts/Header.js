@@ -31,7 +31,7 @@ const NavStyle = styled.nav`
   line-height: 80px;
 
   & .header__nav__logo {
-    font-size: 22px;
+    font-size: 24px;
   }
 `;
 
@@ -59,6 +59,7 @@ const MenuButtonStyle = styled.div`
   align-items: flex-end;
   z-index: 20;
   padding-bottom: 2px;
+  cursor: pointer;
 
   &.lightMode span {
     background-color: #19224e;
@@ -67,17 +68,36 @@ const MenuButtonStyle = styled.div`
   & span {
     text-align: right;
     display: inline-block;
-    width: 30px;
     height: 3px;
     margin-bottom: 4px;
     border-radius: 4px;
     background-color: #fff;
+    transition: all 0.3s ease;
   }
-  & span:first-child {
+  // test
+  & span:nth-of-type(1) {
     width: 40px;
   }
-  & span:last-child {
+  & span:nth-of-type(2) {
+    width: 30px;
+  }
+  & span:nth-of-type(3) {
     width: 20px;
+  }
+
+  &.active span:nth-of-type(3) {
+    transform: translateY(-4px) rotate(45deg);
+    width: 30px;
+  }
+  &.active span:nth-of-type(1) {
+    transform: translateY(10px) rotate(-45deg);
+    width: 30px;
+  }
+  &.active span:nth-of-type(2) {
+    left: 200%;
+    opacity: 0;
+    transform: translateY(10px);
+    animation: active-menu06-bar02 0.8s forwards;
   }
 `;
 
@@ -120,7 +140,9 @@ const Header = (props) => {
         </div>
         <MenuButtonStyle
           id="menuBtn"
-          className={props.isLightMode ? "lightMode" : ""}
+          className={`${props.isLightMode ? "lightMode" : ""} ${
+            isAsideShown ? "active" : ""
+          }`}
           onClick={handleToggleAside}
         >
           <span></span>
