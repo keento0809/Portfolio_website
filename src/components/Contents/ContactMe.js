@@ -28,7 +28,7 @@ const ButtonContainerStyle = styled.div`
   padding: 1rem 0;
 `;
 
-const ButtonStyle = styled.button`
+const ButtonStyle = styled.a`
   display: inline-block;
   background-color: transparent;
   cursor: pointer;
@@ -56,7 +56,7 @@ const ContactMe = (props) => {
               </a>
             </li>
             <li>
-              <a href="">
+              <a href="mailto:kentos1112canada@gmail.com">
                 <ion-icon name="mail-outline"></ion-icon>
               </a>
             </li>
@@ -84,7 +84,10 @@ const ContactMe = (props) => {
           </p>
         </ContactMeDescriptionStyle>
         <ButtonContainerStyle className="contactMe__mailButton">
-          <ButtonStyle className={props.isLightMode ? "lightMode" : ""}>
+          <ButtonStyle
+            href="mailto:kentos1112canada@gmail.com"
+            className={props.isLightMode ? "lightMode" : ""}
+          >
             SAY HELLO
           </ButtonStyle>
         </ButtonContainerStyle>

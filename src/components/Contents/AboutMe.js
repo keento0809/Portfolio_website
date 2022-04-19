@@ -8,8 +8,8 @@ import ContentWrapper from "../UI/Wrapper/ContentWrapper";
 import Title from "../UI/Title/Title";
 
 const ProfileDivStyle = styled.div`
-  width: 280px;
-  height: 280px;
+  width: 240px;
+  height: 240px;
   margin: 0 auto;
 `;
 
@@ -18,6 +18,7 @@ const ImageStyle = styled.img`
   height: 100%;
   border-radius: 8px;
   object-fit: cover;
+  box-shadow: 0px 0px 14px 4px #4a4a4a;
 `;
 
 const AboutMe = (props) => {
