@@ -11,6 +11,10 @@ const UlStyle = styled.ul`
   & li {
     padding: 0.8rem;
   }
+
+  &.lightMode a {
+    color: #1b1f29;
+  }
 `;
 
 const LinkIconsList = (props) => {
@@ -18,7 +22,7 @@ const LinkIconsList = (props) => {
     <ProjectSectionWrapper>
       <div className="link-icons">
         <h3>Links</h3>
-        <UlStyle>
+        <UlStyle className={props.isLightMode ? "lightMode" : ""}>
           <li>
             <a href={`https://github.com/keento0809/${props.gitHubUrl}`}>
               <i className="devicon-github-original"></i>

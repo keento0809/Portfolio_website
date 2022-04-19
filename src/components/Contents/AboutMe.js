@@ -20,7 +20,7 @@ const ImageStyle = styled.img`
   object-fit: cover;
 `;
 
-const AboutMe = () => {
+const AboutMe = (props) => {
   const specialtiesArr = [
     { name: "React.js" },
     { name: "Javascript(ES6)" },
@@ -34,6 +34,7 @@ const AboutMe = () => {
     { name: "SCSS/SASS" },
     { name: "Material-UI" },
     { name: "Tailwind-css" },
+    { name: "Styled-components" },
     { name: "Responsible-Design" },
   ];
   const othersArr = [
@@ -53,22 +54,31 @@ const AboutMe = () => {
           <ImageStyle src={profileImage} alt="picture" />
         </ProfileDivStyle>
         <div className="aboutMe__description">
-          <AboutMeDescription />
+          <AboutMeDescription isLightMode={props.isLightMode} />
         </div>
         <div className="skills">
-          <SkillSetList />
+          <SkillSetList isLightMode={props.isLightMode} />
         </div>
         <div className="specialties">
-          <SpecialtyList specialties={specialtiesArr} title="Specialties" />
+          <SpecialtyList
+            specialties={specialtiesArr}
+            isLightMode={props.isLightMode}
+            title="Specialties"
+          />
         </div>
         <div className="specialties">
           <SpecialtyList
             specialties={frontEndLibrariesArr}
+            isLightMode={props.isLightMode}
             title="Front-End Libraries"
           />
         </div>
         <div className="specialties">
-          <SpecialtyList specialties={othersArr} title="Others" />
+          <SpecialtyList
+            specialties={othersArr}
+            isLightMode={props.isLightMode}
+            title="Others"
+          />
         </div>
       </section>
     </ContentWrapper>

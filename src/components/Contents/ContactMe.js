@@ -34,7 +34,7 @@ const ButtonStyle = styled.button`
   border-radius: 8px;
 `;
 
-const ContactMe = () => {
+const ContactMe = (props) => {
   return (
     <ContentWrapper>
       <section id="contactme" className="contactMe section">

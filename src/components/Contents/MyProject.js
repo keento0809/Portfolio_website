@@ -18,21 +18,34 @@ const dummyPointsArr = [
   { text: "Great something" },
 ];
 
-const dummyLanguagesArr = [
+const freshMarcheToolsArr = [
   { name: "javascript" },
   { name: "react", type: "original" },
   { name: "firebase" },
   { name: "materialui" },
 ];
 
-const MyProject = () => {
+const reduxTodoToolsArr = [
+  { name: "react", type: "original" },
+  { name: "redux" },
+  { name: "materialui" },
+];
+
+const my2048ToolsArr = [{ name: "javascript" }, { name: "tailwindcss" }];
+
+const portfolioWebsiteToolsArr = [
+  { name: "react", type: "original" },
+  { name: "css3" },
+];
+
+const MyProject = (props) => {
   return (
     <ContentWrapper>
       <section id="myproject" className="myProject section">
         <Title title="My Project" />
         <ul>
           <ListStyle>
-            <MyProjectContainer>
+            <MyProjectContainer isLightMode={props.isLightMode}>
               <div className="project-title">
                 <h2>FreshMarche</h2>
               </div>
@@ -43,15 +56,16 @@ const MyProject = () => {
               <div className="project-image">
                 <img src="" alt="" />
               </div>
-              <LanguageList languages={dummyLanguagesArr} />
+              <LanguageList languages={freshMarcheToolsArr} />
               <LinkIconsList
+                isLightMode={props.isLightMode}
                 gitHubUrl="freshmarche"
                 linkUrl="https://devicon.dev/"
               />
             </MyProjectContainer>
           </ListStyle>
           <ListStyle>
-            <MyProjectContainer>
+            <MyProjectContainer isLightMode={props.isLightMode}>
               <div className="project-title">
                 <h2>ReduxTodo</h2>
               </div>
@@ -62,29 +76,51 @@ const MyProject = () => {
               <div className="project-image">
                 <img src="" alt="" />
               </div>
-              <LanguageList languages={dummyLanguagesArr} />
+              <LanguageList languages={reduxTodoToolsArr} />
               <LinkIconsList
+                isLightMode={props.isLightMode}
                 gitHubUrl="ReduxTodo"
                 linkUrl="https://redux-todo-i9cko6vjw-keento0809.vercel.app/"
               />
             </MyProjectContainer>
           </ListStyle>
           <ListStyle>
-            <MyProjectContainer>
+            <MyProjectContainer isLightMode={props.isLightMode}>
               <div className="project-title">
                 <h2>My2048</h2>
               </div>
               <ProjectDescription
-                summary="The reproduction of 2048 (game) with my own styling and some additional features."
+                summary="The reproduction of 2048 game with my own styling (tailwind-css) and some additional features."
                 points={dummyPointsArr}
               />
               <div className="project-image">
                 <img src="" alt="" />
               </div>
-              <LanguageList languages={dummyLanguagesArr} />
+              <LanguageList languages={my2048ToolsArr} />
               <LinkIconsList
+                isLightMode={props.isLightMode}
                 gitHubUrl="my2048"
                 linkUrl="https://my2048-keento0809.netlify.app/"
+              />
+            </MyProjectContainer>
+          </ListStyle>
+          <ListStyle>
+            <MyProjectContainer isLightMode={props.isLightMode}>
+              <div className="project-title">
+                <h2>Portfolio website</h2>
+              </div>
+              <ProjectDescription
+                summary="Simple but user-friendly portfolio website created by react.js and styled-components."
+                points={dummyPointsArr}
+              />
+              <div className="project-image">
+                <img src="" alt="" />
+              </div>
+              <LanguageList languages={portfolioWebsiteToolsArr} />
+              <LinkIconsList
+                isLightMode={props.isLightMode}
+                gitHubUrl="Portfolio_website"
+                linkUrl="https://portfolio-website-9mtqqzzg9-keento0809.vercel.app/"
               />
             </MyProjectContainer>
           </ListStyle>

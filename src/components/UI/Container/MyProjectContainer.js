@@ -6,10 +6,18 @@ const PaperStyle = styled.div`
   padding: 1rem 2rem;
   background-color: #1b1f29;
   border-radius: 8px;
+
+  &.lightMode {
+    background-color: #e7edff;
+  }
 `;
 
 const MyProjectContainer = (props) => {
-  return <PaperStyle>{props.children}</PaperStyle>;
+  return (
+    <PaperStyle className={props.isLightMode ? "lightMode" : ""}>
+      {props.children}
+    </PaperStyle>
+  );
 };
 
 export default MyProjectContainer;
