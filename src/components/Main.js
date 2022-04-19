@@ -24,19 +24,12 @@ const Main = () => {
     timeout = setTimeout(() => {
       timeout = 0;
       let currentScrollY = window.scrollY;
-      console.log(currentScrollY);
 
       if (currentScrollY === 0) setIsScrollingDown(false);
       if (currentScrollY > lastScrollY) {
-        console.log("Scrolling down !!");
-        // original
-        // setIsScrollingDown(!isScrollingDown);
         setIsScrollingDown(true);
       }
       if (currentScrollY < lastScrollY) {
-        console.log("Scrolling Up !!");
-        // original
-        // setIsScrollingDown(!isScrollingDown);
         setIsScrollingDown(false);
       }
       lastScrollY = currentScrollY;
@@ -68,7 +61,7 @@ const Main = () => {
         setIsAsideShown={setIsAsideShown}
       />
       <ContainerWrapper isAsideShown={isAsideShown}>
-        <TopHero />
+        <TopHero isLightMode={isLightMode} />
         <AboutMe isLightMode={isLightMode} />
         <MyProject isLightMode={isLightMode} />
         <ContactMe isLightMode={isLightMode} />

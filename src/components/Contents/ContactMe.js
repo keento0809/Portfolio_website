@@ -20,7 +20,7 @@ const UlStyle = styled.ul`
 `;
 
 const ContactMeDescriptionStyle = styled.div`
-  padding: 2rem 0;
+  padding: 2rem 1rem;
 `;
 
 const ButtonContainerStyle = styled.div`

@@ -76,6 +76,7 @@ const MyProject = (props) => {
               </div>
               <ProjectDescription
                 summary="The E-commerce application for fresh groceries, including authentication form and dummy checkout section."
+                isLightMode={props.isLightMode}
                 points={freshMarchePointsArr}
               />
               <div className="project-image">

@@ -10,7 +10,7 @@ import Title from "../UI/Title/Title";
 const ProfileDivStyle = styled.div`
   width: 240px;
   height: 240px;
-  margin: 0 auto;
+  margin: 1rem auto;
 `;
 
 const ImageStyle = styled.img`

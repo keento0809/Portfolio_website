@@ -86,6 +86,9 @@ const ResumeDivStyle = styled.div`
 `;
 
 const Aside = (props) => {
+  const handleLinkClick = () => {
+    props.setIsAsideShown(false);
+  };
   // const shown = props.isAsideShown ? "show" : "";
   return (
     <AsideStyle
@@ -104,6 +107,7 @@ const Aside = (props) => {
               <AtagStyle
                 className={props.isLightMode ? "lightMode" : ""}
                 href="#home"
+                onClick={handleLinkClick}
               >
                 <ion-icon name="home-outline"></ion-icon>
                 <span>Home</span>
@@ -113,6 +117,7 @@ const Aside = (props) => {
               <AtagStyle
                 className={props.isLightMode ? "lightMode" : ""}
                 href="#aboutme"
+                onClick={handleLinkClick}
               >
                 <ion-icon name="person-outline"></ion-icon>
                 {/* <ion-icon name="help-outline"></ion-icon> */}
@@ -123,6 +128,7 @@ const Aside = (props) => {
               <AtagStyle
                 className={props.isLightMode ? "lightMode" : ""}
                 href="#myproject"
+                onClick={handleLinkClick}
               >
                 <ion-icon name="folder-outline"></ion-icon>
                 <span>My project</span>
@@ -132,6 +138,7 @@ const Aside = (props) => {
               <AtagStyle
                 className={props.isLightMode ? "lightMode" : ""}
                 href="#contactme"
+                onClick={handleLinkClick}
               >
                 <ion-icon name="send-outline"></ion-icon>
                 <span>Contact</span>

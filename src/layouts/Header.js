@@ -152,6 +152,7 @@ const Header = (props) => {
       </NavStyle>
       <Aside
         isAsideShown={props.isAsideShown}
+        setIsAsideShown={props.setIsAsideShown}
         isLightMode={props.isLightMode}
       />
     </HeaderStyle>
