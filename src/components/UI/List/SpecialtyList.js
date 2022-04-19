@@ -8,6 +8,10 @@ const LiStyle = styled.li`
   margin: 0.4rem;
   border: 1px solid #8bfdfe;
   border-radius: 8px;
+
+  &.lightMode {
+    border-color: #19224e;
+  }
 `;
 
 const SpecialtyListTitleStyle = styled.div`
@@ -24,7 +28,9 @@ const SpecialtyListTitleStyle = styled.div`
 const SpecialtyList = (props) => {
   // test
   const list = props.specialties.map((skill, index) => (
-    <LiStyle key={index}>{skill.name}</LiStyle>
+    <LiStyle className={props.isLightMode ? "lightMode" : ""} key={index}>
+      {skill.name}
+    </LiStyle>
   ));
 
   return (

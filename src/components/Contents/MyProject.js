@@ -25,7 +25,7 @@ const dummyLanguagesArr = [
   { name: "materialui" },
 ];
 
-const MyProject = () => {
+const MyProject = (props) => {
   return (
     <ContentWrapper>
       <section id="myproject" className="myProject section">

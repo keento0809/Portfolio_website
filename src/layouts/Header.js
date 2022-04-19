@@ -18,6 +18,10 @@ const HeaderStyle = styled.header`
     transform: translateY(-100%);
     transition: all 0.3s ease;
   }
+
+  &.lightMode {
+    background-color: #eff3ff;
+  }
 `;
 
 const NavStyle = styled.nav`
@@ -56,9 +60,9 @@ const MenuButtonStyle = styled.div`
   z-index: 20;
   padding-bottom: 2px;
 
-  /* .lightMode & {
-    background-color: red;
-  } */
+  &.lightMode span {
+    background-color: #19224e;
+  }
 
   & span {
     text-align: right;
@@ -89,7 +93,11 @@ const Header = (props) => {
   };
 
   return (
-    <HeaderStyle className={props.isScrollingDown ? "hidden" : ""}>
+    <HeaderStyle
+      className={`${props.isScrollingDown ? "hidden" : ""} ${
+        props.isLightMode ? "lightMode" : ""
+      }`}
+    >
       <NavStyle className="header__nav">
         <div className="header__nav__left">
           <HeaderLeftStyle
@@ -112,7 +120,7 @@ const Header = (props) => {
         </div>
         <MenuButtonStyle
           id="menuBtn"
-          className="header__nav__right menuButton"
+          className={props.isLightMode ? "lightMode" : ""}
           onClick={handleToggleAside}
         >
           <span></span>

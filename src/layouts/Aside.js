@@ -56,7 +56,7 @@ const AtagStyle = styled.a`
 
   & ion-icon {
     font-size: 20px;
-    margin-right: 2rem;
+    margin-right: 1rem;
   }
 
   & span {
@@ -88,7 +88,8 @@ const Aside = (props) => {
             </li>
             <li className="menuBtns">
               <AtagStyle href="#aboutme">
-                <ion-icon name="help-outline"></ion-icon>
+                <ion-icon name="person-outline"></ion-icon>
+                {/* <ion-icon name="help-outline"></ion-icon> */}
                 <span>About me</span>
               </AtagStyle>
             </li>

@@ -65,9 +65,9 @@ const Main = () => {
       />
       <ContainerWrapper>
         <TopHero />
-        <AboutMe />
-        <MyProject />
-        <ContactMe />
+        <AboutMe isLightMode={isLightMode} />
+        <MyProject isLightMode={isLightMode} />
+        <ContactMe isLightMode={isLightMode} />
       </ContainerWrapper>
     </div>
   );
