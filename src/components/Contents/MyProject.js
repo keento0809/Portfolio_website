@@ -18,6 +18,31 @@ const dummyPointsArr = [
   { text: "Great something" },
 ];
 
+const freshMarchePointsArr = [
+  { text: "Including the basic CRUD operations" },
+  { text: "React's ContextAPI to manage app-wide states" },
+  { text: "Authentications with Firebase Auth REST API" },
+  { text: "Dummy checkout feature with stripe checkout-form" },
+];
+
+const reduxTodoPointsArr = [
+  { text: "Good-looking design with Material-UI" },
+  { text: "CRUD functions operated by Redux-toolkit " },
+];
+
+const my2048PointsArr = [
+  { text: "Created by Vanilla Javascript only, no JS plugins" },
+  { text: "Sophisticated styling powered by Tailwind-css" },
+  { text: "Enable to switch lightMode and DarkMode" },
+  { text: "Adopting YouTube Player API as adding BGM" },
+];
+
+const portfolioWebsitePointsArr = [
+  { text: "Optimize components to minimize workloads" },
+  { text: "Designed by styled-components, no css-frameworks" },
+  { text: "Enable to switch lightMode and DarkMode" },
+];
+
 const freshMarcheToolsArr = [
   { name: "javascript" },
   { name: "react", type: "original" },
@@ -51,7 +76,7 @@ const MyProject = (props) => {
               </div>
               <ProjectDescription
                 summary="The E-commerce application for fresh groceries, including authentication form and dummy checkout section."
-                points={dummyPointsArr}
+                points={freshMarchePointsArr}
               />
               <div className="project-image">
                 <img src="" alt="" />
@@ -72,7 +97,7 @@ const MyProject = (props) => {
               <ProjectDescription
                 summary="A simple Todo list to manage your task, using React, React-Redux (Redux-toolkit)."
                 isLightMode={props.isLightMode}
-                points={dummyPointsArr}
+                points={reduxTodoPointsArr}
               />
               <div className="project-image">
                 <img src="" alt="" />
@@ -93,7 +118,7 @@ const MyProject = (props) => {
               <ProjectDescription
                 summary="The reproduction of 2048 game with my own styling (tailwind-css) and some additional features."
                 isLightMode={props.isLightMode}
-                points={dummyPointsArr}
+                points={my2048PointsArr}
               />
               <div className="project-image">
                 <img src="" alt="" />
@@ -114,7 +139,7 @@ const MyProject = (props) => {
               <ProjectDescription
                 summary="Simple but user-friendly portfolio website created by react.js and styled-components."
                 isLightMode={props.isLightMode}
-                points={dummyPointsArr}
+                points={portfolioWebsitePointsArr}
               />
               <div className="project-image">
                 <img src="" alt="" />
