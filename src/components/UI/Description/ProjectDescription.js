@@ -3,6 +3,14 @@ import ProjectSectionWrapper from "../Wrapper/ProjectSectionWrapper";
 
 const ProjectSummaryWrapper = styled.div`
   padding-bottom: 2rem;
+
+  & p {
+    color: #94a3b8;
+  }
+
+  &.lightMode p {
+    color: #656e7b;
+  }
 `;
 
 const LiStyle = styled.li`
@@ -34,7 +42,11 @@ const ProjectDescription = (props) => {
   return (
     <ProjectSectionWrapper>
       <div className="">
-        <ProjectSummaryWrapper className="MyProjectDescription-summary">
+        <ProjectSummaryWrapper
+          className={`${
+            props.isLightMode ? "lightMode" : ""
+          } MyProjectDescription-summary`}
+        >
           <p>{props.summary}</p>
         </ProjectSummaryWrapper>
         <div className="MyProjectDescription-body">

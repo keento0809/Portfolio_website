@@ -71,6 +71,7 @@ const MyProject = (props) => {
               </div>
               <ProjectDescription
                 summary="A simple Todo list to manage your task, using React, React-Redux (Redux-toolkit)."
+                isLightMode={props.isLightMode}
                 points={dummyPointsArr}
               />
               <div className="project-image">
@@ -91,6 +92,7 @@ const MyProject = (props) => {
               </div>
               <ProjectDescription
                 summary="The reproduction of 2048 game with my own styling (tailwind-css) and some additional features."
+                isLightMode={props.isLightMode}
                 points={dummyPointsArr}
               />
               <div className="project-image">
@@ -111,6 +113,7 @@ const MyProject = (props) => {
               </div>
               <ProjectDescription
                 summary="Simple but user-friendly portfolio website created by react.js and styled-components."
+                isLightMode={props.isLightMode}
                 points={dummyPointsArr}
               />
               <div className="project-image">

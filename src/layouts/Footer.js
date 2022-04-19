@@ -1,12 +1,19 @@
 import { Fragment } from "react";
+import styled from "styled-components";
+
+const FooterStyle = styled.footer`
+  padding: 0.5rem 0;
+  text-align: center;
+  font-size: 12px;
+`;
 
 const Footer = () => {
   return (
-    <Fragment>
+    <FooterStyle>
       <div className="copyright">
-        <p>All rights reserved.</p>
+        <span>©︎ KENTO HONDA 2022. All Rights Reserved.</span>
       </div>
-    </Fragment>
+    </FooterStyle>
   );
 };
 

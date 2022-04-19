@@ -8,17 +8,7 @@ body {
   padding: 0;
   width: 100%;
   height: 100%;
-  /* test */
-  /* background-color: #050710;
-  color: #8bfdfe;
-  transition: all 0.3s ease; */
 }
-
-/* body.lightMode {
-  background-color: #eff3ff;
-  color: #19224e;
-  transition: all 0.3s ease;
-} */
 
 body {
   margin: 0;

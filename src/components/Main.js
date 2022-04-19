@@ -6,6 +6,7 @@ import TopHero from "./Contents/TopHero";
 import AboutMe from "./Contents/AboutMe";
 import MyProject from "./Contents/MyProject";
 import ContactMe from "./Contents/ContactMe";
+import Footer from "../layouts/Footer";
 import classes from "../styles/base.module.css";
 
 const Main = () => {
@@ -68,6 +69,7 @@ const Main = () => {
         <AboutMe isLightMode={isLightMode} />
         <MyProject isLightMode={isLightMode} />
         <ContactMe isLightMode={isLightMode} />
+        <Footer isLightMode={isLightMode} />
       </ContainerWrapper>
     </div>
   );
