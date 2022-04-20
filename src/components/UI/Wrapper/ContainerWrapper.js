@@ -15,11 +15,16 @@ const ContainerWrapperStyle = styled.div`
 
 const ContainerWrapper = (props) => {
   return (
-    <ContainerWrapperStyle className={props.isAsideShown ? "shown" : ""}>
+    <Fragment>
       {/* test */}
-      <Backdrop isAsideShown={props.isAsideShown} />
-      {props.children}
-    </ContainerWrapperStyle>
+      <Backdrop
+        isAsideShown={props.isAsideShown}
+        setIsAsideShown={props.setIsAsideShown}
+      />
+      <ContainerWrapperStyle className={props.isAsideShown ? "shown" : ""}>
+        {props.children}
+      </ContainerWrapperStyle>
+    </Fragment>
   );
 };
 

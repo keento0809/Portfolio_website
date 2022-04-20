@@ -7,23 +7,29 @@ const BackdropStyle = styled.div`
   right: 0;
   bottom: 0;
   left: 0;
-  background-color: rgba(0, 0, 0, 0.6);
+  background-color: rgba(5, 7, 16, 0.8);
   z-index: 5;
   visibility: hidden;
   display: none;
 
-  &.show {
+  &.shown {
     visibility: visible;
     display: block;
   }
 `;
 
 const Backdrop = (props) => {
+  const handleCloseAside = () => {
+    console.log("Working ????");
+    props.setIsAsideShown(false);
+  };
+
   return (
     <BackdropStyle
       className={`${props.isAsideShown ? "shown" : ""} バックドロップです`}
+      onClick={handleCloseAside}
     >
-      <div className="">{props.children}</div>
+      {props.children}
     </BackdropStyle>
   );
 };
