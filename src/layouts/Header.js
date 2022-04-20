@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Aside from "./Aside";
 import styled from "styled-components";
 
@@ -103,10 +103,66 @@ const MenuButtonStyle = styled.div`
     transform: translateY(10px);
     animation: active-menu06-bar02 0.8s forwards;
   }
+
+  @media screen and (min-width: 1023px) {
+    display: none;
+  }
 `;
 
+const NavMenuStyle = styled.nav`
+  display: none;
+  min-width: 450px;
+
+  @media screen and (min-width: 1023px) {
+    display: block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+`;
+
+const NavUlStyle = styled.ul`
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+  & li {
+    font-size: 12px;
+    transition: all 0.5s ease;
+    cursor: pointer;
+  }
+
+  & li a {
+    padding: 0.5rem 1.3rem;
+  }
+
+  & li.active {
+    font-size: 18px;
+    transition: all 0.5s ease;
+  }
+
+  & li.active a {
+    border: 1px solid #8bfdfe;
+    border-radius: 8px;
+  }
+`;
+
+// styled-components end up here.
+//
+//
+//
+//
+
 const Header = (props) => {
-  // const [isAsideShown, setIsAsideShown] = useState(false);
+  const [isActive, setIsActive] = useState(false);
+
+  const [isHome, setIsHome] = useState(false);
+  const [isAboutMe, setIsAboutMe] = useState(false);
+  const [isProject, setIsProject] = useState(false);
+  const [isContact, setIsContact] = useState(false);
+  const [isResume, setIsResume] = useState(false);
 
   const handleToggleAside = () => {
     props.setIsAsideShown(!props.isAsideShown);
@@ -115,6 +171,28 @@ const Header = (props) => {
   const handleToggleMode = () => {
     props.setIsLightMode(!props.isLightMode);
   };
+
+  const handleMouseOVer = (e) => {
+    const target = e.target.innerText;
+    if (target === "Home") setIsHome(true);
+    if (target === "About Me") setIsAboutMe(true);
+    if (target === "Project") setIsProject(true);
+    if (target === "Contact") setIsContact(true);
+    if (target === "Resume") setIsResume(true);
+  };
+
+  const handleMouseOut = () => {
+    // test
+    setIsHome(false);
+    setIsAboutMe(false);
+    setIsProject(false);
+    setIsContact(false);
+    setIsResume(false);
+  };
+
+  // useEffect(() => {
+  //   window.addEventListener
+  // },[])
 
   return (
     <HeaderStyle
@@ -153,6 +231,45 @@ const Header = (props) => {
           <span></span>
           <span></span>
         </MenuButtonStyle>
+        <NavMenuStyle className="header-nav">
+          <NavUlStyle>
+            <li
+              className={isHome ? "active" : ""}
+              onMouseOver={handleMouseOVer}
+              onMouseOut={handleMouseOut}
+            >
+              <a href="#home">Home</a>
+            </li>
+            <li
+              className={isAboutMe ? "active" : ""}
+              onMouseOver={handleMouseOVer}
+              onMouseOut={handleMouseOut}
+            >
+              <a href="#aboutme">About Me</a>
+            </li>
+            <li
+              className={isProject ? "active" : ""}
+              onMouseOver={handleMouseOVer}
+              onMouseOut={handleMouseOut}
+            >
+              <a href="#myproject">Project</a>
+            </li>
+            <li
+              className={isContact ? "active" : ""}
+              onMouseOver={handleMouseOVer}
+              onMouseOut={handleMouseOut}
+            >
+              <a href="#contactme">Contact</a>
+            </li>
+            <li
+              className={isResume ? "active" : ""}
+              onMouseOver={handleMouseOVer}
+              onMouseOut={handleMouseOut}
+            >
+              <a href="">Resume</a>
+            </li>
+          </NavUlStyle>
+        </NavMenuStyle>
       </NavStyle>
       <Aside
         isAsideShown={props.isAsideShown}
