@@ -7,7 +7,7 @@ const BackdropStyle = styled.div`
   right: 0;
   bottom: 0;
   left: 0;
-  background-color: rgba(5, 7, 16, 0.8);
+  background-color: rgba(5, 7, 16, 0.2);
   z-index: 5;
   visibility: hidden;
   display: none;

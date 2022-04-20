@@ -121,7 +121,7 @@ const Aside = (props) => {
               >
                 <ion-icon name="person-outline"></ion-icon>
                 {/* <ion-icon name="help-outline"></ion-icon> */}
-                <span>About me</span>
+                <span>About Me</span>
               </AtagStyle>
             </li>
             <li className="menuBtns">
@@ -131,7 +131,7 @@ const Aside = (props) => {
                 onClick={handleLinkClick}
               >
                 <ion-icon name="folder-outline"></ion-icon>
-                <span>My project</span>
+                <span>Project</span>
               </AtagStyle>
             </li>
             <li className="menuBtns">
