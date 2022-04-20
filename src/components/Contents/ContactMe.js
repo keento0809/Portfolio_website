@@ -20,7 +20,7 @@ const UlStyle = styled.ul`
 `;
 
 const ContactMeDescriptionStyle = styled.div`
-  padding: 2rem 1rem;
+  padding: 2rem 0.5rem;
 `;
 
 const ButtonContainerStyle = styled.div`
@@ -45,54 +45,56 @@ const ButtonStyle = styled.a`
 
 const ContactMe = (props) => {
   return (
-    <ContentWrapper>
-      <section id="contactme" className="contactMe section">
-        <Title title="Contact Me" />
-        <div className="contactMe__iconsList">
-          <UlStyle className={props.isLightMode ? "lightMode" : ""}>
-            <li>
-              <a href="">
-                <ion-icon name="call-outline"></ion-icon>
-              </a>
-            </li>
-            <li>
-              <a href="mailto:kentos1112canada@gmail.com">
-                <ion-icon name="mail-outline"></ion-icon>
-              </a>
-            </li>
-            <li>
-              <a href="https://www.linkedin.com/in/kento-honda-342a7a227/">
-                <i className="devicon-linkedin-plain"></i>
-              </a>
-            </li>
-            <li>
-              <a href="https://github.com/keento0809">
-                <i className="devicon-github-original"></i>
-              </a>
-            </li>
-            <li>
-              <a href="">
-                <i className="devicon-twitter-original"></i>
-              </a>
-            </li>
-          </UlStyle>
-        </div>
-        <ContactMeDescriptionStyle className="contactMe__description">
-          <p>
-            I'm always looking for opportunities to work as a front-end
-            developer around Vancouver. Please free to contact me.
-          </p>
-        </ContactMeDescriptionStyle>
-        <ButtonContainerStyle className="contactMe__mailButton">
-          <ButtonStyle
-            href="mailto:kentos1112canada@gmail.com"
-            className={props.isLightMode ? "lightMode" : ""}
-          >
-            SAY HELLO
-          </ButtonStyle>
-        </ButtonContainerStyle>
-      </section>
-    </ContentWrapper>
+    <div id="contactme">
+      <ContentWrapper>
+        <section className="contactMe section">
+          <Title title="Contact" />
+          <div className="contactMe__iconsList">
+            <UlStyle className={props.isLightMode ? "lightMode" : ""}>
+              <li>
+                <a href="">
+                  <ion-icon name="call-outline"></ion-icon>
+                </a>
+              </li>
+              <li>
+                <a href="mailto:kentos1112canada@gmail.com">
+                  <ion-icon name="mail-outline"></ion-icon>
+                </a>
+              </li>
+              <li>
+                <a href="https://www.linkedin.com/in/kento-honda-342a7a227/">
+                  <i className="devicon-linkedin-plain"></i>
+                </a>
+              </li>
+              <li>
+                <a href="https://github.com/keento0809">
+                  <i className="devicon-github-original"></i>
+                </a>
+              </li>
+              <li>
+                <a href="">
+                  <i className="devicon-twitter-original"></i>
+                </a>
+              </li>
+            </UlStyle>
+          </div>
+          <ContactMeDescriptionStyle className="contactMe__description">
+            <p>
+              I'm always looking for opportunities to work as a front-end
+              developer around Vancouver. Please free to contact me.
+            </p>
+          </ContactMeDescriptionStyle>
+          <ButtonContainerStyle className="contactMe__mailButton">
+            <ButtonStyle
+              href="mailto:kentos1112canada@gmail.com"
+              className={props.isLightMode ? "lightMode" : ""}
+            >
+              SAY HELLO
+            </ButtonStyle>
+          </ButtonContainerStyle>
+        </section>
+      </ContentWrapper>
+    </div>
   );
 };
 

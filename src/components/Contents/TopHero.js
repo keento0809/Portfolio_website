@@ -28,6 +28,26 @@ const TopHeroWrapperStyle = styled.div`
   & p.nextToTitle {
     padding-bottom: 1rem;
   }
+
+  @media screen and (min-width: 767px) {
+    max-width: none;
+    min-height: 260px;
+  }
+
+  @media screen and (min-width: 1023px) {
+    min-height: 280px;
+
+    & p {
+      font-size: 24px;
+    }
+  }
+
+  @media screen and (min-width: 1300px) {
+    & h4 {
+      font-size: 6.5vw;
+      line-height: 6.5vw;
+    }
+  }
 `;
 
 const AtagStyle = styled.a`

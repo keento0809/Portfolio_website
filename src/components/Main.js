@@ -57,12 +57,14 @@ const Main = () => {
         isLightMode={isLightMode}
         setIsLightMode={setIsLightMode}
         isScrollingDown={isScrollingDown}
+        setIsScrollingDown={setIsScrollingDown}
         isAsideShown={isAsideShown}
         setIsAsideShown={setIsAsideShown}
       />
       <ContainerWrapper
         isAsideShown={isAsideShown}
         setIsAsideShown={setIsAsideShown}
+        isLightMode={isLightMode}
       >
         <TopHero isLightMode={isLightMode} />
         <AboutMe isLightMode={isLightMode} />

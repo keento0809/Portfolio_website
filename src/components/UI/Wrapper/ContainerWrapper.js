@@ -18,6 +18,7 @@ const ContainerWrapper = (props) => {
     <Fragment>
       {/* test */}
       <Backdrop
+        isLightMode={props.isLightMode}
         isAsideShown={props.isAsideShown}
         setIsAsideShown={props.setIsAsideShown}
       />

@@ -138,6 +138,10 @@ const NavUlStyle = styled.ul`
     padding: 0.5rem 1.3rem;
   }
 
+  &.lightMode li a {
+    color: #19224e;
+  }
+
   & li.active {
     font-size: 18px;
     transition: all 0.5s ease;
@@ -146,6 +150,10 @@ const NavUlStyle = styled.ul`
   & li.active a {
     border: 1px solid #8bfdfe;
     border-radius: 8px;
+  }
+
+  &.lightMode li.active a {
+    border-color: #19224e;
   }
 `;
 
@@ -232,7 +240,7 @@ const Header = (props) => {
           <span></span>
         </MenuButtonStyle>
         <NavMenuStyle className="header-nav">
-          <NavUlStyle>
+          <NavUlStyle className={props.isLightMode ? "lightMode" : ""}>
             <li
               className={isHome ? "active" : ""}
               onMouseOver={handleMouseOVer}
@@ -274,6 +282,7 @@ const Header = (props) => {
       <Aside
         isAsideShown={props.isAsideShown}
         setIsAsideShown={props.setIsAsideShown}
+        setIsScrollingDown={props.setIsScrollingDown}
         isLightMode={props.isLightMode}
       />
     </HeaderStyle>
