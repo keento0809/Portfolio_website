@@ -1,3 +1,28 @@
+export const specialtiesArr = [
+  { name: "React.js" },
+  { name: "Javascript(ES6)" },
+  { name: "Redux" },
+];
+export const frontEndLibrariesArr = [
+  { name: "HTML5/CSS3" },
+  { name: "Javascript(ES6)" },
+  { name: "React.js" },
+  { name: "Redux" },
+  { name: "SCSS/SASS" },
+  { name: "Material-UI" },
+  { name: "Tailwind-css" },
+  { name: "Styled-components" },
+  { name: "Responsible-Design" },
+];
+export const othersArr = [
+  { name: "Node.js" },
+  { name: "Express.js" },
+  { name: "Git/CLI" },
+  { name: "Firebase" },
+  { name: "RESTfulAPI" },
+  { name: "Figma" },
+];
+
 export const dummyPointsArr = [
   { text: "Great UI" },
   { text: "Great UX" },

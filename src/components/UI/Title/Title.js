@@ -10,6 +10,12 @@ const TitleStyle = styled.div`
     font-size: 8vw;
     line-height: 8vw;
   }
+  @media screen and (min-width: 767px) {
+    & h4 {
+      font-size: 4vw;
+      line-height: 4vw;
+    }
+  }
 `;
 
 const Title = (props) => {
