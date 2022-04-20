@@ -16,17 +16,22 @@ const BackdropStyle = styled.div`
     visibility: visible;
     display: block;
   }
+
+  &.lightMode {
+    background-color: rgba(255, 255, 255, 0.2);
+  }
 `;
 
 const Backdrop = (props) => {
   const handleCloseAside = () => {
-    console.log("Working ????");
     props.setIsAsideShown(false);
   };
 
   return (
     <BackdropStyle
-      className={`${props.isAsideShown ? "shown" : ""} バックドロップです`}
+      className={`${props.isAsideShown ? "shown" : ""} ${
+        props.isLightMode ? "lightMode" : ""
+      }`}
       onClick={handleCloseAside}
     >
       {props.children}

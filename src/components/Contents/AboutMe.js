@@ -28,41 +28,43 @@ const ImageStyle = styled.img`
 
 const AboutMe = (props) => {
   return (
-    <ContentWrapper>
-      <section id="aboutme" className="aboutMe section">
-        <Title className="これぞタイトル" title="About Me" />
-        <ProfileDivStyle className="aboutMe__picture">
-          <ImageStyle src={profileImage} alt="picture" />
-        </ProfileDivStyle>
-        <div className="aboutMe__description">
-          <AboutMeDescription isLightMode={props.isLightMode} />
-        </div>
-        <div className="skills">
-          <SkillSetList isLightMode={props.isLightMode} />
-        </div>
-        <div className="specialties">
-          <SpecialtyList
-            specialties={specialtiesArr}
-            isLightMode={props.isLightMode}
-            title="Specialties"
-          />
-        </div>
-        <div className="specialties">
-          <SpecialtyList
-            specialties={frontEndLibrariesArr}
-            isLightMode={props.isLightMode}
-            title="Front-End Libraries"
-          />
-        </div>
-        <div className="specialties">
-          <SpecialtyList
-            specialties={othersArr}
-            isLightMode={props.isLightMode}
-            title="Others"
-          />
-        </div>
-      </section>
-    </ContentWrapper>
+    <div id="aboutme">
+      <ContentWrapper>
+        <section className="aboutMe section">
+          <Title title="About Me" />
+          <ProfileDivStyle className="aboutMe__picture">
+            <ImageStyle src={profileImage} alt="picture" />
+          </ProfileDivStyle>
+          <div className="aboutMe__description">
+            <AboutMeDescription isLightMode={props.isLightMode} />
+          </div>
+          <div className="skills">
+            <SkillSetList isLightMode={props.isLightMode} />
+          </div>
+          <div className="specialties">
+            <SpecialtyList
+              specialties={specialtiesArr}
+              isLightMode={props.isLightMode}
+              title="Specialties"
+            />
+          </div>
+          <div className="specialties">
+            <SpecialtyList
+              specialties={frontEndLibrariesArr}
+              isLightMode={props.isLightMode}
+              title="Front-End Libraries"
+            />
+          </div>
+          <div className="specialties">
+            <SpecialtyList
+              specialties={othersArr}
+              isLightMode={props.isLightMode}
+              title="Others"
+            />
+          </div>
+        </section>
+      </ContentWrapper>
+    </div>
   );
 };
 
