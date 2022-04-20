@@ -1,5 +1,6 @@
 import { Fragment } from "react";
 import styled from "styled-components";
+import Backdrop from "../Backdrop/Backdrop";
 
 const ContainerWrapperStyle = styled.div`
   padding: 0 24px;
@@ -14,9 +15,16 @@ const ContainerWrapperStyle = styled.div`
 
 const ContainerWrapper = (props) => {
   return (
-    <ContainerWrapperStyle className={props.isAsideShown ? "shown" : ""}>
-      {props.children}
-    </ContainerWrapperStyle>
+    <Fragment>
+      {/* test */}
+      <Backdrop
+        isAsideShown={props.isAsideShown}
+        setIsAsideShown={props.setIsAsideShown}
+      />
+      <ContainerWrapperStyle className={props.isAsideShown ? "shown" : ""}>
+        {props.children}
+      </ContainerWrapperStyle>
+    </Fragment>
   );
 };
 

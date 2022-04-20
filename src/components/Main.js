@@ -60,7 +60,10 @@ const Main = () => {
         isAsideShown={isAsideShown}
         setIsAsideShown={setIsAsideShown}
       />
-      <ContainerWrapper isAsideShown={isAsideShown}>
+      <ContainerWrapper
+        isAsideShown={isAsideShown}
+        setIsAsideShown={setIsAsideShown}
+      >
         <TopHero isLightMode={isLightMode} />
         <AboutMe isLightMode={isLightMode} />
         <MyProject isLightMode={isLightMode} />
