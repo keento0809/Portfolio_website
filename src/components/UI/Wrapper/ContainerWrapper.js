@@ -7,6 +7,9 @@ const ContainerWrapperStyle = styled.div`
   &.shown {
     opacity: 0.5;
   }
+  @media screen and (min-width: 767px) {
+    padding: 0 56px;
+  }
 `;
 
 const ContainerWrapper = (props) => {

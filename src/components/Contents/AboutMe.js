@@ -6,6 +6,11 @@ import SpecialtyList from "../UI/List/SpecialtyList";
 import profileImage from "../../assets/images/prof-pic.jpg";
 import ContentWrapper from "../UI/Wrapper/ContentWrapper";
 import Title from "../UI/Title/Title";
+import {
+  specialtiesArr,
+  frontEndLibrariesArr,
+  othersArr,
+} from "../../data/data";
 
 const ProfileDivStyle = styled.div`
   width: 240px;
@@ -22,35 +27,10 @@ const ImageStyle = styled.img`
 `;
 
 const AboutMe = (props) => {
-  const specialtiesArr = [
-    { name: "React.js" },
-    { name: "Javascript(ES6)" },
-    { name: "Redux" },
-  ];
-  const frontEndLibrariesArr = [
-    { name: "HTML5/CSS3" },
-    { name: "Javascript(ES6)" },
-    { name: "React.js" },
-    { name: "Redux" },
-    { name: "SCSS/SASS" },
-    { name: "Material-UI" },
-    { name: "Tailwind-css" },
-    { name: "Styled-components" },
-    { name: "Responsible-Design" },
-  ];
-  const othersArr = [
-    { name: "Node.js" },
-    { name: "Express.js" },
-    { name: "Git/CLI" },
-    { name: "Firebase" },
-    { name: "RESTfulAPI" },
-    { name: "Figma" },
-  ];
-
   return (
     <ContentWrapper>
       <section id="aboutme" className="aboutMe section">
-        <Title title="About Me" />
+        <Title className="これぞタイトル" title="About Me" />
         <ProfileDivStyle className="aboutMe__picture">
           <ImageStyle src={profileImage} alt="picture" />
         </ProfileDivStyle>

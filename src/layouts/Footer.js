@@ -6,6 +6,7 @@ const FooterStyle = styled.footer`
   padding-bottom: 0.5rem;
   text-align: center;
   font-size: 12px;
+  letter-spacing: -0.5px;
 `;
 
 const Footer = () => {
