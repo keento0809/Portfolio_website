@@ -1,5 +1,6 @@
 import { Fragment } from "react";
 import styled from "styled-components";
+import Backdrop from "../Backdrop/Backdrop";
 
 const ContainerWrapperStyle = styled.div`
   padding: 0 24px;
@@ -15,6 +16,8 @@ const ContainerWrapperStyle = styled.div`
 const ContainerWrapper = (props) => {
   return (
     <ContainerWrapperStyle className={props.isAsideShown ? "shown" : ""}>
+      {/* test */}
+      <Backdrop isAsideShown={props.isAsideShown} />
       {props.children}
     </ContainerWrapperStyle>
   );

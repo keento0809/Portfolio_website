@@ -8,7 +8,7 @@ const HeaderStyle = styled.header`
   width: 100%;
   padding: 0 24px;
   height: 80px;
-  z-index: 11;
+  z-index: 10;
   opacity: 1;
   transform: none;
   transition: all 0.3s ease;
@@ -21,6 +21,10 @@ const HeaderStyle = styled.header`
 
   &.lightMode {
     background-color: #eff3ff;
+  }
+
+  @media screen and (min-width: 767px) {
+    padding: 0 56px;
   }
 `;
 
