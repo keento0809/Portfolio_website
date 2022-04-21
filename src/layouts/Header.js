@@ -47,6 +47,7 @@ const HeaderLeftStyle = styled.div`
 
   & ion-icon {
     padding-bottom: 1.6px;
+    cursor: pointer;
   }
 `;
 
@@ -197,10 +198,6 @@ const Header = (props) => {
     setIsContact(false);
     setIsResume(false);
   };
-
-  // useEffect(() => {
-  //   window.addEventListener
-  // },[])
 
   return (
     <HeaderStyle
