@@ -30,7 +30,7 @@ const MyProject = (props) => {
               points={freshMarchePointsArr}
               languages={freshMarcheToolsArr}
               gitHubUrl={"freshmarche"}
-              linkUrl={"https://devicon.dev/"}
+              linkUrl={"https://freshmarche.vercel.app/home"}
             />
             <Project
               isLightMode={props.isLightMode}
