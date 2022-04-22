@@ -56,9 +56,9 @@ export const portfolioWebsitePointsArr = [
 ];
 
 export const spotifyReplicaPointsArr = [
-  { text: "Optimize components to minimize workloads" },
-  { text: "Designed by styled-components, no css-frameworks" },
-  { text: "Enable to switch lightMode and DarkMode" },
+  { text: "Created and imitated the Spotify landingPage with normal CSS" },
+  { text: "Having Responsible-design with mediaQuery" },
+  { text: "Added some animations powered by Vanilla Javascript" },
 ];
 
 export const freshMarcheToolsArr = [

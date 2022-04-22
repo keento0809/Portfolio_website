@@ -12,6 +12,7 @@ import {
   my2048ToolsArr,
   portfolioWebsiteToolsArr,
   spotifyReplicaToolsArr,
+  spotifyReplicaPointsArr,
 } from "../../data/data";
 
 const MyProject = (props) => {
@@ -73,7 +74,7 @@ const MyProject = (props) => {
               summary={
                 "Simple but user-friendly portfolio website created by react.js and styled-components."
               }
-              points={dummyPointsArr}
+              points={spotifyReplicaPointsArr}
               languages={spotifyReplicaToolsArr}
               gitHubUrl={"Spotify_replica"}
               linkUrl={"https://keento0809.github.io/Spotify_replica/"}

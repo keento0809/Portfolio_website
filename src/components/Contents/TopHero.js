@@ -1,6 +1,7 @@
 import { Fragment } from "react";
 import styled from "styled-components";
 import classes from "../../styles/NeonText.module.css";
+import ButtonUI from "../UI/Button/Button";
 
 const TopHeroStyle = styled.div`
   min-height: 100vh;
@@ -77,17 +78,8 @@ const TopHero = (props) => {
           <p>Front-end Developer</p>
           <p>Based in Vancouver</p>
         </div>
-        {/* <div className="topHero__subDescription">
-          <p>"Being Passionate for better solutions"</p>
-        </div> */}
         <div className="toHero__button">
-          {/* <p>"Always Be Resilient"</p> */}
-          <AtagStyle
-            href="#aboutme"
-            className={props.isLightMode ? "lightMode" : ""}
-          >
-            Explore
-          </AtagStyle>
+          <ButtonUI label={"Explore"} url={"#aboutme"} />
         </div>
       </TopHeroWrapperStyle>
     </TopHeroStyle>
