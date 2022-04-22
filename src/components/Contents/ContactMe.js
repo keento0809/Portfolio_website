@@ -18,6 +18,19 @@ const UlStyle = styled.ul`
   &.lightMode a {
     color: #1b1f29;
   }
+
+  & ion-icon,
+  & i {
+    transform: none;
+    transition: all 0.5s ease;
+    display: inline-block;
+  }
+
+  & ion-icon:hover,
+  & i:hover {
+    transform: scale(1.2);
+    transition: all 0.5s ease;
+  }
 `;
 
 const ContactMeDescriptionStyle = styled.div`
@@ -89,6 +102,7 @@ const ContactMe = (props) => {
             <ButtonUI
               label={"SAT HELLO"}
               url={"mailto:kentos1112canada@gmail.com"}
+              isLightMode={props.isLightMode}
             />
           </ButtonContainerStyle>
         </section>

@@ -10,7 +10,7 @@ const TopHeroStyle = styled.div`
   justify-content: center;
   align-items: center;
   padding-bottom: 40px;
-  transition: all 0.3s ease;
+  transition: all 0.5s ease;
 `;
 
 const TopHeroWrapperStyle = styled.div`
@@ -79,7 +79,11 @@ const TopHero = (props) => {
           <p>Based in Vancouver</p>
         </div>
         <div className="toHero__button">
-          <ButtonUI label={"Explore"} url={"#aboutme"} />
+          <ButtonUI
+            isLightMode={props.isLightMode}
+            label={"Explore"}
+            url={"#aboutme"}
+          />
         </div>
       </TopHeroWrapperStyle>
     </TopHeroStyle>
