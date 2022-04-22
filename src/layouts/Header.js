@@ -47,6 +47,7 @@ const HeaderLeftStyle = styled.div`
 
   & ion-icon {
     padding-bottom: 1.6px;
+    cursor: pointer;
   }
 `;
 
@@ -165,12 +166,7 @@ const NavUlStyle = styled.ul`
 
 const Header = (props) => {
   const [isActive, setIsActive] = useState(false);
-
-  const [isHome, setIsHome] = useState(false);
-  const [isAboutMe, setIsAboutMe] = useState(false);
-  const [isProject, setIsProject] = useState(false);
-  const [isContact, setIsContact] = useState(false);
-  const [isResume, setIsResume] = useState(false);
+  const [targetValue, setTargetValue] = useState("");
 
   const handleToggleAside = () => {
     props.setIsAsideShown(!props.isAsideShown);
@@ -182,25 +178,33 @@ const Header = (props) => {
 
   const handleMouseOVer = (e) => {
     const target = e.target.innerText;
-    if (target === "Home") setIsHome(true);
-    if (target === "About Me") setIsAboutMe(true);
-    if (target === "Project") setIsProject(true);
-    if (target === "Contact") setIsContact(true);
-    if (target === "Resume") setIsResume(true);
+
+    if (target === "Home") {
+      setIsActive(true);
+      setTargetValue("Home");
+    }
+    if (target === "About Me") {
+      setIsActive(true);
+      setTargetValue("About Me");
+    }
+    if (target === "Project") {
+      setIsActive(true);
+      setTargetValue("Project");
+    }
+    if (target === "Contact") {
+      setIsActive(true);
+      setTargetValue("Contact");
+    }
+    if (target === "Resume") {
+      setIsActive(true);
+      setTargetValue("Resume");
+    }
   };
 
   const handleMouseOut = () => {
-    // test
-    setIsHome(false);
-    setIsAboutMe(false);
-    setIsProject(false);
-    setIsContact(false);
-    setIsResume(false);
+    setIsActive(false);
+    setTargetValue("");
   };
-
-  // useEffect(() => {
-  //   window.addEventListener
-  // },[])
 
   return (
     <HeaderStyle
@@ -242,35 +246,35 @@ const Header = (props) => {
         <NavMenuStyle className="header-nav">
           <NavUlStyle className={props.isLightMode ? "lightMode" : ""}>
             <li
-              className={isHome ? "active" : ""}
+              className={isActive && targetValue === "Home" ? "active" : ""}
               onMouseOver={handleMouseOVer}
               onMouseOut={handleMouseOut}
             >
               <a href="#home">Home</a>
             </li>
             <li
-              className={isAboutMe ? "active" : ""}
+              className={isActive && targetValue === "About Me" ? "active" : ""}
               onMouseOver={handleMouseOVer}
               onMouseOut={handleMouseOut}
             >
               <a href="#aboutme">About Me</a>
             </li>
             <li
-              className={isProject ? "active" : ""}
+              className={isActive && targetValue === "Project" ? "active" : ""}
               onMouseOver={handleMouseOVer}
               onMouseOut={handleMouseOut}
             >
               <a href="#myproject">Project</a>
             </li>
             <li
-              className={isContact ? "active" : ""}
+              className={isActive && targetValue === "Contact" ? "active" : ""}
               onMouseOver={handleMouseOVer}
               onMouseOut={handleMouseOut}
             >
               <a href="#contactme">Contact</a>
             </li>
             <li
-              className={isResume ? "active" : ""}
+              className={isActive && targetValue === "Resume" ? "active" : ""}
               onMouseOver={handleMouseOVer}
               onMouseOut={handleMouseOut}
             >
