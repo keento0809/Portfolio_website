@@ -8,7 +8,7 @@ const ButtonStyle = styled.a`
   padding: 0.6rem 1.7rem;
   border: 1px solid #8bfdfe;
   border-radius: 8px;
-  transition: all 0.3s ease;
+  transition: all 0.5s ease;
   transform: none;
 
   &:hover {
