@@ -2,6 +2,7 @@ import { Fragment } from "react";
 import styled from "styled-components";
 import Title from "../UI/Title/Title";
 import ContentWrapper from "../UI/Wrapper/ContentWrapper";
+import ButtonUI from "../UI/Button/Button";
 
 const UlStyle = styled.ul`
   margin: 0 auto;
@@ -85,12 +86,10 @@ const ContactMe = (props) => {
             </p>
           </ContactMeDescriptionStyle>
           <ButtonContainerStyle className="contactMe__mailButton">
-            <ButtonStyle
-              href="mailto:kentos1112canada@gmail.com"
-              className={props.isLightMode ? "lightMode" : ""}
-            >
-              SAY HELLO
-            </ButtonStyle>
+            <ButtonUI
+              label={"SAT HELLO"}
+              url={"mailto:kentos1112canada@gmail.com"}
+            />
           </ButtonContainerStyle>
         </section>
       </ContentWrapper>
