@@ -27,7 +27,7 @@ const AsideStyle = styled.aside`
 `;
 
 const AsideContainerStyle = styled.div`
-  min-height: 75%;
+  min-height: 65%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
