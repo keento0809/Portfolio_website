@@ -1,4 +1,5 @@
-import { Fragment } from "react";
+import React, { Fragment } from "react";
+import AnchorLink from "react-anchor-link-smooth-scroll";
 import styled from "styled-components";
 
 const AsideStyle = styled.aside`
@@ -48,6 +49,34 @@ const AsideContainerStyle = styled.div`
 
   & a {
     font-size: 20px;
+  }
+`;
+
+const LiStyle = styled.li`
+  & a {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    line-height: 20px;
+
+    & ion-icon {
+      font-size: 20px;
+      margin-right: 1rem;
+    }
+
+    & span {
+      padding-bottom: 1px;
+    }
+
+    & .resume {
+      width: 100%;
+      text-align: center;
+    }
+
+    &.lightMode {
+      color: #19224e;
+    }
   }
 `;
 
@@ -103,47 +132,46 @@ const Aside = (props) => {
             <h4>Menu</h4>
           </div>
           <ul className="aside-container__menuList">
-            <li className="menuBtns">
-              <AtagStyle
+            <LiStyle className="menuBtns">
+              <AnchorLink
                 className={props.isLightMode ? "lightMode" : ""}
                 href="#home"
                 onClick={handleLinkClick}
               >
                 <ion-icon name="home-outline"></ion-icon>
                 <span>Home</span>
-              </AtagStyle>
-            </li>
-            <li className="menuBtns">
-              <AtagStyle
+              </AnchorLink>
+            </LiStyle>
+            <LiStyle className="menuBtns">
+              <AnchorLink
                 className={props.isLightMode ? "lightMode" : ""}
                 href="#aboutme"
                 onClick={handleLinkClick}
               >
                 <ion-icon name="person-outline"></ion-icon>
-                {/* <ion-icon name="help-outline"></ion-icon> */}
                 <span>About Me</span>
-              </AtagStyle>
-            </li>
-            <li className="menuBtns">
-              <AtagStyle
+              </AnchorLink>
+            </LiStyle>
+            <LiStyle className="menuBtns">
+              <AnchorLink
                 className={props.isLightMode ? "lightMode" : ""}
                 href="#myproject"
                 onClick={handleLinkClick}
               >
                 <ion-icon name="folder-outline"></ion-icon>
                 <span>Project</span>
-              </AtagStyle>
-            </li>
-            <li className="menuBtns">
-              <AtagStyle
+              </AnchorLink>
+            </LiStyle>
+            <LiStyle className="menuBtns">
+              <AnchorLink
                 className={props.isLightMode ? "lightMode" : ""}
                 href="#contactme"
                 onClick={handleLinkClick}
               >
                 <ion-icon name="send-outline"></ion-icon>
                 <span>Contact</span>
-              </AtagStyle>
-            </li>
+              </AnchorLink>
+            </LiStyle>
           </ul>
         </div>
         <ResumeDivStyle className={props.isLightMode ? "lightMode" : ""}>
