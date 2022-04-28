@@ -107,7 +107,7 @@ const ContactMe = (props) => {
           </ContactMeDescriptionStyle>
           <ButtonContainerStyle className="contactMe__mailButton">
             <ButtonUI
-              label={"SAT HELLO"}
+              label={"SAY HELLO"}
               url={"mailto:kentos1112canada@gmail.com"}
               isLightMode={props.isLightMode}
             />

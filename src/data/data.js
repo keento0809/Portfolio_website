@@ -31,7 +31,7 @@ export const dummyPointsArr = [
 ];
 
 export const freshMarchePointsArr = [
-  { text: "Including the basic CRUD operations" },
+  { text: "Utilizing React-router routing multiple pages" },
   { text: "React's ContextAPI to manage app-wide states" },
   { text: "Authentications with Firebase Auth REST API" },
   { text: "Dummy checkout feature with stripe checkout-form" },
