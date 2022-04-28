@@ -25,7 +25,7 @@ const MyProject = (props) => {
     <div id="myproject">
       <ContentWrapper>
         <section className="myProject section">
-          <Title title="Project" />
+          <Title title="Project" isLightMode={props.isLightMode} />
           <ul>
             <Project
               isLightMode={props.isLightMode}

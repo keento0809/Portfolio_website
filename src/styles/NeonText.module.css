@@ -7,34 +7,25 @@
 .flux {
   font-family: neon;
   color: #426dfb;
-  font-size: 9vw;
-  line-height: 9vw;
-  text-shadow: 0 0 3vw #2356ff;
-  animation: flux 2s linear infinite;
-  -moz-animation: flux 2s linear infinite;
-  -webkit-animation: flux 2s linear infinite;
-  -o-animation: flux 2s linear infinite;
-}
-
-.flux.topHero {
-  font-family: neon;
-  color: #426dfb;
-  font-size: 9vw;
-  line-height: 9vw;
-  text-shadow: 0 0 3vw #2356ff;
-  animation: flux 2s linear infinite;
-  -moz-animation: flux 2s linear infinite;
-  -webkit-animation: flux 2s linear infinite;
-  -o-animation: flux 2s linear infinite;
   font-size: 11vw;
   line-height: 11vw;
+  text-shadow: 0 0 3vw #2356ff;
+  animation: flux 2s linear infinite;
+  -moz-animation: flux 2s linear infinite;
+  -webkit-animation: flux 2s linear infinite;
+  -o-animation: flux 2s linear infinite;
 }
 
-@media screen and (min-width: 768px) {
-  .flux.topHero {
-    font-size: 6vw;
-    line-height: 6vw;
-  }
+.fluxLight {
+  font-family: neon;
+  color: #426dfb;
+  font-size: 11vw;
+  line-height: 11vw;
+  text-shadow: 0 0 3vw #2356ff;
+  animation: fluxLight 2s linear infinite;
+  -moz-animation: fluxLight 2s linear infinite;
+  -webkit-animation: fluxLight 2s linear infinite;
+  -o-animation: fluxLight 2s linear infinite;
 }
 
 @keyframes flux {
@@ -48,5 +39,13 @@
     text-shadow: 0 0 0.5vw #082180, 0 0 1.5vw #082180, 0 0 5vw #082180,
       0 0 5vw #082180, 0 0 0.2vw #082180, 0.5vw 0.5vw 0.1vw #0a3940;
     color: #146c80;
+  }
+}
+@keyframes fluxLight {
+  0%,
+  100% {
+    text-shadow: 0 0 1vw #1041ff, 0 0 3vw #1041ff, 0 0 6.5vw #1041ff,
+      0 0 6.5vw #1041ff, 0 0 0.4vw #8bfdfe, 0.5vw 0.5vw 0.1vw #0a3940;
+    color: #28d7fe;
   }
 }

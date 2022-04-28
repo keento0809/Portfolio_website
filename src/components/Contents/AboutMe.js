@@ -31,7 +31,7 @@ const AboutMe = (props) => {
     <div id="aboutme">
       <ContentWrapper>
         <section className="aboutMe section">
-          <Title title="About Me" />
+          <Title title="About Me" isLightMode={props.isLightMode} />
           <ProfileDivStyle className="aboutMe__picture">
             <ImageStyle src={profileImage} alt="picture" />
           </ProfileDivStyle>

@@ -69,7 +69,7 @@ const ContactMe = (props) => {
     <div id="contactme">
       <ContentWrapper>
         <section className="contactMe section">
-          <Title title="Contact" />
+          <Title title="Contact" isLightMode={props.isLightMode} />
           <div className="contactMe__iconsList">
             <UlStyle className={props.isLightMode ? "lightMode" : ""}>
               <li>

@@ -21,7 +21,13 @@ const TitleStyle = styled.div`
 const Title = (props) => {
   return (
     <TitleStyle>
-      <h4 className={`${classes.flux} ${props.className}`}>{props.title}</h4>
+      <h4
+        className={`${props.isLightMode ? classes.fluxLight : classes.flux} ${
+          props.className
+        }`}
+      >
+        {props.title}
+      </h4>
     </TitleStyle>
   );
 };
