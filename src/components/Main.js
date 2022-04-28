@@ -15,6 +15,7 @@ const Main = () => {
   const [isLightMode, setIsLightMode] = useState(false);
   const [isScrollingDown, setIsScrollingDown] = useState(false);
   const [isAsideShown, setIsAsideShown] = useState(false);
+  const [isTopBtnActive, setIsTopBtnActive] = useState(false);
 
   let lastScrollY;
   let timeout;
@@ -25,6 +26,10 @@ const Main = () => {
     timeout = setTimeout(() => {
       timeout = 0;
       let currentScrollY = window.scrollY;
+
+      if (window.innerWidth > 1023 && currentScrollY > 900) {
+        if (!isTopBtnActive) setIsTopBtnActive(true);
+      } else setIsTopBtnActive(false);
 
       if (currentScrollY === 0) setIsScrollingDown(false);
       if (currentScrollY > lastScrollY) {
@@ -45,7 +50,6 @@ const Main = () => {
   }, []);
 
   useEffect(() => {
-    // original code
     window.addEventListener("scroll", handleScroll);
   }, [isScrollingDown]);
 
@@ -72,7 +76,10 @@ const Main = () => {
         <MyProject isLightMode={isLightMode} />
         <ContactMe isLightMode={isLightMode} />
         <Footer isLightMode={isLightMode} />
-        <BackToTopButton isLightMode={isLightMode} />
+        <BackToTopButton
+          isLightMode={isLightMode}
+          isTopBtnActive={isTopBtnActive}
+        />
       </ContainerWrapper>
     </div>
   );
