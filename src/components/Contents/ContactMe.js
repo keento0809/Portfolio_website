@@ -3,6 +3,7 @@ import styled from "styled-components";
 import Title from "../UI/Title/Title";
 import ContentWrapper from "../UI/Wrapper/ContentWrapper";
 import ButtonUI from "../UI/Button/Button";
+import ReactTooltip from "react-tooltip";
 
 const UlStyle = styled.ul`
   margin: 0 auto;
@@ -35,6 +36,12 @@ const UlStyle = styled.ul`
 
 const ContactMeDescriptionStyle = styled.div`
   padding: 2rem 0.5rem;
+  text-align: center;
+
+  @media screen and (min-width: 617px) {
+    width: 60%;
+    margin: 0 auto;
+  }
 `;
 
 const ButtonContainerStyle = styled.div`
@@ -95,7 +102,7 @@ const ContactMe = (props) => {
           <ContactMeDescriptionStyle className="contactMe__description">
             <p>
               I'm always looking for opportunities to work as a front-end
-              developer around Vancouver. Please free to contact me.
+              developer. Please free to contact me.
             </p>
           </ContactMeDescriptionStyle>
           <ButtonContainerStyle className="contactMe__mailButton">
@@ -107,6 +114,7 @@ const ContactMe = (props) => {
           </ButtonContainerStyle>
         </section>
       </ContentWrapper>
+      {/* test */}
     </div>
   );
 };

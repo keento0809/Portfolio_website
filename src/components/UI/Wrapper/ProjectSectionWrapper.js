@@ -2,7 +2,7 @@ import { Fragment } from "react";
 import styled from "styled-components";
 
 const ProjectSectionWrapperStyle = styled.div`
-  padding: 20px 0;
+  padding: 0;
 `;
 
 const ProjectSectionWrapper = (props) => {

@@ -1,8 +1,9 @@
 import styled from "styled-components";
 import ProjectSectionWrapper from "../Wrapper/ProjectSectionWrapper";
+import imageUrl from "../../../assets/images/portfolio-website-lp.png";
 
 const ProjectSummaryWrapper = styled.div`
-  padding-bottom: 2rem;
+  padding-bottom: 1rem;
 
   & p {
     color: #94a3b8;
@@ -10,6 +11,35 @@ const ProjectSummaryWrapper = styled.div`
 
   &.lightMode p {
     color: #656e7b;
+  }
+`;
+
+const ImageDivStyle = styled.div`
+  position: relative;
+  margin: 0.1rem 0 1rem;
+  width: 302px;
+  height: 220px;
+
+  & .imageBackdrop {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: rgba(5, 7, 16, 0.5);
+    z-index: 4;
+    border-radius: 8px;
+
+    &.lightMode {
+      background-color: rgb(187 189 194 / 50%);
+    }
+  }
+
+  & img {
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    object-fit: contain;
   }
 `;
 
@@ -42,7 +72,14 @@ const ProjectDescription = (props) => {
 
   return (
     <ProjectSectionWrapper>
-      <div className="">
+      <div className="とりまっか">
+        {/* test */}
+        <ImageDivStyle className="">
+          <div
+            className={`${props.isLightMode ? "lightMode" : ""} imageBackdrop`}
+          ></div>
+          <img src={`${props.imageUrl}`} alt="" width="300px" height="250px" />
+        </ImageDivStyle>
         <ProjectSummaryWrapper
           className={`${
             props.isLightMode ? "lightMode" : ""
@@ -50,6 +87,7 @@ const ProjectDescription = (props) => {
         >
           <p>{props.summary}</p>
         </ProjectSummaryWrapper>
+
         <div className="MyProjectDescription-body">
           <ul>{pointsList}</ul>
         </div>

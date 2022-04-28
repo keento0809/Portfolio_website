@@ -3,6 +3,7 @@ import styled from "styled-components";
 import ProjectSectionWrapper from "../Wrapper/ProjectSectionWrapper";
 
 const UlStyle = styled.ul`
+  padding-left: 1rem;
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
@@ -10,7 +11,11 @@ const UlStyle = styled.ul`
   transition: all 0.5s ease;
 
   & li {
+    min-width: 60px;
     padding: 0.8rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
   &.lightMode a {

@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import Aside from "./Aside";
+import AnchorLink from "react-anchor-link-smooth-scroll";
 import styled from "styled-components";
 
 const HeaderStyle = styled.header`
@@ -250,35 +251,35 @@ const Header = (props) => {
               onMouseOver={handleMouseOVer}
               onMouseOut={handleMouseOut}
             >
-              <a href="#home">Home</a>
+              <AnchorLink href="#home">Home</AnchorLink>
             </li>
             <li
               className={isActive && targetValue === "About Me" ? "active" : ""}
               onMouseOver={handleMouseOVer}
               onMouseOut={handleMouseOut}
             >
-              <a href="#aboutme">About Me</a>
+              <AnchorLink href="#aboutme">About Me</AnchorLink>
             </li>
             <li
               className={isActive && targetValue === "Project" ? "active" : ""}
               onMouseOver={handleMouseOVer}
               onMouseOut={handleMouseOut}
             >
-              <a href="#myproject">Project</a>
+              <AnchorLink href="#myproject">Project</AnchorLink>
             </li>
             <li
               className={isActive && targetValue === "Contact" ? "active" : ""}
               onMouseOver={handleMouseOVer}
               onMouseOut={handleMouseOut}
             >
-              <a href="#contactme">Contact</a>
+              <AnchorLink href="#contactme">Contact</AnchorLink>
             </li>
             <li
               className={isActive && targetValue === "Resume" ? "active" : ""}
               onMouseOver={handleMouseOVer}
               onMouseOut={handleMouseOut}
             >
-              <a href="">Resume</a>
+              <AnchorLink href="">Resume</AnchorLink>
             </li>
           </NavUlStyle>
         </NavMenuStyle>

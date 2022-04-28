@@ -1,4 +1,5 @@
 import Main from "./components/Main";
+import ReactTooltip from "react-tooltip";
 
 function App() {
   return (

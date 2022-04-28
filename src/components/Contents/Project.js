@@ -19,10 +19,8 @@ const Project = (props) => {
           summary={props.summary}
           isLightMode={props.isLightMode}
           points={props.points}
+          imageUrl={props.imageUrl}
         />
-        <div className="project-image">
-          <img src={props.imageUrl} alt="" />
-        </div>
         <LanguageList languages={props.languages} />
         <LinkIconsList
           isLightMode={props.isLightMode}

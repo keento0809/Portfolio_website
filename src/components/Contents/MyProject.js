@@ -14,6 +14,11 @@ import {
   spotifyReplicaToolsArr,
   spotifyReplicaPointsArr,
 } from "../../data/data";
+import freshMarcheImageUrl from "../../assets/images/freshMarche-lp.png";
+import reduxTodoImageUrl from "../../assets/images/reduxTodo-lp.png";
+import my2048ImageUrl from "../../assets/images/my2048-lp.png";
+import portfolioImageUrl from "../../assets/images/portfolio-website-lp.png";
+import spotifyReplicaUrl from "../../assets/images/spotify-replica-lp.png";
 
 const MyProject = (props) => {
   return (
@@ -32,6 +37,7 @@ const MyProject = (props) => {
               languages={freshMarcheToolsArr}
               gitHubUrl={"freshmarche"}
               linkUrl={"https://freshmarche.vercel.app/home"}
+              imageUrl={`${freshMarcheImageUrl}`}
             />
             <Project
               isLightMode={props.isLightMode}
@@ -43,6 +49,7 @@ const MyProject = (props) => {
               languages={reduxTodoToolsArr}
               gitHubUrl={"ReduxTodo"}
               linkUrl={"https://redux-todo-i9cko6vjw-keento0809.vercel.app/"}
+              imageUrl={`${reduxTodoImageUrl}`}
             />
             <Project
               isLightMode={props.isLightMode}
@@ -54,6 +61,7 @@ const MyProject = (props) => {
               languages={my2048ToolsArr}
               gitHubUrl={"my2048"}
               linkUrl={"https://my2048-keento0809.netlify.app/"}
+              imageUrl={`${my2048ImageUrl}`}
             />
             <Project
               isLightMode={props.isLightMode}
@@ -67,6 +75,7 @@ const MyProject = (props) => {
               linkUrl={
                 "https://portfolio-website-9mtqqzzg9-keento0809.vercel.app/"
               }
+              imageUrl={`${portfolioImageUrl}`}
             />
             <Project
               isLightMode={props.isLightMode}
@@ -78,6 +87,7 @@ const MyProject = (props) => {
               languages={spotifyReplicaToolsArr}
               gitHubUrl={"Spotify_replica"}
               linkUrl={"https://keento0809.github.io/Spotify_replica/"}
+              imageUrl={`${spotifyReplicaUrl}`}
             />
           </ul>
         </section>
