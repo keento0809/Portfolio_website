@@ -11,6 +11,10 @@ const BackToTopBtnStyle = styled.div`
   opacity: 0;
   transition: all 0.3s ease;
 
+  &.lightMode {
+    background-color: #eff3ff;
+  }
+
   @media screen and (min-width: 1023px) {
     &.active {
       transform: none;
@@ -22,7 +26,11 @@ const BackToTopBtnStyle = styled.div`
 
 const BackToTopButton = (props) => {
   return (
-    <BackToTopBtnStyle className={props.isTopBtnActive ? "active" : ""}>
+    <BackToTopBtnStyle
+      className={`${props.isTopBtnActive ? "active" : ""} ${
+        props.isLightMode ? "lightMode" : ""
+      }`}
+    >
       <ButtonUI isLightMode={props.isLightMode} label={"TOP"} url={"#home"} />
     </BackToTopBtnStyle>
   );
