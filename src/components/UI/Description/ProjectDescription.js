@@ -1,6 +1,5 @@
 import styled from "styled-components";
 import ProjectSectionWrapper from "../Wrapper/ProjectSectionWrapper";
-import imageUrl from "../../../assets/images/portfolio-website-lp.png";
 
 const ProjectSummaryWrapper = styled.div`
   padding-bottom: 1rem;
