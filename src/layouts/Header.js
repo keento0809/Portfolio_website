@@ -138,6 +138,7 @@ const NavUlStyle = styled.ul`
 
   & li a {
     padding: 0.5rem 1.3rem;
+    /* border: 1px solid #050710; */
   }
 
   &.lightMode li a {
@@ -146,6 +147,7 @@ const NavUlStyle = styled.ul`
 
   & li.active {
     font-size: 18px;
+    border-color: #8bfdfe;
     transition: all 0.5s ease;
   }
 

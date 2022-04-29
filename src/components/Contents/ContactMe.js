@@ -3,7 +3,6 @@ import styled from "styled-components";
 import Title from "../UI/Title/Title";
 import ContentWrapper from "../UI/Wrapper/ContentWrapper";
 import ButtonUI from "../UI/Button/Button";
-import ReactTooltip from "react-tooltip";
 
 const UlStyle = styled.ul`
   margin: 0 auto;

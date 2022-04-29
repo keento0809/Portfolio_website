@@ -23,7 +23,7 @@ const SkillIconsStyle = styled.div`
 const SkillSetList = (props) => {
   return (
     <ProjectSectionWrapper>
-      <h2>SKILL SET</h2>
+      <h2>SKILL SETS</h2>
       <SkillIconsStyle
         className={`${
           props.isLightMode ? "lightMode" : ""

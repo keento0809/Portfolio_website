@@ -12,8 +12,8 @@ const TitleStyle = styled.div`
   }
   @media screen and (min-width: 767px) {
     & h4 {
-      font-size: 4vw;
-      line-height: 4vw;
+      font-size: 5vw;
+      line-height: 5vw;
     }
   }
 `;

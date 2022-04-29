@@ -6,12 +6,12 @@ import styled from "styled-components";
 
 const ListStyle = styled.li`
   margin-bottom: 24px;
-  min-height: 900px;
+  /* min-height: 900px; */
   background-color: #1b1f29;
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  padding-top: 2rem;
+  padding-top: 1rem;
   border-radius: 8px;
 
   &.lightMode {
@@ -19,7 +19,7 @@ const ListStyle = styled.li`
   }
 
   @media screen and (min-width: 768px) {
-    min-height: 800px;
+    /* min-height: 800px; */
   }
 `;
 
