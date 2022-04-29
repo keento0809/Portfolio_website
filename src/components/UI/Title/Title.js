@@ -12,8 +12,8 @@ const TitleStyle = styled.div`
   }
   @media screen and (min-width: 767px) {
     & h4 {
-      font-size: 4vw;
-      line-height: 4vw;
+      font-size: 5vw;
+      line-height: 5vw;
     }
   }
 `;
@@ -21,7 +21,13 @@ const TitleStyle = styled.div`
 const Title = (props) => {
   return (
     <TitleStyle>
-      <h4 className={`${classes.flux} ${props.className}`}>{props.title}</h4>
+      <h4
+        className={`${props.isLightMode ? classes.fluxLight : classes.flux} ${
+          props.className
+        }`}
+      >
+        {props.title}
+      </h4>
     </TitleStyle>
   );
 };

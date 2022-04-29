@@ -31,6 +31,8 @@
 }
 
 .load div {
+  /* will-change: animation, -o-animation, -moz-animation, -webkit-animation,
+    transform, -o-transform, -moz-transform, -webkit-transform; */
   font-size: 20px;
   position: absolute;
   width: 20px;

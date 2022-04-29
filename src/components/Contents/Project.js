@@ -6,15 +6,36 @@ import styled from "styled-components";
 
 const ListStyle = styled.li`
   margin-bottom: 24px;
+  /* min-height: 900px; */
+  background-color: #1b1f29;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding-top: 1rem;
+  border-radius: 8px;
+
+  &.lightMode {
+    background-color: #e7edff;
+  }
+
+  @media screen and (min-width: 768px) {
+    /* min-height: 800px; */
+  }
+`;
+
+const ProjectTitleStyle = styled.div`
+  & h2 {
+    font-size: 1.7rem;
+  }
 `;
 
 const Project = (props) => {
   return (
-    <ListStyle>
+    <ListStyle className={props.isLightMode ? "lightMode" : ""}>
       <MyProjectContainer isLightMode={props.isLightMode}>
-        <div className="project-title">
+        <ProjectTitleStyle className="project-title">
           <h2>{props.projectTitle}</h2>
-        </div>
+        </ProjectTitleStyle>
         <ProjectDescription
           summary={props.summary}
           isLightMode={props.isLightMode}

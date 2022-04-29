@@ -1,7 +1,10 @@
 import { Fragment } from "react";
+import React from "react";
+import ReactDOM from "react-dom";
+import ReactTooltip from "react-tooltip";
 import styled from "styled-components";
 import ProjectSectionWrapper from "../Wrapper/ProjectSectionWrapper";
-import ReactTooltip from "react-tooltip";
+// import ReactTooltip from "react-tooltip";
 
 const UlStyle = styled.ul`
   display: flex;
@@ -38,13 +41,10 @@ const LanguageList = (props) => {
             className={`devicon-${lan.name}-${
               lan.type === "original" ? "original" : "plain"
             }`}
-            data-tip
-            // data-event="click"
-            data-event-off="mouseleave"
-            data-for={`${lan.name}-${index}`}
           ></i>
         </LanguageLiStyle>
-        <ReactTooltip
+        {/* <ReactTooltip /> */}
+        {/* <ReactTooltip
           // key={`${lan.name}-${index}`}
           id={`${lan.name}-${index}`}
           // ref={(el) => (this.tooltip = el)}
@@ -58,7 +58,7 @@ const LanguageList = (props) => {
           }}
         >
           <span>{`${lan.name}`}</span>
-        </ReactTooltip>
+        </ReactTooltip> */}
       </Fragment>
     );
   });
@@ -66,8 +66,9 @@ const LanguageList = (props) => {
   return (
     <ProjectSectionWrapper>
       <div className="languages">
-        <h3>Tools</h3>
+        <h3 data-tip="hello world">Tools</h3>
         <UlStyle className="skill-icons">{languageList}</UlStyle>
+        <ReactTooltip />
       </div>
     </ProjectSectionWrapper>
   );

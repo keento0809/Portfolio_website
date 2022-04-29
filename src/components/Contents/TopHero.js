@@ -33,10 +33,20 @@ const TopHeroWrapperStyle = styled.div`
   @media screen and (min-width: 767px) {
     max-width: none;
     min-height: 260px;
+
+    & h4 {
+      font-size: 9vw;
+      line-height: 9vw;
+    }
   }
 
   @media screen and (min-width: 1023px) {
     min-height: 280px;
+
+    & h4 {
+      font-size: 7.5vw;
+      line-height: 7.5vw;
+    }
 
     & p {
       font-size: 24px;
@@ -44,39 +54,51 @@ const TopHeroWrapperStyle = styled.div`
   }
 
   @media screen and (min-width: 1300px) {
+    min-height: 300px;
+
     & h4 {
-      font-size: 6.5vw;
-      line-height: 6.5vw;
+      font-size: 8vw;
+      line-height: 8vw;
     }
   }
 `;
 
-const AtagStyle = styled.a`
-  font-size: 14px;
-  display: inline-block;
-  padding: 0.5rem 1.8rem;
-  margin-top: 1rem;
-  font-weight: bold;
-  border: 2px solid #8bfdfe;
-  border-radius: 8px;
+// const AtagStyle = styled.a`
+//   font-size: 14px;
+//   display: inline-block;
+//   padding: 0.5rem 1.8rem;
+//   margin-top: 1rem;
+//   font-weight: bold;
+//   border: 2px solid #8bfdfe;
+//   border-radius: 8px;
 
-  &.lightMode {
-    border-color: #19224e;
-    color: #19224e;
-  }
-`;
+//   &.lightMode {
+//     border-color: #19224e;
+//     color: #19224e;
+//   }
+// `;
 
 const TopHero = (props) => {
+  console.log(props.isLightMode);
+
   return (
     <TopHeroStyle id="home">
       <TopHeroWrapperStyle className="topHero__wrapper">
         <div>
           <p className="nextToTitle">Hello, I'm</p>
-          <h4 className={classes.flux}>KENTO</h4>
+          <h4
+            className={`${
+              props.isLightMode ? `${classes.fluxLight}` : `${classes.flux}`
+            }`}
+          >
+            KENTO
+          </h4>
         </div>
         <div className="topHero__mainDescription">
           <p>Front-end Developer</p>
           <p>Based in Vancouver</p>
+          {/* test */}
+          {/* <p>Front-end Developer Based in Vancouver</p> */}
         </div>
         <div className="toHero__button">
           <ButtonUI

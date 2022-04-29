@@ -26,12 +26,16 @@ const ImageStyle = styled.img`
   box-shadow: 0px 0px 14px 4px #4a4a4a;
 `;
 
+const SpecialtiesStyle = styled.div`
+  padding-bottom: 1rem;
+`;
+
 const AboutMe = (props) => {
   return (
     <div id="aboutme">
       <ContentWrapper>
         <section className="aboutMe section">
-          <Title title="About Me" />
+          <Title title="About Me" isLightMode={props.isLightMode} />
           <ProfileDivStyle className="aboutMe__picture">
             <ImageStyle src={profileImage} alt="picture" />
           </ProfileDivStyle>
@@ -41,27 +45,27 @@ const AboutMe = (props) => {
           <div className="skills">
             <SkillSetList isLightMode={props.isLightMode} />
           </div>
-          <div className="specialties">
+          <SpecialtiesStyle className="specialties">
             <SpecialtyList
               specialties={specialtiesArr}
               isLightMode={props.isLightMode}
               title="Specialties"
             />
-          </div>
-          <div className="specialties">
+          </SpecialtiesStyle>
+          <SpecialtiesStyle className="specialties">
             <SpecialtyList
               specialties={frontEndLibrariesArr}
               isLightMode={props.isLightMode}
               title="Front-End Libraries"
             />
-          </div>
-          <div className="specialties">
+          </SpecialtiesStyle>
+          <SpecialtiesStyle className="specialties">
             <SpecialtyList
               specialties={othersArr}
               isLightMode={props.isLightMode}
               title="Others"
             />
-          </div>
+          </SpecialtiesStyle>
         </section>
       </ContentWrapper>
     </div>
