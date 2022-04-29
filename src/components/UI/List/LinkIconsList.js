@@ -11,7 +11,7 @@ const UlStyle = styled.ul`
   transition: all 0.5s ease;
 
   & li {
-    min-width: 60px;
+    min-width: 57px;
     padding: 0.8rem;
     display: flex;
     justify-content: center;
