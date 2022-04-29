@@ -3,13 +3,17 @@ import styled from "styled-components";
 
 const HobbySentenceStyle = styled.p`
   color: #94a3b8;
+
+  &.lightMode {
+    color: #393e46;
+  }
 `;
 
 const UlStyle = styled.ul`
   padding: 1.5rem 0;
 
   & li {
-    padding-bottom: 0.4rem;
+    padding-bottom: 1rem;
   }
 `;
 
@@ -28,11 +32,11 @@ const HobbyOutlineStyle = styled.div`
   }
 `;
 
-const HobbyDescription = () => {
+const HobbyDescription = (props) => {
   return (
     <ProjectSectionWrapper>
       <h2>Hobbies</h2>
-      <HobbySentenceStyle>
+      <HobbySentenceStyle className={props.isLightMode ? "lightMode" : ""}>
         Aside from things regarding my skills, I would like to introduce what I
         love to do a little.
       </HobbySentenceStyle>
@@ -45,7 +49,7 @@ const HobbyDescription = () => {
               I'm a <strong>"Travel lover"</strong>.
             </h3>
           </HobbyOutlineStyle>
-          <HobbySentenceStyle>
+          <HobbySentenceStyle className={props.isLightMode ? "lightMode" : ""}>
             I've been to 16 countries and regions to explore something new and
             enjoy the adventures.
           </HobbySentenceStyle>
@@ -58,7 +62,7 @@ const HobbyDescription = () => {
               I'm a <strong>"Sports lover"</strong>.
             </h3>
           </HobbyOutlineStyle>
-          <HobbySentenceStyle>
+          <HobbySentenceStyle className={props.isLightMode ? "lightMode" : ""}>
             Watching any kinds of sports on live is always fun for me,
             especially baseball and handball.
           </HobbySentenceStyle>
@@ -71,7 +75,7 @@ const HobbyDescription = () => {
               I'm a <strong>"Movie lover"</strong>.
             </h3>
           </HobbyOutlineStyle>
-          <HobbySentenceStyle>
+          <HobbySentenceStyle className={props.isLightMode ? "lightMode" : ""}>
             I've watched various types of movies including Japanese Studio
             Ghibli movies.
           </HobbySentenceStyle>
