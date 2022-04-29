@@ -5,6 +5,7 @@ import SkillSetList from "../UI/List/SkillSetList";
 import SpecialtyList from "../UI/List/SpecialtyList";
 import profileImage from "../../assets/images/prof-pic.jpg";
 import ContentWrapper from "../UI/Wrapper/ContentWrapper";
+import HobbyDescription from "../UI/Description/HobbyDescription";
 import Title from "../UI/Title/Title";
 import {
   specialtiesArr,
@@ -66,6 +67,7 @@ const AboutMe = (props) => {
               title="Others"
             />
           </SpecialtiesStyle>
+          <HobbyDescription />
         </section>
       </ContentWrapper>
     </div>
