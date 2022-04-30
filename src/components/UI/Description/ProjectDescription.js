@@ -30,7 +30,7 @@ const ImageDivStyle = styled.div`
     border-radius: 8px;
 
     &.lightMode {
-      background-color: rgb(187 189 194 / 50%);
+      background-color: rgb(187 189 194 / 60%);
     }
   }
 
@@ -39,6 +39,15 @@ const ImageDivStyle = styled.div`
     height: 100%;
     border-radius: 8px;
     object-fit: contain;
+  }
+
+  @media screen and (min-width: 768px) {
+    width: 560px;
+    height: 320px;
+  }
+  @media screen and (min-width: 1023px) {
+    width: 600px;
+    height: 340px;
   }
 `;
 

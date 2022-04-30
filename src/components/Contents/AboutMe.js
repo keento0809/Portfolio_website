@@ -67,7 +67,7 @@ const AboutMe = (props) => {
               title="Others"
             />
           </SpecialtiesStyle>
-          <HobbyDescription />
+          <HobbyDescription isLightMode={props.isLightMode} />
         </section>
       </ContentWrapper>
     </div>

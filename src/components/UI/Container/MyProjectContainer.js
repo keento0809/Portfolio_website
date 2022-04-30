@@ -13,7 +13,7 @@ const PaperStyle = styled.div`
   }
 
   @media screen and (min-width: 768px) {
-    min-height: 800px;
+    /* min-height: 800px; */
   }
 `;
 
