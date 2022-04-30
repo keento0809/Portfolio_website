@@ -3,9 +3,11 @@ export const specialtiesArr = [
   { name: "Javascript(ES6)" },
   { name: "Redux" },
 ];
+
 export const frontEndLibrariesArr = [
   { name: "HTML5/CSS3" },
   { name: "Javascript(ES6)" },
+  { name: "Typescript" },
   { name: "React.js" },
   { name: "Redux" },
   { name: "SCSS/SASS" },
@@ -14,6 +16,7 @@ export const frontEndLibrariesArr = [
   { name: "Styled-components" },
   { name: "Responsible-Design" },
 ];
+
 export const othersArr = [
   { name: "Node.js" },
   { name: "Express.js" },

@@ -57,14 +57,14 @@ const AboutMe = (props) => {
             <SpecialtyList
               specialties={frontEndLibrariesArr}
               isLightMode={props.isLightMode}
-              title="Front-End Libraries"
+              title="Front-End Tools"
             />
           </SpecialtiesStyle>
           <SpecialtiesStyle className="specialties">
             <SpecialtyList
               specialties={othersArr}
               isLightMode={props.isLightMode}
-              title="Others"
+              title="Other Tools"
             />
           </SpecialtiesStyle>
           <HobbyDescription isLightMode={props.isLightMode} />
