@@ -2,6 +2,8 @@ import { useState, useEffect } from "react";
 import Aside from "./Aside";
 import AnchorLink from "react-anchor-link-smooth-scroll";
 import styled from "styled-components";
+import iconUrlDark from "../assets/images/icon-32x32.png";
+import iconUrlLight from "../assets/images/icon-32x32-light.png";
 
 const HeaderStyle = styled.header`
   position: fixed;
@@ -55,6 +57,11 @@ const HeaderLeftStyle = styled.div`
 const LogoStyle = styled.span`
   display: inline-block;
   padding-right: 20px;
+  cursor: pointer;
+
+  & img {
+    display: block;
+  }
 `;
 
 const MenuButtonStyle = styled.div`
@@ -161,12 +168,6 @@ const NavUlStyle = styled.ul`
   }
 `;
 
-// styled-components end up here.
-//
-//
-//
-//
-
 const Header = (props) => {
   const [isActive, setIsActive] = useState(false);
   const [targetValue, setTargetValue] = useState("");
@@ -227,7 +228,13 @@ const Header = (props) => {
             }}
           >
             <LogoStyle id="logoBtn" className="header__nav__logo">
-              LOGO
+              {/* LOGO */}
+              <AnchorLink href="#home">
+                <img
+                  src={props.isLightMode ? `${iconUrlLight}` : `${iconUrlDark}`}
+                  alt=""
+                />
+              </AnchorLink>
             </LogoStyle>
             <ion-icon
               name="contrast-outline"
