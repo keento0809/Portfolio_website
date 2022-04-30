@@ -36,6 +36,7 @@ const NavStyle = styled.nav`
   justify-content: space-between;
   align-items: center;
   line-height: 80px;
+  height: 80px;
 
   & .header__nav__logo {
     font-size: 24px;
@@ -54,10 +55,15 @@ const HeaderLeftStyle = styled.div`
   }
 `;
 
-const LogoStyle = styled.span`
+// test span
+const LogoStyle = styled.div`
   display: inline-block;
   padding-right: 20px;
   cursor: pointer;
+
+  & a {
+    display: block;
+  }
 
   & img {
     display: block;
