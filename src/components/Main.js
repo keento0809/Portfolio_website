@@ -55,7 +55,9 @@ const Main = () => {
 
   return (
     <div
-      className={`${classes.global} ${isLightMode ? classes.lightMode : ""}`}
+      className={`${classes.global} ${isLightMode ? classes.lightMode : ""} ${
+        !isLoading && classes.testingOpacity
+      }`}
     >
       {isLoading && <Loader />}
       <Header

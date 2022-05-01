@@ -9,3 +9,18 @@
   color: #19224e;
   transition: all 0.3s ease;
 }
+
+.testingOpacity {
+  animation: testOpacity;
+  animation-duration: 1.8s;
+  animation-timing-function: ease;
+}
+
+@keyframes testOpacity {
+  0% {
+    opacity: 0.6;
+  }
+  100% {
+    opacity: 1;
+  }
+}
