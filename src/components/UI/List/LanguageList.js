@@ -3,6 +3,7 @@ import React from "react";
 import ReactTooltip from "react-tooltip";
 import styled from "styled-components";
 import ProjectSectionWrapper from "../Wrapper/ProjectSectionWrapper";
+import { Tooltip } from "@mui/material";
 
 const UlStyle = styled.ul`
   display: flex;
@@ -35,11 +36,13 @@ const LanguageList = (props) => {
     return (
       <Fragment>
         <LanguageLiStyle key={index}>
-          <i
-            className={`devicon-${lan.name}-${
-              lan.type === "original" ? "original" : "plain"
-            }`}
-          ></i>
+          <Tooltip title={`${lan.name}`}>
+            <i
+              className={`devicon-${lan.name}-${
+                lan.type === "original" ? "original" : "plain"
+              }`}
+            ></i>
+          </Tooltip>
         </LanguageLiStyle>
       </Fragment>
     );

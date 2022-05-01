@@ -1,6 +1,7 @@
 import { Fragment } from "react";
 import styled from "styled-components";
 import ProjectSectionWrapper from "../Wrapper/ProjectSectionWrapper";
+import { Tooltip } from "@mui/material";
 
 const SkillIconsStyle = styled.div`
   color: #fff;
