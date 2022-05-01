@@ -1,6 +1,7 @@
 import { Fragment } from "react";
 import styled from "styled-components";
 import ProjectSectionWrapper from "../Wrapper/ProjectSectionWrapper";
+import { Tooltip } from "@mui/material";
 
 const UlStyle = styled.ul`
   padding-left: 1rem;
@@ -43,14 +44,18 @@ const LinkIconsList = (props) => {
         <h3>Links</h3>
         <UlStyle className={props.isLightMode ? "lightMode" : ""}>
           <li>
-            <a href={`https://github.com/keento0809/${props.gitHubUrl}`}>
-              <i className="devicon-github-original"></i>
-            </a>
+            <Tooltip title="GitHub" arrow>
+              <a href={`https://github.com/keento0809/${props.gitHubUrl}`}>
+                <i className="devicon-github-original"></i>
+              </a>
+            </Tooltip>
           </li>
           <li>
-            <a href={props.linkUrl}>
-              <ion-icon name="link-outline"></ion-icon>
-            </a>
+            <Tooltip title="Link" arrow>
+              <a href={props.linkUrl}>
+                <ion-icon name="link-outline"></ion-icon>
+              </a>
+            </Tooltip>
           </li>
         </UlStyle>
       </div>
