@@ -271,8 +271,14 @@ const Header = (props) => {
               {/* <AnchorLink href="#home">Home</AnchorLink> */}
               <AnchorLink href="#home">
                 <span className="text">Home</span>
-                <span className="btnBefore"></span>
-                <span className="btnAfter"></span>
+                <span
+                  className={`${
+                    props.isLightMode ? "lightMode" : ""
+                  } btnBefore`}
+                ></span>
+                <span
+                  className={`${props.isLightMode ? "lightMode" : ""} btnAfter`}
+                ></span>
               </AnchorLink>
             </li>
             <li
@@ -282,8 +288,14 @@ const Header = (props) => {
             >
               <AnchorLink href="#aboutme">
                 <span className="text">About Me</span>
-                <span className="btnBefore"></span>
-                <span className="btnAfter"></span>
+                <span
+                  className={`${
+                    props.isLightMode ? "lightMode" : ""
+                  } btnBefore`}
+                ></span>
+                <span
+                  className={`${props.isLightMode ? "lightMode" : ""} btnAfter`}
+                ></span>
               </AnchorLink>
             </li>
             <li
@@ -293,8 +305,14 @@ const Header = (props) => {
             >
               <AnchorLink href="#myproject">
                 <span className="text">Project</span>
-                <span className="btnBefore"></span>
-                <span className="btnAfter"></span>
+                <span
+                  className={`${
+                    props.isLightMode ? "lightMode" : ""
+                  } btnBefore`}
+                ></span>
+                <span
+                  className={`${props.isLightMode ? "lightMode" : ""} btnAfter`}
+                ></span>
               </AnchorLink>
             </li>
             <li
@@ -304,8 +322,14 @@ const Header = (props) => {
             >
               <AnchorLink href="#contactme">
                 <span className="text">Contact</span>
-                <span className="btnBefore"></span>
-                <span className="btnAfter"></span>
+                <span
+                  className={`${
+                    props.isLightMode ? "lightMode" : ""
+                  } btnBefore`}
+                ></span>
+                <span
+                  className={`${props.isLightMode ? "lightMode" : ""} btnAfter`}
+                ></span>
               </AnchorLink>
             </li>
             <li
@@ -315,8 +339,14 @@ const Header = (props) => {
             >
               <AnchorLink href="">
                 <span className="text">Resume</span>
-                <span className="btnBefore"></span>
-                <span className="btnAfter"></span>
+                <span
+                  className={`${
+                    props.isLightMode ? "lightMode" : ""
+                  } btnBefore`}
+                ></span>
+                <span
+                  className={`${props.isLightMode ? "lightMode" : ""} btnAfter`}
+                ></span>
               </AnchorLink>
             </li>
           </NavUlStyle>

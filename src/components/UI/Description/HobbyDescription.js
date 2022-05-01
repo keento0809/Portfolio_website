@@ -10,7 +10,11 @@ const HobbySentenceStyle = styled.p`
 `;
 
 const UlStyle = styled.ul`
-  padding: 1.5rem 0;
+  /* padding: 1.5rem 0; */
+  border: 1px solid;
+  border-radius: 8px;
+  margin: 2rem 0;
+  padding: 1rem 1.5rem;
 
   & li {
     padding-bottom: 1rem;

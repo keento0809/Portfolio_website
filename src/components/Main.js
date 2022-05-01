@@ -46,7 +46,7 @@ const Main = () => {
     setIsLoading(true);
     setTimeout(() => {
       setIsLoading(false);
-    }, 2880);
+    }, 3280);
   }, []);
 
   useEffect(() => {
