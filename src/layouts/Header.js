@@ -1,9 +1,10 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import Aside from "./Aside";
 import AnchorLink from "react-anchor-link-smooth-scroll";
 import styled from "styled-components";
 import iconUrlDark from "../assets/images/icon-32x32.png";
 import iconUrlLight from "../assets/images/icon-32x32-light.png";
+import "../styles/navBorder.css";
 
 const HeaderStyle = styled.header`
   position: fixed;
@@ -165,7 +166,7 @@ const NavUlStyle = styled.ul`
   }
 
   & li.active a {
-    border: 1px solid #8bfdfe;
+    /* border: 1px solid #8bfdfe; */
     border-radius: 8px;
   }
 
@@ -266,35 +267,57 @@ const Header = (props) => {
               onMouseOver={handleMouseOVer}
               onMouseOut={handleMouseOut}
             >
-              <AnchorLink href="#home">Home</AnchorLink>
+              {/* original code */}
+              {/* <AnchorLink href="#home">Home</AnchorLink> */}
+              <AnchorLink href="#home">
+                <span className="text">Home</span>
+                <span className="btnBefore"></span>
+                <span className="btnAfter"></span>
+              </AnchorLink>
             </li>
             <li
               className={isActive && targetValue === "About Me" ? "active" : ""}
               onMouseOver={handleMouseOVer}
               onMouseOut={handleMouseOut}
             >
-              <AnchorLink href="#aboutme">About Me</AnchorLink>
+              <AnchorLink href="#aboutme">
+                <span className="text">About Me</span>
+                <span className="btnBefore"></span>
+                <span className="btnAfter"></span>
+              </AnchorLink>
             </li>
             <li
               className={isActive && targetValue === "Project" ? "active" : ""}
               onMouseOver={handleMouseOVer}
               onMouseOut={handleMouseOut}
             >
-              <AnchorLink href="#myproject">Project</AnchorLink>
+              <AnchorLink href="#myproject">
+                <span className="text">Project</span>
+                <span className="btnBefore"></span>
+                <span className="btnAfter"></span>
+              </AnchorLink>
             </li>
             <li
               className={isActive && targetValue === "Contact" ? "active" : ""}
               onMouseOver={handleMouseOVer}
               onMouseOut={handleMouseOut}
             >
-              <AnchorLink href="#contactme">Contact</AnchorLink>
+              <AnchorLink href="#contactme">
+                <span className="text">Contact</span>
+                <span className="btnBefore"></span>
+                <span className="btnAfter"></span>
+              </AnchorLink>
             </li>
             <li
               className={isActive && targetValue === "Resume" ? "active" : ""}
               onMouseOver={handleMouseOVer}
               onMouseOut={handleMouseOut}
             >
-              <AnchorLink href="">Resume</AnchorLink>
+              <AnchorLink href="">
+                <span className="text">Resume</span>
+                <span className="btnBefore"></span>
+                <span className="btnAfter"></span>
+              </AnchorLink>
             </li>
           </NavUlStyle>
         </NavMenuStyle>
