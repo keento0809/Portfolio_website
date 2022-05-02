@@ -29,6 +29,15 @@ const ProjectTitleStyle = styled.div`
   }
 `;
 
+const IconsDivStyle = styled.div`
+  @media screen and (min-width: 1023px) {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+  }
+`;
+
 const Project = (props) => {
   return (
     <ListStyle className={props.isLightMode ? "lightMode" : ""}>
@@ -42,12 +51,14 @@ const Project = (props) => {
           points={props.points}
           imageUrl={props.imageUrl}
         />
-        <LanguageList languages={props.languages} />
-        <LinkIconsList
-          isLightMode={props.isLightMode}
-          gitHubUrl={props.gitHubUrl}
-          linkUrl={props.linkUrl}
-        />
+        <IconsDivStyle className="囲むでぇ">
+          <LanguageList languages={props.languages} />
+          <LinkIconsList
+            isLightMode={props.isLightMode}
+            gitHubUrl={props.gitHubUrl}
+            linkUrl={props.linkUrl}
+          />
+        </IconsDivStyle>
       </MyProjectContainer>
     </ListStyle>
   );
