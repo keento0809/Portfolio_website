@@ -37,10 +37,14 @@ const UlStyle = styled.ul`
   }
 `;
 
+const LinkIconsDivStyle = styled.div`
+  padding-left: 4rem;
+`;
+
 const LinkIconsList = (props) => {
   return (
     <ProjectSectionWrapper>
-      <div className="link-icons">
+      <LinkIconsDivStyle className="link-icons">
         <h3>Links</h3>
         <UlStyle className={props.isLightMode ? "lightMode" : ""}>
           <li>
@@ -58,7 +62,7 @@ const LinkIconsList = (props) => {
             </Tooltip>
           </li>
         </UlStyle>
-      </div>
+      </LinkIconsDivStyle>
     </ProjectSectionWrapper>
   );
 };

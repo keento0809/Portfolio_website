@@ -42,12 +42,16 @@ const ImageDivStyle = styled.div`
   }
 
   @media screen and (min-width: 768px) {
-    width: 560px;
+    width: 592px;
     height: 320px;
   }
   @media screen and (min-width: 1023px) {
-    width: 600px;
-    height: 340px;
+    width: 848px;
+    height: 400px;
+  }
+  @media screen and (min-width: 1300px) {
+    /* width: 1124px; */
+    /* height: 340px; */
   }
 `;
 
