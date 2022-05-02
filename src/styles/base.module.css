@@ -12,7 +12,7 @@
 
 .testingOpacity {
   animation: testOpacity;
-  animation-duration: 1.8s;
+  animation-duration: 3s;
   animation-timing-function: ease;
 }
 

@@ -55,6 +55,10 @@ a:hover span {
   border-color: #8bfdfe;
   border-radius: 8px;
 }
+.btnBefore.lightMode,
+.btnAfter.lightMode {
+  border-color: #19224e;
+}
 a .btnBefore {
   right: 0;
   bottom: 0;

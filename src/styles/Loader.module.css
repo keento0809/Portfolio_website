@@ -208,7 +208,7 @@
   margin-top: 1rem;
   display: block;
   background: #8bfdfe;
-  animation: 3s lineGrow linear infinite;
+  animation: 3s lineGrow ease-out 1 forwards;
 }
 
 @keyframes lineGrow {
