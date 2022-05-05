@@ -38,7 +38,9 @@ const UlStyle = styled.ul`
 `;
 
 const LinkIconsDivStyle = styled.div`
-  padding-left: 4rem;
+  @media screen and (min-width: 1300px) {
+    padding-left: 4rem;
+  }
 `;
 
 const LinkIconsList = (props) => {
