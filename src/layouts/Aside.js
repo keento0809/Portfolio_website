@@ -40,7 +40,7 @@ const AsideContainerStyle = styled.div`
 
   & h4 {
     font-size: 24px;
-    padding-left: 20px;
+    /* padding-left: 20px; */
   }
 
   & li {
@@ -107,7 +107,17 @@ const AtagStyle = styled.a`
 `;
 
 const ResumeDivStyle = styled.div`
-  padding-left: 20px;
+  /* padding-left: 20px; */
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  line-height: 20px;
+
+  & ion-icon {
+    font-size: 20px;
+    margin-right: 1rem;
+  }
 
   &.lightMode a {
     color: #19224e;
@@ -145,21 +155,21 @@ const Aside = (props) => {
             <LiStyle className="menuBtns">
               <AnchorLink
                 className={props.isLightMode ? "lightMode" : ""}
-                href="#aboutme"
-                onClick={handleLinkClick}
-              >
-                <ion-icon name="person-outline"></ion-icon>
-                <span>About Me</span>
-              </AnchorLink>
-            </LiStyle>
-            <LiStyle className="menuBtns">
-              <AnchorLink
-                className={props.isLightMode ? "lightMode" : ""}
                 href="#myproject"
                 onClick={handleLinkClick}
               >
                 <ion-icon name="folder-outline"></ion-icon>
                 <span>Project</span>
+              </AnchorLink>
+            </LiStyle>
+            <LiStyle className="menuBtns">
+              <AnchorLink
+                className={props.isLightMode ? "lightMode" : ""}
+                href="#aboutme"
+                onClick={handleLinkClick}
+              >
+                <ion-icon name="person-outline"></ion-icon>
+                <span>About Me</span>
               </AnchorLink>
             </LiStyle>
             <LiStyle className="menuBtns">
@@ -175,6 +185,7 @@ const Aside = (props) => {
           </ul>
         </div>
         <ResumeDivStyle className={props.isLightMode ? "lightMode" : ""}>
+          <ion-icon name="document-text-outline"></ion-icon>
           <a href="" className="resumeLink">
             Resume
           </a>

@@ -74,8 +74,8 @@ const Main = () => {
         isLightMode={isLightMode}
       >
         <TopHero isLightMode={isLightMode} />
-        <AboutMe isLightMode={isLightMode} />
         <MyProject isLightMode={isLightMode} />
+        <AboutMe isLightMode={isLightMode} />
         <ContactMe isLightMode={isLightMode} />
         <Footer isLightMode={isLightMode} />
         <BackToTopButton

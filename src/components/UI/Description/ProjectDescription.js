@@ -25,7 +25,7 @@ const ImageDivStyle = styled.div`
     left: 0;
     bottom: 0;
     right: 0;
-    background: rgba(5, 7, 16, 0.5);
+    background: rgba(5, 7, 16, 0.2);
     z-index: 4;
     border-radius: 8px;
 
