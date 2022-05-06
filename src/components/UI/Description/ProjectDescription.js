@@ -30,7 +30,7 @@ const ImageDivStyle = styled.div`
     border-radius: 8px;
 
     &.lightMode {
-      background-color: rgb(187 189 194 / 60%);
+      background-color: rgb(187 189 194 / 30%);
     }
   }
 
