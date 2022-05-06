@@ -63,24 +63,7 @@ const TopHeroWrapperStyle = styled.div`
   }
 `;
 
-// const AtagStyle = styled.a`
-//   font-size: 14px;
-//   display: inline-block;
-//   padding: 0.5rem 1.8rem;
-//   margin-top: 1rem;
-//   font-weight: bold;
-//   border: 2px solid #8bfdfe;
-//   border-radius: 8px;
-
-//   &.lightMode {
-//     border-color: #19224e;
-//     color: #19224e;
-//   }
-// `;
-
 const TopHero = (props) => {
-  console.log(props.isLightMode);
-
   return (
     <TopHeroStyle id="home">
       <TopHeroWrapperStyle className="topHero__wrapper">
@@ -104,7 +87,7 @@ const TopHero = (props) => {
           <ButtonUI
             isLightMode={props.isLightMode}
             label={"Explore"}
-            url={"#aboutme"}
+            url={"#myproject"}
           />
         </div>
       </TopHeroWrapperStyle>
