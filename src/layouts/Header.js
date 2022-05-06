@@ -282,12 +282,12 @@ const Header = (props) => {
               </AnchorLink>
             </li>
             <li
-              className={isActive && targetValue === "About Me" ? "active" : ""}
+              className={isActive && targetValue === "Project" ? "active" : ""}
               onMouseOver={handleMouseOVer}
               onMouseOut={handleMouseOut}
             >
-              <AnchorLink href="#aboutme">
-                <span className="text">About Me</span>
+              <AnchorLink href="#myproject">
+                <span className="text">Project</span>
                 <span
                   className={`${
                     props.isLightMode ? "lightMode" : ""
@@ -299,12 +299,12 @@ const Header = (props) => {
               </AnchorLink>
             </li>
             <li
-              className={isActive && targetValue === "Project" ? "active" : ""}
+              className={isActive && targetValue === "About Me" ? "active" : ""}
               onMouseOver={handleMouseOVer}
               onMouseOut={handleMouseOut}
             >
-              <AnchorLink href="#myproject">
-                <span className="text">Project</span>
+              <AnchorLink href="#aboutme">
+                <span className="text">About Me</span>
                 <span
                   className={`${
                     props.isLightMode ? "lightMode" : ""
