@@ -51,7 +51,7 @@ const Project = (props) => {
           points={props.points}
           imageUrl={props.imageUrl}
         />
-        <IconsDivStyle className="囲むでぇ">
+        <IconsDivStyle>
           <LanguageList languages={props.languages} />
           <LinkIconsList
             isLightMode={props.isLightMode}

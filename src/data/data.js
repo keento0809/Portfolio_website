@@ -41,8 +41,11 @@ export const freshMarchePointsArr = [
 ];
 
 export const reduxTodoPointsArr = [
-  { text: "Good-looking design with Material-UI" },
+  { text: "Simple and good-looking design with Material-UI" },
   { text: "CRUD functions operated by Redux-toolkit " },
+  {
+    text: "Add drop-and-down feature using react-beautiful-dnd(a library)",
+  },
 ];
 
 export const my2048PointsArr = [
@@ -54,7 +57,7 @@ export const my2048PointsArr = [
 
 export const portfolioWebsitePointsArr = [
   { text: "Optimize components to minimize workloads" },
-  { text: "Designed by styled-components, no css-frameworks" },
+  { text: "Styled by styled-components, not relying on css frameworks" },
   { text: "Enable to switch lightMode and DarkMode" },
 ];
 
