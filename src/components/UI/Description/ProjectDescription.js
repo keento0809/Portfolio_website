@@ -64,6 +64,7 @@ const LiStyle = styled.li`
 
   & ion-icon {
     padding-right: 0.5rem;
+    min-width: 24px;
   }
 
   & span {
@@ -84,9 +85,9 @@ const ProjectDescription = (props) => {
 
   return (
     <ProjectSectionWrapper>
-      <div className="とりまっか">
+      <div>
         {/* test */}
-        <ImageDivStyle className="">
+        <ImageDivStyle>
           <div
             className={`${props.isLightMode ? "lightMode" : ""} imageBackdrop`}
           ></div>

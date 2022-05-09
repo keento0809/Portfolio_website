@@ -34,17 +34,15 @@ const LanguageLiStyle = styled.li`
 const LanguageList = (props) => {
   const languageList = props.languages.map((lan, index) => {
     return (
-      <Fragment>
-        <LanguageLiStyle key={index}>
-          <Tooltip title={`${lan.name}`}>
-            <i
-              className={`devicon-${lan.name}-${
-                lan.type === "original" ? "original" : "plain"
-              }`}
-            ></i>
-          </Tooltip>
-        </LanguageLiStyle>
-      </Fragment>
+      <LanguageLiStyle key={index}>
+        <Tooltip title={`${lan.name}`}>
+          <i
+            className={`devicon-${lan.name}-${
+              lan.type === "original" ? "original" : "plain"
+            }`}
+          ></i>
+        </Tooltip>
+      </LanguageLiStyle>
     );
   });
 
