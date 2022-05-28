@@ -3,10 +3,12 @@ import Title from "../UI/Title/Title";
 import Project from "./Project";
 import {
   dummyPointsArr,
+  countryBeenPointsArr,
   freshMarchePointsArr,
   reduxTodoPointsArr,
   my2048PointsArr,
   portfolioWebsitePointsArr,
+  countryBeenToolsArr,
   freshMarcheToolsArr,
   reduxTodoToolsArr,
   my2048ToolsArr,
@@ -14,6 +16,7 @@ import {
   spotifyReplicaToolsArr,
   spotifyReplicaPointsArr,
 } from "../../data/data";
+import countryBeenImageUrl from "../../assets/images/countryBeen.png";
 import freshMarcheImageUrl from "../../assets/images/freshMarche-lp.png";
 import reduxTodoImageUrl from "../../assets/images/reduxTodo-lp.png";
 import my2048ImageUrl from "../../assets/images/my2048-lp.png";
@@ -27,6 +30,18 @@ const MyProject = (props) => {
         <section className="myProject section">
           <Title title="Project" isLightMode={props.isLightMode} />
           <ul>
+            <Project
+              isLightMode={props.isLightMode}
+              projectTitle={"CountryBeen"}
+              summary={
+                "The web application recording countries where you've ever been to and analyze them visually."
+              }
+              points={countryBeenPointsArr}
+              languages={countryBeenToolsArr}
+              gitHubUrl={"CountryBeen"}
+              linkUrl={"https://country-been.vercel.app/"}
+              imageUrl={`${countryBeenImageUrl}`}
+            />
             <Project
               isLightMode={props.isLightMode}
               projectTitle={"FreshMarche"}
