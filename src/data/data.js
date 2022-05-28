@@ -33,6 +33,17 @@ export const dummyPointsArr = [
   { text: "Great something" },
 ];
 
+export const countryBeenPointsArr = [
+  {
+    text: "Coded by Typescript and React-redux",
+  },
+  { text: "Introduce react-simple-maps to display world map on the page" },
+  {
+    text: "Use REST Countries API to fetch data regarding countries",
+  },
+  { text: "Styled by tailwind CSS and the third-party library (Daisy UI)" },
+];
+
 export const studyLogPointsArr = [
   { text: "Utilize Typescript in order to minimize the errors in my project" },
   { text: "Analyzing data using the Ant Design Chart" },
@@ -74,6 +85,13 @@ export const spotifyReplicaPointsArr = [
   { text: "Created and imitated the Spotify landingPage with normal CSS" },
   { text: "Having Responsible-design with mediaQuery" },
   { text: "Added some animations powered by Vanilla Javascript" },
+];
+
+export const countryBeenToolsArr = [
+  { name: "typescript" },
+  { name: "react", type: "original" },
+  { name: "redux" },
+  { name: "tailwindcss" },
 ];
 
 export const studylogToolsArr = [
