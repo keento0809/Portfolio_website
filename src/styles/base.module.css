@@ -4,6 +4,11 @@
   transition: all 0.3s ease;
 }
 
+.global.asideOpen {
+  height: 100%;
+  overflow: hidden;
+}
+
 .global.lightMode {
   background-color: #eff3ff;
   color: #19224e;
