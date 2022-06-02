@@ -20,6 +20,10 @@ body {
   min-height: 100vh;
 }
 
+body.over {
+  overflow-y: hidden;
+}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;

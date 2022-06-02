@@ -1,4 +1,4 @@
-import React, { Fragment } from "react";
+import React, { Fragment, useEffect } from "react";
 import AnchorLink from "react-anchor-link-smooth-scroll";
 import styled from "styled-components";
 
@@ -128,6 +128,16 @@ const Aside = (props) => {
   const handleLinkClick = () => {
     props.setIsAsideShown(false);
   };
+
+  useEffect(() => {
+    if (props.isAsideShown) {
+      console.log("it's changing!");
+      document.body.className = "over";
+      return () => {
+        document.body.className = "";
+      };
+    }
+  }, [props.isAsideShown]);
   // const shown = props.isAsideShown ? "show" : "";
   return (
     <AsideStyle

@@ -15,7 +15,7 @@ const ContainerWrapperStyle = styled.div`
 
 const ContainerWrapper = (props) => {
   return (
-    <Fragment>
+    <div className="classNameこれがコンテイナー">
       {/* test */}
       <Backdrop
         isLightMode={props.isLightMode}
@@ -25,7 +25,7 @@ const ContainerWrapper = (props) => {
       <ContainerWrapperStyle className={props.isAsideShown ? "shown" : ""}>
         {props.children}
       </ContainerWrapperStyle>
-    </Fragment>
+    </div>
   );
 };
 
