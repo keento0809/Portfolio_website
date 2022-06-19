@@ -9,7 +9,7 @@ const UlStyle = styled.ul`
   flex-direction: row;
   justify-content: flex-start;
   align-items: center;
-  transition: all 0.5s ease;
+  transition: all 0.3s ease;
 
   & li {
     min-width: 57px;
@@ -19,6 +19,10 @@ const UlStyle = styled.ul`
     align-items: center;
   }
 
+  & a {
+    transition: all 0.3s ease;
+  }
+
   &.lightMode a {
     color: #1b1f29;
   }
@@ -26,14 +30,14 @@ const UlStyle = styled.ul`
   & ion-icon,
   & i.devicon-github-original {
     transform: none;
-    transition: all 0.5s ease;
+    transition: all 0.3s ease;
     display: inline-block;
   }
 
   & ion-icon:hover,
   & i.devicon-github-original:hover {
     transform: scale(1.2);
-    transition: all 0.5s ease;
+    transition: all 0.3s ease;
   }
 `;
 

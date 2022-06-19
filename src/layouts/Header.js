@@ -146,7 +146,7 @@ const NavUlStyle = styled.ul`
 
   & li {
     font-size: 12px;
-    transition: all 0.5s ease;
+    transition: all 0.3s ease;
     cursor: pointer;
   }
 
@@ -162,7 +162,7 @@ const NavUlStyle = styled.ul`
   & li.active {
     font-size: 18px;
     border-color: #8bfdfe;
-    transition: all 0.5s ease;
+    transition: all 0.3s ease;
   }
 
   & li.active a {

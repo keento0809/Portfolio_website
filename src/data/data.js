@@ -33,6 +33,17 @@ export const dummyPointsArr = [
   { text: "Great something" },
 ];
 
+export const pokeAppPointsArr = [
+  {
+    text: "Utilize Next.js to simplify the composition of application",
+  },
+  {
+    text: "Taking advantage of next-themes to easily add dark-mode theme",
+  },
+  { text: "Dynamic page path to PokemonDetail page powered by getStaticPath" },
+  { text: "Styled by tailwind CSS minimizing workloads for design part" },
+];
+
 export const countryBeenPointsArr = [
   {
     text: "Coded by Typescript and React-redux",
@@ -86,6 +97,8 @@ export const spotifyReplicaPointsArr = [
   { text: "Having Responsible-design with mediaQuery" },
   { text: "Added some animations powered by Vanilla Javascript" },
 ];
+
+export const pokeAppToolsArr = [{ name: "nextjs" }, { name: "tailwindcss" }];
 
 export const countryBeenToolsArr = [
   { name: "typescript" },
