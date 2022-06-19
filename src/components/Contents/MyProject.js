@@ -2,12 +2,13 @@ import ContentWrapper from "../UI/Wrapper/ContentWrapper";
 import Title from "../UI/Title/Title";
 import Project from "./Project";
 import {
-  dummyPointsArr,
+  pokeAppPointsArr,
   countryBeenPointsArr,
   freshMarchePointsArr,
   reduxTodoPointsArr,
   my2048PointsArr,
   portfolioWebsitePointsArr,
+  pokeAppToolsArr,
   countryBeenToolsArr,
   freshMarcheToolsArr,
   reduxTodoToolsArr,
@@ -16,6 +17,7 @@ import {
   spotifyReplicaToolsArr,
   spotifyReplicaPointsArr,
 } from "../../data/data";
+import pokeAppImageUrl from "../../assets/images/pokeApp-lp.png";
 import countryBeenImageUrl from "../../assets/images/countryBeen.png";
 import freshMarcheImageUrl from "../../assets/images/freshMarche-lp.png";
 import reduxTodoImageUrl from "../../assets/images/reduxTodo-lp.png";
@@ -30,6 +32,18 @@ const MyProject = (props) => {
         <section className="myProject section">
           <Title title="Project" isLightMode={props.isLightMode} />
           <ul>
+            <Project
+              isLightMode={props.isLightMode}
+              projectTitle={"PokeApp"}
+              summary={
+                "The simple web application discovering pokemon and finding your favorite ones."
+              }
+              points={pokeAppPointsArr}
+              languages={pokeAppToolsArr}
+              gitHubUrl={"poke-app"}
+              linkUrl={"poke-app-three-mu.vercel.app"}
+              imageUrl={`${pokeAppImageUrl}`}
+            />
             <Project
               isLightMode={props.isLightMode}
               projectTitle={"CountryBeen"}
