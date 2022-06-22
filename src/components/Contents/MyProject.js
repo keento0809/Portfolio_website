@@ -22,7 +22,7 @@ import countryBeenImageUrl from "../../assets/images/countryBeen.png";
 import freshMarcheImageUrl from "../../assets/images/freshMarche-lp.png";
 import reduxTodoImageUrl from "../../assets/images/reduxTodo-lp.png";
 import my2048ImageUrl from "../../assets/images/my2048-lp.png";
-import portfolioImageUrl from "../../assets/images/portfolio-website-lp.png";
+import portfolioImageUrl from "../../assets/images/portfolio-website-lp-revised.png";
 import spotifyReplicaUrl from "../../assets/images/spotify-replica-lp.png";
 
 const MyProject = (props) => {
@@ -36,12 +36,12 @@ const MyProject = (props) => {
               isLightMode={props.isLightMode}
               projectTitle={"PokeApp"}
               summary={
-                "The simple web application discovering pokemon and finding your favorite ones."
+                "The simple web application introducing Poke REST API discovering your favorite pokemon."
               }
               points={pokeAppPointsArr}
               languages={pokeAppToolsArr}
               gitHubUrl={"poke-app"}
-              linkUrl={"poke-app-three-mu.vercel.app"}
+              linkUrl={"https://poke-app-three-mu.vercel.app/"}
               imageUrl={`${pokeAppImageUrl}`}
             />
             <Project
