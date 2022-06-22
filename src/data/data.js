@@ -7,9 +7,10 @@ export const specialtiesArr = [
 export const frontEndLibrariesArr = [
   { name: "HTML5/CSS3" },
   { name: "Javascript(ES6)" },
-  { name: "Typescript" },
   { name: "React.js" },
   { name: "Redux" },
+  { name: "Next.js" },
+  { name: "Typescript" },
   { name: "SCSS/SASS" },
   { name: "Material-UI" },
   { name: "Tailwind-css" },
