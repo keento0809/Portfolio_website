@@ -76,7 +76,7 @@ export const reduxTodoPointsArr = [
   { text: "Simple and good-looking design with Material-UI" },
   { text: "CRUD functions operated by Redux-toolkit " },
   {
-    text: "Add drop-and-down feature using react-beautiful-dnd(a library)",
+    text: "Add drop-and-down feature using react-beautiful-dnd(react library)",
   },
 ];
 
@@ -99,7 +99,11 @@ export const spotifyReplicaPointsArr = [
   { text: "Added some animations powered by Vanilla Javascript" },
 ];
 
-export const pokeAppToolsArr = [{ name: "nextjs" }, { name: "tailwindcss" }];
+export const pokeAppToolsArr = [
+  { name: "javascript" },
+  { name: "nextjs" },
+  { name: "tailwindcss" },
+];
 
 export const countryBeenToolsArr = [
   { name: "typescript" },
@@ -123,6 +127,7 @@ export const freshMarcheToolsArr = [
 ];
 
 export const reduxTodoToolsArr = [
+  { name: "javascript" },
   { name: "react", type: "original" },
   { name: "redux" },
   { name: "materialui" },
