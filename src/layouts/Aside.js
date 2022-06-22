@@ -1,6 +1,7 @@
 import React, { Fragment, useEffect } from "react";
 import AnchorLink from "react-anchor-link-smooth-scroll";
 import styled from "styled-components";
+import resumePdf from "../assets/pdf/kentos-resume.pdf";
 
 const AsideStyle = styled.aside`
   position: fixed;
@@ -196,7 +197,7 @@ const Aside = (props) => {
         </div>
         <ResumeDivStyle className={props.isLightMode ? "lightMode" : ""}>
           <ion-icon name="document-text-outline"></ion-icon>
-          <a href="" className="resumeLink">
+          <a href={resumePdf} className="resumeLink" target="_blank">
             Resume
           </a>
         </ResumeDivStyle>

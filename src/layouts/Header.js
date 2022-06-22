@@ -4,6 +4,7 @@ import AnchorLink from "react-anchor-link-smooth-scroll";
 import styled from "styled-components";
 import iconUrlDark from "../assets/images/icon-32x32.png";
 import iconUrlLight from "../assets/images/icon-32x32-light.png";
+import resumePdf from "../assets/pdf/kentos-resume.pdf";
 import "../styles/navBorder.css";
 
 const HeaderStyle = styled.header`
@@ -337,7 +338,7 @@ const Header = (props) => {
               onMouseOver={handleMouseOVer}
               onMouseOut={handleMouseOut}
             >
-              <AnchorLink href="">
+              <a href={resumePdf} target="_blank">
                 <span className="text">Resume</span>
                 <span
                   className={`${
@@ -347,7 +348,7 @@ const Header = (props) => {
                 <span
                   className={`${props.isLightMode ? "lightMode" : ""} btnAfter`}
                 ></span>
-              </AnchorLink>
+              </a>
             </li>
           </NavUlStyle>
         </NavMenuStyle>

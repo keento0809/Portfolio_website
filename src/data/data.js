@@ -59,7 +59,7 @@ export const countryBeenPointsArr = [
 export const studyLogPointsArr = [
   { text: "Utilize Typescript in order to minimize the errors in my project" },
   { text: "Analyzing data using the Ant Design Chart" },
-  { text: "Always Store and fetch the data connecting to the firebase" },
+  { text: "Dynamically Store and fetch the data connecting to firebase" },
   {
     text: "Introduced Maps Javascript API and Geocoding API showing locations",
   },
