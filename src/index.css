@@ -21,7 +21,8 @@ body {
 }
 
 body.over {
-  overflow-y: hidden;
+  overflow: hidden;
+  position: relative;
 }
 
 code {
