@@ -53,10 +53,6 @@ const Main = () => {
     window.addEventListener("scroll", handleScroll);
   }, [isScrollingDown]);
 
-  useEffect(() => {
-    console.log(window.innerHeight);
-  }, []);
-
   return (
     <div
       className={`${classes.global} ${isLightMode ? classes.lightMode : ""} ${
