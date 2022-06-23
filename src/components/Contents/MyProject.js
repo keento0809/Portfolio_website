@@ -2,12 +2,14 @@ import ContentWrapper from "../UI/Wrapper/ContentWrapper";
 import Title from "../UI/Title/Title";
 import Project from "./Project";
 import {
+  studyLogPointsArr,
   pokeAppPointsArr,
   countryBeenPointsArr,
   freshMarchePointsArr,
   reduxTodoPointsArr,
   my2048PointsArr,
   portfolioWebsitePointsArr,
+  studyLogToolsArr,
   pokeAppToolsArr,
   countryBeenToolsArr,
   freshMarcheToolsArr,
@@ -17,6 +19,7 @@ import {
   spotifyReplicaToolsArr,
   spotifyReplicaPointsArr,
 } from "../../data/data";
+import studyLogImageUrl from "../../assets/images/studylog-lp.png";
 import pokeAppImageUrl from "../../assets/images/pokeApp-lp.png";
 import countryBeenImageUrl from "../../assets/images/countryBeen.png";
 import freshMarcheImageUrl from "../../assets/images/freshMarche-lp.png";
@@ -32,6 +35,18 @@ const MyProject = (props) => {
         <section className="myProject section">
           <Title title="Project" isLightMode={props.isLightMode} />
           <ul>
+            <Project
+              isLightMode={props.isLightMode}
+              projectTitle={"StudyLog"}
+              summary={
+                "The simple web application introducing Poke REST API discovering your favorite pokemon."
+              }
+              points={studyLogPointsArr}
+              languages={studyLogToolsArr}
+              gitHubUrl={"studylog"}
+              linkUrl={"https://studylog-three.vercel.app/"}
+              imageUrl={`${studyLogImageUrl}`}
+            />
             <Project
               isLightMode={props.isLightMode}
               projectTitle={"PokeApp"}
