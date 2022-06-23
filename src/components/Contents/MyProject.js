@@ -20,8 +20,8 @@ import {
   spotifyReplicaPointsArr,
 } from "../../data/data";
 import studyLogImageUrl from "../../assets/images/studylog-lp.png";
-import pokeAppImageUrl from "../../assets/images/pokeApp-lp.png";
-import countryBeenImageUrl from "../../assets/images/countryBeen.png";
+import pokeAppImageUrl from "../../assets/images/pokeApp-lp-revised.png";
+import countryBeenImageUrl from "../../assets/images/countryBeen-lp-revised.png";
 import freshMarcheImageUrl from "../../assets/images/freshMarche-lp.png";
 import reduxTodoImageUrl from "../../assets/images/reduxTodo-lp.png";
 import my2048ImageUrl from "../../assets/images/my2048-lp.png";
