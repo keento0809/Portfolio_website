@@ -38,6 +38,10 @@ const TopHeroWrapperStyle = styled.div`
       font-size: 9vw;
       line-height: 9vw;
     }
+
+    & p.nextToTitle {
+      padding-bottom: 1.5rem;
+    }
   }
 
   @media screen and (min-width: 1023px) {
@@ -60,6 +64,16 @@ const TopHeroWrapperStyle = styled.div`
       font-size: 8vw;
       line-height: 8vw;
     }
+
+    & p.nextToTitle {
+      padding-bottom: 2rem;
+    }
+  }
+`;
+
+const MainDescStyle = styled.div`
+  @media screen and (min-width: 1600px) {
+    padding: 1.5rem 0;
   }
 `;
 
@@ -77,12 +91,12 @@ const TopHero = (props) => {
             KENTO
           </h4>
         </div>
-        <div className="topHero__mainDescription">
+        <MainDescStyle className="topHero__mainDescription">
           <p>Front-end Developer</p>
           <p>Based in Vancouver</p>
           {/* test */}
           {/* <p>Front-end Developer Based in Vancouver</p> */}
-        </div>
+        </MainDescStyle>
         <div className="toHero__button">
           <ButtonUI
             isLightMode={props.isLightMode}

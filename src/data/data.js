@@ -57,11 +57,13 @@ export const countryBeenPointsArr = [
 ];
 
 export const studyLogPointsArr = [
-  { text: "Utilize Typescript in order to minimize the errors in my project" },
+  {
+    text: "Utilize Typescript in order to minimize errors and bugs in my project",
+  },
   { text: "Analyzing data using the Ant Design Chart" },
   { text: "Dynamically Store and fetch the data connecting to firebase" },
   {
-    text: "Introduced Maps Javascript API and Geocoding API showing locations",
+    text: "Introducing Maps Javascript API and Geocoding API to showcase locations",
   },
 ];
 
@@ -97,6 +99,13 @@ export const spotifyReplicaPointsArr = [
   { text: "Created and imitated the Spotify landingPage with normal CSS" },
   { text: "Having Responsible-design with mediaQuery" },
   { text: "Added some animations powered by Vanilla Javascript" },
+];
+
+export const studyLogToolsArr = [
+  { name: "typescript" },
+  { name: "react", type: "original" },
+  { name: "firebase" },
+  { name: "tailwindcss" },
 ];
 
 export const pokeAppToolsArr = [
