@@ -92,7 +92,7 @@ const MyProject = (props) => {
               points={reduxTodoPointsArr}
               languages={reduxTodoToolsArr}
               gitHubUrl={"ReduxTodo"}
-              linkUrl={"https://redux-todo-i9cko6vjw-keento0809.vercel.app/"}
+              linkUrl={"https://redux-todo-kappa.vercel.app/"}
               imageUrl={`${reduxTodoImageUrl}`}
             />
             <Project
@@ -116,9 +116,7 @@ const MyProject = (props) => {
               points={portfolioWebsitePointsArr}
               languages={portfolioWebsiteToolsArr}
               gitHubUrl={"Portfolio_website"}
-              linkUrl={
-                "https://portfolio-website-9mtqqzzg9-keento0809.vercel.app/"
-              }
+              linkUrl={"https://portfolio-website-zeta-five.vercel.app/"}
               imageUrl={`${portfolioImageUrl}`}
             />
             <Project
