@@ -37,6 +37,8 @@ const SkillSetList = (props) => {
         <i className="devicon-react-original"></i>
         <i className="devicon-redux-original"></i>
         <i className="devicon-nextjs-plain"></i>
+        <i className="devicon-jquery-plain"></i>
+        <i className="devicon-bootstrap-plain"></i>
         <i className="devicon-sass-original"></i>
         <i className="devicon-materialui-plain"></i>
         <i className="devicon-tailwindcss-plain"></i>

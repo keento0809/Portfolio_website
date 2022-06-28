@@ -11,6 +11,8 @@ export const frontEndLibrariesArr = [
   { name: "Redux" },
   { name: "Next.js" },
   { name: "Typescript" },
+  { name: "jQuery" },
+  { name: "Bootstrap" },
   { name: "SCSS/SASS" },
   { name: "Material-UI" },
   { name: "Tailwind-css" },
