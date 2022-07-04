@@ -23,18 +23,20 @@ export const frontEndLibrariesArr = [
 export const othersArr = [
   { name: "Node.js" },
   { name: "Express.js" },
-  { name: "Git/CLI" },
+  { name: "MongoDB" },
   { name: "Firebase" },
+  { name: "Heroku" },
+  { name: "Git/CLI" },
   { name: "RESTfulAPI" },
   { name: "Figma" },
 ];
 
-export const dummyPointsArr = [
-  { text: "Great UI" },
-  { text: "Great UX" },
-  { text: "Great Feature" },
-  { text: "Great something" },
-];
+// export const dummyPointsArr = [
+//   { text: "Great UI" },
+//   { text: "Great UX" },
+//   { text: "Great Feature" },
+//   { text: "Great something" },
+// ];
 
 export const pokeAppPointsArr = [
   {
