@@ -21,6 +21,7 @@ const UlStyle = styled.ul`
 
   & a {
     transition: all 0.3s ease;
+    overflow: unset;
   }
 
   &.lightMode a {

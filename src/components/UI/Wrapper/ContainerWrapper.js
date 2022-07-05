@@ -15,7 +15,7 @@ const ContainerWrapperStyle = styled.div`
 
 const ContainerWrapper = (props) => {
   return (
-    <div className="classNameこれがコンテイナー">
+    <div className="">
       {/* test */}
       <Backdrop
         isLightMode={props.isLightMode}
