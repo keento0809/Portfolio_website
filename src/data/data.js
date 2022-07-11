@@ -25,6 +25,7 @@ export const othersArr = [
   { name: "Express.js" },
   { name: "MongoDB" },
   { name: "Firebase" },
+  { name: "Jest" },
   { name: "Heroku" },
   { name: "Git/CLI" },
   { name: "RESTfulAPI" },
