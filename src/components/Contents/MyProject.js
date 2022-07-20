@@ -2,6 +2,7 @@ import ContentWrapper from "../UI/Wrapper/ContentWrapper";
 import Title from "../UI/Title/Title";
 import Project from "./Project";
 import {
+  shoppingListMernPointsArr,
   studyLogPointsArr,
   pokeAppPointsArr,
   countryBeenPointsArr,
@@ -9,6 +10,7 @@ import {
   reduxTodoPointsArr,
   my2048PointsArr,
   portfolioWebsitePointsArr,
+  ShoppingListMernToolsArr,
   studyLogToolsArr,
   pokeAppToolsArr,
   countryBeenToolsArr,
@@ -49,18 +51,6 @@ const MyProject = (props) => {
             />
             <Project
               isLightMode={props.isLightMode}
-              projectTitle={"PokeApp"}
-              summary={
-                "The simple web application introducing Poke REST API discovering your favorite pokemon."
-              }
-              points={pokeAppPointsArr}
-              languages={pokeAppToolsArr}
-              gitHubUrl={"poke-app"}
-              linkUrl={"https://poke-app-three-mu.vercel.app/"}
-              imageUrl={`${pokeAppImageUrl}`}
-            />
-            <Project
-              isLightMode={props.isLightMode}
               projectTitle={"CountryBeen"}
               summary={
                 "The web application recording countries where you've ever been to and analyze them visually."
@@ -82,6 +72,18 @@ const MyProject = (props) => {
               gitHubUrl={"freshmarche"}
               linkUrl={"https://freshmarche.vercel.app/home"}
               imageUrl={`${freshMarcheImageUrl}`}
+            />
+            <Project
+              isLightMode={props.isLightMode}
+              projectTitle={"PokeApp"}
+              summary={
+                "The simple web application introducing Poke REST API discovering your favorite pokemon."
+              }
+              points={pokeAppPointsArr}
+              languages={pokeAppToolsArr}
+              gitHubUrl={"poke-app"}
+              linkUrl={"https://poke-app-three-mu.vercel.app/"}
+              imageUrl={`${pokeAppImageUrl}`}
             />
             <Project
               isLightMode={props.isLightMode}

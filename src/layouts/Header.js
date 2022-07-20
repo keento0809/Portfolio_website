@@ -4,7 +4,7 @@ import AnchorLink from "react-anchor-link-smooth-scroll";
 import styled from "styled-components";
 import iconUrlDark from "../assets/images/icon-32x32.png";
 import iconUrlLight from "../assets/images/icon-32x32-light.png";
-import resumePdf from "../assets/pdf/resume-Kento-Honda.pdf";
+import resumePdf from "../assets/pdf/kento-honda-resume.pdf";
 import "../styles/navBorder.css";
 
 const HeaderStyle = styled.header`
