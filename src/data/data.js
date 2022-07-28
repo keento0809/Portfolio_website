@@ -58,12 +58,12 @@ export const pokeAppPointsArr = [
 ];
 
 export const countryBeenPointsArr = [
-  {
-    text: "Coded by Typescript and React-redux",
-  },
   { text: "Introduce react-simple-maps to display world map on the page" },
   {
     text: "Use REST Countries API to fetch data regarding countries",
+  },
+  {
+    text: "Connected to firebase storing data correctly",
   },
   { text: "Styled by tailwind CSS and the third-party library (Daisy UI)" },
 ];
@@ -137,6 +137,7 @@ export const countryBeenToolsArr = [
   { name: "typescript" },
   { name: "react", type: "original" },
   { name: "redux" },
+  { name: "firebase" },
   { name: "tailwindcss" },
 ];
 
