@@ -21,6 +21,7 @@ import {
   spotifyReplicaToolsArr,
   spotifyReplicaPointsArr,
 } from "../../data/data";
+import shoppingListImageUrl from "../../assets/images/shoppingList-mern-lp.png";
 import studyLogImageUrl from "../../assets/images/studylog-lp.png";
 import pokeAppImageUrl from "../../assets/images/pokeApp-lp-revised.png";
 import countryBeenImageUrl from "../../assets/images/countryBeen-lp-revised.png";
@@ -37,6 +38,18 @@ const MyProject = (props) => {
         <section className="myProject section">
           <Title title="Project" isLightMode={props.isLightMode} />
           <ul>
+            <Project
+              isLightMode={props.isLightMode}
+              projectTitle={"ShoppingList-Mern-App"}
+              summary={
+                "The simple web application introducing Poke REST API discovering your favorite pokemon."
+              }
+              points={shoppingListMernPointsArr}
+              languages={ShoppingListMernToolsArr}
+              gitHubUrl={"shoppingList-mern-app"}
+              linkUrl={"https://shopping-list-mern-app.vercel.app/"}
+              imageUrl={`${shoppingListImageUrl}`}
+            />
             <Project
               isLightMode={props.isLightMode}
               projectTitle={"StudyLog"}

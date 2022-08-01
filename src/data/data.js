@@ -116,7 +116,8 @@ export const spotifyReplicaPointsArr = [
 export const ShoppingListMernToolsArr = [
   { name: "javascript" },
   { name: "react", type: "original" },
-  { name: "express" },
+  { name: "nodejs" },
+  { name: "express", type: "original" },
   { name: "mongodb" },
 ];
 
