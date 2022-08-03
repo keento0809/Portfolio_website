@@ -1,4 +1,3 @@
-import { Fragment } from "react";
 import styled from "styled-components";
 import AboutMeDescription from "../UI/Description/AboutMeDescription";
 import SkillSetList from "../UI/List/SkillSetList";

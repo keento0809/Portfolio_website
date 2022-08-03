@@ -47,9 +47,30 @@ const AboutMeDescription = (props) => {
           >
             KENTO HONDA
           </StrongStyle>
-          ; creative, hard-working, and resilient Front-End Web Developer from
+          ; front-end developer with an extensive education in web development
+          and a vast passion for building user experience and interaction
+          design.
+          {/* Learning and growing as a developer always comes as my first
+          priority to enhance my skills by creating an e-commerce-like
+          application as my personal project utilizing React.js, Javascript,
+          Typescript, Redux, and so on.  */}
+          {/* I am confident in working and collaborating in teams through the
+          experience of group projects in my college. */}
+          {/* creative, hard-working, and resilient Front-End Web Developer from
           Japan. I always pursue creating, designing sophisticated web
-          applications with better solutions.
+          applications with better solutions. */}
+        </p>
+        <br />
+        <p>
+          Learning and growing as a developer always comes as my first priority
+          to enhance my skills throughout the experiences of creating my
+          personal projects utilizing React.js, Javascript, Typescript, Redux,
+          and so on.
+        </p>
+        <br />
+        <p>
+          I am very confident in working and collaborating in teams through the
+          experience of group projects in my college.
         </p>
         <br />
         <p className="description-body__secondParagraph">
@@ -62,8 +83,19 @@ const AboutMeDescription = (props) => {
             "Always Be Resilient"
           </StrongStyle>
           . Since every time I'm very strict with myself to complete my task and
-          work, I can persistently handle with any kind of problems or bugs with
-          difficulties.
+          work, I can persistently handle with any kind of problems or bugs no
+          matter how difficult they are.
+          {/* Indeed, I will never stop learning
+          something new related to web development and grow more to become a
+          better developer as I really work hard on improving my tech skills
+          with a huge passion for coding. */}
+          {/* with difficulties. */}
+        </p>
+        <br />
+        <p>
+          Indeed, I will never stop learning something new related to web
+          development and grow more to become a better developer as I really
+          work hard on improving my tech skills with a huge passion for coding.
         </p>
       </DescriptionBodyStyle>
     </AboutMeDescriptionWrapper>
