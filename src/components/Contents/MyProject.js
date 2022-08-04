@@ -42,7 +42,7 @@ const MyProject = (props) => {
               isLightMode={props.isLightMode}
               projectTitle={"ShoppingList-Mern-App"}
               summary={
-                "The simple web application introducing Poke REST API discovering your favorite pokemon."
+                "The shopping list application built by MERN stack tools."
               }
               points={shoppingListMernPointsArr}
               languages={ShoppingListMernToolsArr}
