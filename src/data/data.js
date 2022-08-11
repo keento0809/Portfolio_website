@@ -39,6 +39,13 @@ export const othersArr = [
 //   { text: "Great something" },
 // ];
 
+export const doctorAppointmentPointsArr = [
+  { text: "A full-stack application with React.js, Redux, and MongoDB" },
+  { text: "Having user authentication utilizing firebase authentication" },
+  { text: "Styled CSS modules, not relying on css libraries or UI frameworks" },
+  { text: "Enabling users to compare doctors and book doctor appointments" },
+];
+
 export const shoppingListMernPointsArr = [
   { text: "A MERN-stack application with React.js, Express, and MongoDB" },
   { text: "Having user authentication using bcrypt and JWT" },
@@ -111,6 +118,14 @@ export const spotifyReplicaPointsArr = [
   { text: "Created and imitated the Spotify landingPage with normal CSS" },
   { text: "Having Responsible-design with mediaQuery" },
   { text: "Added some animations powered by Vanilla Javascript" },
+];
+
+export const doctorAppointmentToolsArr = [
+  { name: "javascript" },
+  { name: "react", type: "original" },
+  { name: "redux" },
+  { name: "firebase" },
+  { name: "mongodb" },
 ];
 
 export const ShoppingListMernToolsArr = [

@@ -2,6 +2,7 @@ import ContentWrapper from "../UI/Wrapper/ContentWrapper";
 import Title from "../UI/Title/Title";
 import Project from "./Project";
 import {
+  doctorAppointmentPointsArr,
   shoppingListMernPointsArr,
   studyLogPointsArr,
   pokeAppPointsArr,
@@ -10,6 +11,7 @@ import {
   reduxTodoPointsArr,
   my2048PointsArr,
   portfolioWebsitePointsArr,
+  doctorAppointmentToolsArr,
   ShoppingListMernToolsArr,
   studyLogToolsArr,
   pokeAppToolsArr,
@@ -21,6 +23,7 @@ import {
   spotifyReplicaToolsArr,
   spotifyReplicaPointsArr,
 } from "../../data/data";
+import doctorAppointmentImageUrl from "../../assets/images/doctor-appintment-lp.png";
 import shoppingListImageUrl from "../../assets/images/shoppingList-mern-lp.png";
 import studyLogImageUrl from "../../assets/images/studylog-lp.png";
 import pokeAppImageUrl from "../../assets/images/pokeApp-lp-revised.png";
@@ -73,6 +76,18 @@ const MyProject = (props) => {
               gitHubUrl={"CountryBeen"}
               linkUrl={"https://country-been.vercel.app/"}
               imageUrl={`${countryBeenImageUrl}`}
+            />
+            <Project
+              isLightMode={props.isLightMode}
+              projectTitle={"Doctor Appointment"}
+              summary={
+                "A group project booking doctor appointments easily with CRUD operation and authentication both users and doctors"
+              }
+              points={doctorAppointmentPointsArr}
+              languages={doctorAppointmentToolsArr}
+              gitHubUrl={"https://github.com/kubilaycakmak/doctor-appointment"}
+              linkUrl={"https://easydoctorappointment.netlify.app/"}
+              imageUrl={`${doctorAppointmentImageUrl}`}
             />
             <Project
               isLightMode={props.isLightMode}
