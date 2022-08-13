@@ -57,7 +57,7 @@ const MyProject = (props) => {
               isLightMode={props.isLightMode}
               projectTitle={"StudyLog"}
               summary={
-                "The simple web application introducing Poke REST API discovering your favorite pokemon."
+                "A simple web application that records the data about the daily study histories of users."
               }
               points={studyLogPointsArr}
               languages={studyLogToolsArr}
