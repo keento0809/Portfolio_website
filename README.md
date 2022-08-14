@@ -1,6 +1,8 @@
 # Portfolio website
 
-This is my portfolio website, simple but user-friendly and great UI design created with React.js and styled-components.
+This is my portfolio website, a simple but user-friendly and great UI design created with React.js and styled-components.
+
+Everyone can check all of my projects created with various programming languages and tools on the portfolio website. And the order of projects is based on how featured the project is. Since my specialities of tech skills are Javascript, React.js, and Redux, I showcase my projects utilizing them a lot to highlight my skills.
 
 ## Demo link:
 
