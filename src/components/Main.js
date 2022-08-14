@@ -11,7 +11,7 @@ import BackToTopButton from "./UI/Button/BackToTopButton";
 import classes from "../styles/base.module.css";
 
 const Main = () => {
-  const [isLoading, setIsLoading] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
   const [isLightMode, setIsLightMode] = useState(false);
   const [isScrollingDown, setIsScrollingDown] = useState(false);
   const [isAsideShown, setIsAsideShown] = useState(false);
@@ -43,7 +43,7 @@ const Main = () => {
   }
 
   useEffect(() => {
-    setIsLoading(true);
+    // setIsLoading(true);
     setTimeout(() => {
       setIsLoading(false);
     }, 3280);
