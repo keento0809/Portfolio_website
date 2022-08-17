@@ -56,14 +56,17 @@ const LinkIconsList = (props) => {
         <UlStyle className={props.isLightMode ? "lightMode" : ""}>
           <li>
             <Tooltip title="GitHub" arrow>
-              <a href={`https://github.com/keento0809/${props.gitHubUrl}`}>
+              <a
+                href={`https://github.com/keento0809/${props.gitHubUrl}`}
+                target="_blank"
+              >
                 <i className="devicon-github-original"></i>
               </a>
             </Tooltip>
           </li>
           <li>
             <Tooltip title="Link" arrow>
-              <a href={props.linkUrl}>
+              <a href={props.linkUrl} target="_blank">
                 <ion-icon name="link-outline"></ion-icon>
               </a>
             </Tooltip>
