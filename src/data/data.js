@@ -16,6 +16,8 @@ export const frontEndLibrariesArr = [
   { name: "SCSS/SASS" },
   { name: "Material-UI" },
   { name: "Tailwind-css" },
+  { name: "Chakra UI" },
+  { name: "Ant Design" },
   { name: "Styled-components" },
   { name: "Responsible-Design" },
 ];
@@ -23,6 +25,7 @@ export const frontEndLibrariesArr = [
 export const othersArr = [
   { name: "Node.js" },
   { name: "Express.js" },
+  { name: "GraphQL" },
   { name: "Ruby" },
   { name: "Ruby on Rails" },
   { name: "MongoDB" },
