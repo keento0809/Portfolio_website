@@ -23,6 +23,8 @@ export const frontEndLibrariesArr = [
 export const othersArr = [
   { name: "Node.js" },
   { name: "Express.js" },
+  { name: "Ruby" },
+  { name: "Ruby on Rails" },
   { name: "MongoDB" },
   { name: "Firebase" },
   { name: "Jest" },
