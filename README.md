@@ -21,7 +21,36 @@ Access this project at [Portfolio website](https://portfolio-website-zeta-five.v
 
 ## About The App
 
-[Portfolio website](https://portfolio-website-zeta-five.vercel.app/) is my portfolio website.
+[Portfolio website](https://portfolio-website-zeta-five.vercel.app/) is my portfolio website showcasing my personal projects that I've created as well as group projects in my school.
+
+Here are the summary of featured projects in my portfolio website. Please take a look and if you get more interests to my projects, you can check the github link in each project and see how I've done for developing them.
+
+<!-- [ShoppingList Mern App](https://shopping-list-mern-app.vercel.app/) -->
+
+[ShoppingList Mern App](https://shopping-list-mern-app.vercel.app/)
+
+- A MERN-stack application memorizing shopping items with the
+  back-end side (server and database), user authentication powered by bcrypt and JWT, and basic CRUD operation.
+
+[StudyLog](https://studylog-three.vercel.app/)
+
+- A simple application recording and analyzing users daily study logs
+  by visualizing the data fetched from database.
+
+[CountryBeen](https://country-been.vercel.app/)
+
+- A useful web application for making appointments with doctors as
+  well as checking out upcoming appointment schedules.
+
+[FreshMarche](https://freshmarche.vercel.app/home)
+
+- An e-commerce-like application with basic CRUD operations (add,
+  edit, delete items in the cart) and dummy checkout form powered by Stripe API.
+
+[Doctor Appointment](https://easydoctorappointment.netlify.app/home)
+
+- A helpful application for booking appointments with doctors as
+  well as checking out upcoming appointment schedules.
 
 ## Screenshots
 
