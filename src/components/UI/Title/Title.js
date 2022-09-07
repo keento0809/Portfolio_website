@@ -1,5 +1,6 @@
 import { Fragment } from "react";
 import styled from "styled-components";
+import useToggleModeContext from "../../../hooks/useToggleModeContext";
 import classes from "../../../styles/NeonText.module.css";
 
 const TitleStyle = styled.div`
@@ -25,10 +26,11 @@ const TitleStyle = styled.div`
 `;
 
 const Title = (props) => {
+  const { isLightMode } = useToggleModeContext();
   return (
     <TitleStyle>
       <h4
-        className={`${props.isLightMode ? classes.fluxLight : classes.flux} ${
+        className={`${isLightMode ? classes.fluxLight : classes.flux} ${
           props.className
         }`}
       >

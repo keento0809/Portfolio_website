@@ -1,10 +1,11 @@
 import Main from "./components/Main";
+import ToggleModeProvider from "./context/ToggleModeContext";
 
 function App() {
   return (
-    <div className="App">
+    <ToggleModeProvider>
       <Main />
-    </div>
+    </ToggleModeProvider>
   );
 }
 

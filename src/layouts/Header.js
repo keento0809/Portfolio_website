@@ -6,6 +6,7 @@ import iconUrlDark from "../assets/images/icon-32x32.png";
 import iconUrlLight from "../assets/images/icon-32x32-light.png";
 import resumePdf from "../assets/pdf/resume-KENTO-HONDA.pdf";
 import "../styles/navBorder.css";
+import useToggleModeContext from "../hooks/useToggleModeContext";
 
 const HeaderStyle = styled.header`
   position: fixed;
@@ -153,7 +154,6 @@ const NavUlStyle = styled.ul`
 
   & li a {
     padding: 0.5rem 1.3rem;
-    /* border: 1px solid #050710; */
   }
 
   &.lightMode li a {
@@ -167,7 +167,6 @@ const NavUlStyle = styled.ul`
   }
 
   & li.active a {
-    /* border: 1px solid #8bfdfe; */
     border-radius: 8px;
   }
 
@@ -180,12 +179,14 @@ const Header = (props) => {
   const [isActive, setIsActive] = useState(false);
   const [targetValue, setTargetValue] = useState("");
 
+  const { isLightMode, setIsLightMode } = useToggleModeContext();
+
   const handleToggleAside = () => {
     props.setIsAsideShown(!props.isAsideShown);
   };
 
   const handleToggleMode = () => {
-    props.setIsLightMode(!props.isLightMode);
+    setIsLightMode(!isLightMode);
   };
 
   const handleMouseOVer = (e) => {
@@ -221,7 +222,7 @@ const Header = (props) => {
   return (
     <HeaderStyle
       className={`${props.isScrollingDown ? "hidden" : ""} ${
-        props.isLightMode ? "lightMode" : ""
+        isLightMode ? "lightMode" : ""
       }`}
     >
       <NavStyle className="header__nav">
@@ -239,7 +240,7 @@ const Header = (props) => {
               {/* LOGO */}
               <AnchorLink href="#home">
                 <img
-                  src={props.isLightMode ? `${iconUrlLight}` : `${iconUrlDark}`}
+                  src={isLightMode ? `${iconUrlLight}` : `${iconUrlDark}`}
                   alt=""
                 />
               </AnchorLink>
@@ -252,7 +253,7 @@ const Header = (props) => {
         </div>
         <MenuButtonStyle
           id="menuBtn"
-          className={`${props.isLightMode ? "lightMode" : ""} ${
+          className={`${isLightMode ? "lightMode" : ""} ${
             props.isAsideShown ? "active" : ""
           }`}
           onClick={handleToggleAside}
@@ -262,7 +263,7 @@ const Header = (props) => {
           <span></span>
         </MenuButtonStyle>
         <NavMenuStyle className="header-nav">
-          <NavUlStyle className={props.isLightMode ? "lightMode" : ""}>
+          <NavUlStyle className={isLightMode ? "lightMode" : ""}>
             <li
               className={isActive && targetValue === "Home" ? "active" : ""}
               onMouseOver={handleMouseOVer}
@@ -273,12 +274,10 @@ const Header = (props) => {
               <AnchorLink href="#home">
                 <span className="text">Home</span>
                 <span
-                  className={`${
-                    props.isLightMode ? "lightMode" : ""
-                  } btnBefore`}
+                  className={`${isLightMode ? "lightMode" : ""} btnBefore`}
                 ></span>
                 <span
-                  className={`${props.isLightMode ? "lightMode" : ""} btnAfter`}
+                  className={`${isLightMode ? "lightMode" : ""} btnAfter`}
                 ></span>
               </AnchorLink>
             </li>
@@ -290,12 +289,10 @@ const Header = (props) => {
               <AnchorLink href="#myproject">
                 <span className="text">Project</span>
                 <span
-                  className={`${
-                    props.isLightMode ? "lightMode" : ""
-                  } btnBefore`}
+                  className={`${isLightMode ? "lightMode" : ""} btnBefore`}
                 ></span>
                 <span
-                  className={`${props.isLightMode ? "lightMode" : ""} btnAfter`}
+                  className={`${isLightMode ? "lightMode" : ""} btnAfter`}
                 ></span>
               </AnchorLink>
             </li>
@@ -307,12 +304,10 @@ const Header = (props) => {
               <AnchorLink href="#aboutme">
                 <span className="text">About Me</span>
                 <span
-                  className={`${
-                    props.isLightMode ? "lightMode" : ""
-                  } btnBefore`}
+                  className={`${isLightMode ? "lightMode" : ""} btnBefore`}
                 ></span>
                 <span
-                  className={`${props.isLightMode ? "lightMode" : ""} btnAfter`}
+                  className={`${isLightMode ? "lightMode" : ""} btnAfter`}
                 ></span>
               </AnchorLink>
             </li>
@@ -324,12 +319,10 @@ const Header = (props) => {
               <AnchorLink href="#contactme">
                 <span className="text">Contact</span>
                 <span
-                  className={`${
-                    props.isLightMode ? "lightMode" : ""
-                  } btnBefore`}
+                  className={`${isLightMode ? "lightMode" : ""} btnBefore`}
                 ></span>
                 <span
-                  className={`${props.isLightMode ? "lightMode" : ""} btnAfter`}
+                  className={`${isLightMode ? "lightMode" : ""} btnAfter`}
                 ></span>
               </AnchorLink>
             </li>
@@ -341,12 +334,10 @@ const Header = (props) => {
               <a href={resumePdf} target="_blank">
                 <span className="text">Resume</span>
                 <span
-                  className={`${
-                    props.isLightMode ? "lightMode" : ""
-                  } btnBefore`}
+                  className={`${isLightMode ? "lightMode" : ""} btnBefore`}
                 ></span>
                 <span
-                  className={`${props.isLightMode ? "lightMode" : ""} btnAfter`}
+                  className={`${isLightMode ? "lightMode" : ""} btnAfter`}
                 ></span>
               </a>
             </li>
@@ -357,7 +348,7 @@ const Header = (props) => {
         isAsideShown={props.isAsideShown}
         setIsAsideShown={props.setIsAsideShown}
         setIsScrollingDown={props.setIsScrollingDown}
-        isLightMode={props.isLightMode}
+        // isLightMode={isLightMode}
       />
     </HeaderStyle>
   );

@@ -2,6 +2,7 @@ import { Fragment } from "react";
 import styled from "styled-components";
 import classes from "../../styles/NeonText.module.css";
 import ButtonUI from "../UI/Button/Button";
+import useToggleModeContext from "../../hooks/useToggleModeContext";
 
 const TopHeroStyle = styled.div`
   min-height: 100vh;
@@ -78,6 +79,7 @@ const MainDescStyle = styled.div`
 `;
 
 const TopHero = (props) => {
+  const { isLightMode } = useToggleModeContext();
   return (
     <TopHeroStyle id="home">
       <TopHeroWrapperStyle className="topHero__wrapper">
@@ -85,7 +87,7 @@ const TopHero = (props) => {
           <p className="nextToTitle">Hello, I'm</p>
           <h4
             className={`${
-              props.isLightMode ? `${classes.fluxLight}` : `${classes.flux}`
+              isLightMode ? `${classes.fluxLight}` : `${classes.flux}`
             }`}
           >
             KENTO
@@ -94,15 +96,9 @@ const TopHero = (props) => {
         <MainDescStyle className="topHero__mainDescription">
           <p>Web Developer</p>
           <p>Based in Vancouver</p>
-          {/* test */}
-          {/* <p>Front-end Developer Based in Vancouver</p> */}
         </MainDescStyle>
         <div className="toHero__button">
-          <ButtonUI
-            isLightMode={props.isLightMode}
-            label={"Explore"}
-            url={"#myproject"}
-          />
+          <ButtonUI label={"Explore"} url={"#myproject"} />
         </div>
       </TopHeroWrapperStyle>
     </TopHeroStyle>

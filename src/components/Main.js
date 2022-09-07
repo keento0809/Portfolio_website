@@ -9,13 +9,15 @@ import ContactMe from "./Contents/ContactMe";
 import Footer from "../layouts/Footer";
 import BackToTopButton from "./UI/Button/BackToTopButton";
 import classes from "../styles/base.module.css";
+import useToggleModeContext from "../hooks/useToggleModeContext";
 
 const Main = () => {
   const [isLoading, setIsLoading] = useState(true);
-  const [isLightMode, setIsLightMode] = useState(false);
   const [isScrollingDown, setIsScrollingDown] = useState(false);
   const [isAsideShown, setIsAsideShown] = useState(false);
   const [isTopBtnActive, setIsTopBtnActive] = useState(false);
+
+  const { isLightMode, setIsLightMode } = useToggleModeContext();
 
   let lastScrollY;
   let timeout;
@@ -43,7 +45,6 @@ const Main = () => {
   }
 
   useEffect(() => {
-    // setIsLoading(true);
     setTimeout(() => {
       setIsLoading(false);
     }, 3280);
@@ -61,8 +62,6 @@ const Main = () => {
     >
       {isLoading && <Loader />}
       <Header
-        isLightMode={isLightMode}
-        setIsLightMode={setIsLightMode}
         isScrollingDown={isScrollingDown}
         setIsScrollingDown={setIsScrollingDown}
         isAsideShown={isAsideShown}
@@ -71,7 +70,6 @@ const Main = () => {
       <ContainerWrapper
         isAsideShown={isAsideShown}
         setIsAsideShown={setIsAsideShown}
-        isLightMode={isLightMode}
       >
         <TopHero isLightMode={isLightMode} />
         <MyProject isLightMode={isLightMode} />

@@ -33,16 +33,16 @@ import reduxTodoImageUrl from "../../assets/images/reduxTodo-lp.png";
 import my2048ImageUrl from "../../assets/images/my2048-lp.png";
 import portfolioImageUrl from "../../assets/images/portfolio-website-lp-revised.png";
 import spotifyReplicaUrl from "../../assets/images/spotify-replica-lp.png";
+import useToggleModeContext from "../../hooks/useToggleModeContext";
 
-const MyProject = (props) => {
+const MyProject = () => {
   return (
     <div id="myproject">
       <ContentWrapper>
         <section className="myProject section">
-          <Title title="Project" isLightMode={props.isLightMode} />
+          <Title title="Project" />
           <ul>
             <Project
-              isLightMode={props.isLightMode}
               projectTitle={"ShoppingList-Mern-App"}
               summary={
                 "The shopping list application built by MERN stack tools."
@@ -54,7 +54,6 @@ const MyProject = (props) => {
               imageUrl={`${shoppingListImageUrl}`}
             />
             <Project
-              isLightMode={props.isLightMode}
               projectTitle={"StudyLog"}
               summary={
                 "A simple web application that records the data about the daily study histories of users."
@@ -66,7 +65,6 @@ const MyProject = (props) => {
               imageUrl={`${studyLogImageUrl}`}
             />
             <Project
-              isLightMode={props.isLightMode}
               projectTitle={"CountryBeen"}
               summary={
                 "The web application recording countries where you've ever been to and analyze them visually."
@@ -78,7 +76,6 @@ const MyProject = (props) => {
               imageUrl={`${countryBeenImageUrl}`}
             />
             <Project
-              isLightMode={props.isLightMode}
               projectTitle={"Doctor Appointment"}
               summary={
                 "A group project booking doctor appointments easily with CRUD operation and authentication both users and doctors"
@@ -90,7 +87,6 @@ const MyProject = (props) => {
               imageUrl={`${doctorAppointmentImageUrl}`}
             />
             <Project
-              isLightMode={props.isLightMode}
               projectTitle={"FreshMarche"}
               summary={
                 "The E-commerce application for fresh groceries, including authentication form and dummy checkout section."
@@ -102,7 +98,6 @@ const MyProject = (props) => {
               imageUrl={`${freshMarcheImageUrl}`}
             />
             <Project
-              isLightMode={props.isLightMode}
               projectTitle={"PokeApp"}
               summary={
                 "The simple web application introducing Poke REST API discovering your favorite pokemon."
@@ -114,7 +109,6 @@ const MyProject = (props) => {
               imageUrl={`${pokeAppImageUrl}`}
             />
             <Project
-              isLightMode={props.isLightMode}
               projectTitle={"ReduxTodo"}
               summary={
                 "A simple Todo list to manage your task, using React, React-Redux (Redux-toolkit)."
@@ -126,7 +120,6 @@ const MyProject = (props) => {
               imageUrl={`${reduxTodoImageUrl}`}
             />
             <Project
-              isLightMode={props.isLightMode}
               projectTitle={"My2048"}
               summary={
                 "The reproduction of 2048 game with my own styling (tailwind-css) and some additional features."
@@ -138,7 +131,6 @@ const MyProject = (props) => {
               imageUrl={`${my2048ImageUrl}`}
             />
             <Project
-              isLightMode={props.isLightMode}
               projectTitle={"Portfolio website"}
               summary={
                 "Simple but user-friendly portfolio website created by react.js and styled-components."
@@ -150,7 +142,6 @@ const MyProject = (props) => {
               imageUrl={`${portfolioImageUrl}`}
             />
             <Project
-              isLightMode={props.isLightMode}
               projectTitle={"Spotify Replica(Landing Page)"}
               summary={
                 "Simple but user-friendly portfolio website created by react.js and styled-components."

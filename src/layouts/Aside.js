@@ -2,6 +2,7 @@ import React, { Fragment, useEffect } from "react";
 import AnchorLink from "react-anchor-link-smooth-scroll";
 import styled from "styled-components";
 import resumePdf from "../assets/pdf/resume-KENTO-HONDA.pdf";
+import useToggleModeContext from "../hooks/useToggleModeContext";
 
 const AsideStyle = styled.aside`
   position: fixed;
@@ -108,7 +109,6 @@ const AtagStyle = styled.a`
 `;
 
 const ResumeDivStyle = styled.div`
-  /* padding-left: 20px; */
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
@@ -126,6 +126,8 @@ const ResumeDivStyle = styled.div`
 `;
 
 const Aside = (props) => {
+  const { isLightMode } = useToggleModeContext();
+
   const handleLinkClick = () => {
     props.setIsAsideShown(false);
   };
@@ -143,7 +145,7 @@ const Aside = (props) => {
   return (
     <AsideStyle
       className={`${props.isAsideShown ? "show" : ""} ${
-        props.isLightMode ? "lightMode" : ""
+        isLightMode ? "lightMode" : ""
       }`}
     >
       <AsideContainerStyle className="aside-container">
@@ -155,7 +157,7 @@ const Aside = (props) => {
           <ul className="aside-container__menuList">
             <LiStyle className="menuBtns">
               <AnchorLink
-                className={props.isLightMode ? "lightMode" : ""}
+                className={isLightMode ? "lightMode" : ""}
                 href="#home"
                 onClick={handleLinkClick}
               >
@@ -165,7 +167,7 @@ const Aside = (props) => {
             </LiStyle>
             <LiStyle className="menuBtns">
               <AnchorLink
-                className={props.isLightMode ? "lightMode" : ""}
+                className={isLightMode ? "lightMode" : ""}
                 href="#myproject"
                 onClick={handleLinkClick}
               >
@@ -175,7 +177,7 @@ const Aside = (props) => {
             </LiStyle>
             <LiStyle className="menuBtns">
               <AnchorLink
-                className={props.isLightMode ? "lightMode" : ""}
+                className={isLightMode ? "lightMode" : ""}
                 href="#aboutme"
                 onClick={handleLinkClick}
               >
@@ -185,7 +187,7 @@ const Aside = (props) => {
             </LiStyle>
             <LiStyle className="menuBtns">
               <AnchorLink
-                className={props.isLightMode ? "lightMode" : ""}
+                className={isLightMode ? "lightMode" : ""}
                 href="#contactme"
                 onClick={handleLinkClick}
               >
@@ -195,7 +197,7 @@ const Aside = (props) => {
             </LiStyle>
           </ul>
         </div>
-        <ResumeDivStyle className={props.isLightMode ? "lightMode" : ""}>
+        <ResumeDivStyle className={isLightMode ? "lightMode" : ""}>
           <ion-icon name="document-text-outline"></ion-icon>
           <a href={resumePdf} className="resumeLink" target="_blank">
             Resume
