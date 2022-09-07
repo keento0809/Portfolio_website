@@ -92,7 +92,7 @@ const TopHero = (props) => {
           </h4>
         </div>
         <MainDescStyle className="topHero__mainDescription">
-          <p>Front-end Developer</p>
+          <p>Web Developer</p>
           <p>Based in Vancouver</p>
           {/* test */}
           {/* <p>Front-end Developer Based in Vancouver</p> */}

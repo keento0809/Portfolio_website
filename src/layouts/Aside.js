@@ -1,7 +1,7 @@
 import React, { Fragment, useEffect } from "react";
 import AnchorLink from "react-anchor-link-smooth-scroll";
 import styled from "styled-components";
-import resumePdf from "../assets/pdf/resume-frontend.pdf";
+import resumePdf from "../assets/pdf/resume-KENTO-HONDA.pdf";
 
 const AsideStyle = styled.aside`
   position: fixed;
