@@ -1,5 +1,5 @@
-import { Fragment } from "react";
 import styled from "styled-components";
+import useToggleModeContext from "../../../hooks/useToggleModeContext";
 
 const BackdropStyle = styled.div`
   position: fixed;
@@ -23,6 +23,8 @@ const BackdropStyle = styled.div`
 `;
 
 const Backdrop = (props) => {
+  const { isLightMode } = useToggleModeContext();
+
   const handleCloseAside = () => {
     props.setIsAsideShown(false);
   };
@@ -30,7 +32,7 @@ const Backdrop = (props) => {
   return (
     <BackdropStyle
       className={`${props.isAsideShown ? "shown" : ""} ${
-        props.isLightMode ? "lightMode" : ""
+        isLightMode ? "lightMode" : ""
       }`}
       onClick={handleCloseAside}
     >

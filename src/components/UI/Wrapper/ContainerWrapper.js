@@ -1,4 +1,3 @@
-import { Fragment } from "react";
 import styled from "styled-components";
 import Backdrop from "../Backdrop/Backdrop";
 
@@ -18,7 +17,6 @@ const ContainerWrapper = (props) => {
     <div className="">
       {/* test */}
       <Backdrop
-        isLightMode={props.isLightMode}
         isAsideShown={props.isAsideShown}
         setIsAsideShown={props.setIsAsideShown}
       />

@@ -3,6 +3,7 @@ import ProjectDescription from "../UI/Description/ProjectDescription";
 import LanguageList from "../UI/List/LanguageList";
 import LinkIconsList from "../UI/List/LinkIconsList";
 import styled from "styled-components";
+import useToggleModeContext from "../../hooks/useToggleModeContext";
 
 const ListStyle = styled.li`
   margin-bottom: 24px;
@@ -39,22 +40,23 @@ const IconsDivStyle = styled.div`
 `;
 
 const Project = (props) => {
+  const { isLightMode } = useToggleModeContext();
   return (
-    <ListStyle className={props.isLightMode ? "lightMode" : ""}>
-      <MyProjectContainer isLightMode={props.isLightMode}>
+    <ListStyle className={isLightMode ? "lightMode" : ""}>
+      <MyProjectContainer isLightMode={isLightMode}>
         <ProjectTitleStyle className="project-title">
           <h2>{props.projectTitle}</h2>
         </ProjectTitleStyle>
         <ProjectDescription
           summary={props.summary}
-          isLightMode={props.isLightMode}
+          isLightMode={isLightMode}
           points={props.points}
           imageUrl={props.imageUrl}
         />
         <IconsDivStyle>
           <LanguageList languages={props.languages} />
           <LinkIconsList
-            isLightMode={props.isLightMode}
+            isLightMode={isLightMode}
             gitHubUrl={props.gitHubUrl}
             linkUrl={props.linkUrl}
           />

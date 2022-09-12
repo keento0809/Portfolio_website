@@ -37,15 +37,19 @@ export const othersArr = [
   { name: "Figma" },
 ];
 
-// export const dummyPointsArr = [
-//   { text: "Great UI" },
-//   { text: "Great UX" },
-//   { text: "Great Feature" },
-//   { text: "Great something" },
-// ];
+export const gatheringPointsArr = [
+  { text: "A full-stack application with Typescript, NextJS, and MongoDB" },
+  {
+    text: "Applied next-auth to add admin-user authentication feature with NextJS",
+  },
+  {
+    text: "Utilizing google maps api displaying each gathering's location",
+  },
+  { text: "Managing data with MongoDB to enable users to join gatherings" },
+];
 
 export const doctorAppointmentPointsArr = [
-  { text: "A full-stack application with React.js, Redux, and MongoDB" },
+  { text: "A full-stack application with ReactJS, Redux, and MongoDB" },
   { text: "Having user authentication utilizing firebase authentication" },
   { text: "Styled CSS modules, not relying on css libraries or UI frameworks" },
   { text: "Enabling users to compare doctors and book doctor appointments" },
@@ -123,6 +127,13 @@ export const spotifyReplicaPointsArr = [
   { text: "Created and imitated the Spotify landingPage with normal CSS" },
   { text: "Having Responsible-design with mediaQuery" },
   { text: "Added some animations powered by Vanilla Javascript" },
+];
+
+export const gatheringToolsArr = [
+  { name: "typescript" },
+  { name: "nextjs" },
+  { name: "tailwindcss" },
+  { name: "mongodb" },
 ];
 
 export const doctorAppointmentToolsArr = [

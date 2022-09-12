@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import AnchorLink from "react-anchor-link-smooth-scroll";
+import useToggleModeContext from "../../../hooks/useToggleModeContext";
 
 // original code
 const ButtonStyle = styled.a`
@@ -46,18 +47,16 @@ const ButtonWrapperStyle = styled.div`
 `;
 
 const ButtonUI = (props) => {
+  const { isLightMode } = useToggleModeContext();
   return (
     <ButtonWrapperStyle>
       {props.label === "SAY HELLO" && (
-        <a href={props.url} className={props.isLightMode ? "lightMode" : ""}>
+        <a href={props.url} className={isLightMode ? "lightMode" : ""}>
           {props.label}
         </a>
       )}
       {props.label !== "SAY HELLO" && (
-        <AnchorLink
-          href={props.url}
-          className={props.isLightMode ? "lightMode" : ""}
-        >
+        <AnchorLink href={props.url} className={isLightMode ? "lightMode" : ""}>
           {props.label}
         </AnchorLink>
       )}
