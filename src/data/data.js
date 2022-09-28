@@ -1,7 +1,8 @@
 export const specialtiesArr = [
   { name: "React.js" },
-  { name: "Javascript(ES6)" },
   { name: "Redux" },
+  { name: "Javascript(ES6)" },
+  { name: "Typescript" },
 ];
 
 export const frontEndLibrariesArr = [
@@ -40,12 +41,14 @@ export const othersArr = [
 export const gatheringPointsArr = [
   { text: "A full-stack application with Typescript, NextJS, and MongoDB" },
   {
-    text: "Applied next-auth to add admin-user authentication feature with NextJS",
+    text: "Applied next-auth to add admin-user authentication with NextJS",
   },
   {
-    text: "Utilizing google maps api displaying each gathering's location",
+    text: "Making use of emailJS to add the feature of sending confirmation mails to users",
   },
-  { text: "Managing data with MongoDB to enable users to join gatherings" },
+  {
+    text: "Deal with Data by MongoDB dynamically to enable admin users to manage gatherings",
+  },
 ];
 
 export const doctorAppointmentPointsArr = [

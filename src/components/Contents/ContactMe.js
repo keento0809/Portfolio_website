@@ -100,8 +100,8 @@ const ContactMe = (props) => {
           </div>
           <ContactMeDescriptionStyle className="contactMe__description">
             <p>
-              I'm always looking for opportunities to work as a front-end
-              developer. Please free to contact me.
+              I'm always looking for opportunities to work as a web developer.
+              Please free to contact me.
             </p>
           </ContactMeDescriptionStyle>
           <ButtonContainerStyle className="contactMe__mailButton">
