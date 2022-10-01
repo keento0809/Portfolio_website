@@ -113,7 +113,6 @@ const ContactMe = (props) => {
           </ButtonContainerStyle>
         </section>
       </ContentWrapper>
-      {/* test */}
     </div>
   );
 };
