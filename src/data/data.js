@@ -30,6 +30,7 @@ export const othersArr = [
   { name: "Ruby" },
   { name: "Ruby on Rails" },
   { name: "MongoDB" },
+  { name: "PostgreSQL" },
   { name: "Firebase" },
   { name: "Jest" },
   { name: "Heroku" },
