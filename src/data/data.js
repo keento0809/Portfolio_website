@@ -3,6 +3,7 @@ export const specialtiesArr = [
   { name: "Redux" },
   { name: "Javascript(ES6)" },
   { name: "Typescript" },
+  { name: "Next.js" },
 ];
 
 export const frontEndLibrariesArr = [
