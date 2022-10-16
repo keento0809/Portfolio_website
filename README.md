@@ -28,7 +28,6 @@ Here is the summary of featured projects on my portfolio website. Please take a 
 [ShoppingList Mern App](https://shopping-list-mern-app.vercel.app/)
 
 - MERN-stack application memorizing shopping items with MongoDB, Express, React, and NodeJS.
-
 - Showcasing my skills such as developing a full-stack application with a good understanding of bcrypt and JWT, connecting MongoDB to React App, and styling with Chakra UI.
 
 - Tools: `ReactJS` `NodeJS` `Express` `MongoDB` `ChakraUI` `bcrypt` `JWT`
@@ -36,7 +35,6 @@ Here is the summary of featured projects on my portfolio website. Please take a 
 [StudyLog](https://studylog-three.vercel.app/)
 
 - Helpful web application that analyzes and visualizes users’ daily study records.
-
 - Utilized Ant Design Chart to visualize data with line charts and manipulated users’ data with firebase.
 
 - Tools: `Typescript` `ReactJS` `Firebase` `TailwindCSS` `Ant Design Chart`
@@ -44,7 +42,6 @@ Here is the summary of featured projects on my portfolio website. Please take a 
 [CountryBeen](https://country-been.vercel.app/)
 
 - Useful web application for remembering countries where users have been before.
-
 - Applied Redux toolkit for state management with Typescript, and a React library (react-simple-map).
 
 - Tools: `Typescript` `ReactJS` `Redux` `Firebase` `TailwindCSS` `DaisyUI`
@@ -52,7 +49,6 @@ Here is the summary of featured projects on my portfolio website. Please take a 
 [FreshMarche](https://freshmarche.vercel.app/home)
 
 - E-commerce-like application specializing in fruits and vegetables created with ReactJS and MaterialUI.
-
 - Implemented CRUD operations with React-Router, applied Stripe API for the checkout section.
 
 - Tools: `ReactJS` `Firebase` `MaterialUI` `Stripe API`
@@ -60,7 +56,6 @@ Here is the summary of featured projects on my portfolio website. Please take a 
 [Doctor Appointment](https://easydoctorappointment.netlify.app/home)
 
 - Group project in school - Practical application for booking doctor appointments.
-
 - Completed connecting React App to MongoDB, as well as utilizing firebase for user authentication.
 
 - Tools: `ReactJS` `Redux` `MongoDB` `Firebase` `Styled-components`
