@@ -1,4 +1,4 @@
-# Portfolio website
+# KENTO's Portfolio website
 
 This is my portfolio website, a simple but user-friendly and great UI design created with React.js and styled-components.
 
@@ -27,36 +27,41 @@ Here is the summary of featured projects on my portfolio website. Please take a 
 
 [ShoppingList Mern App](https://shopping-list-mern-app.vercel.app/)
 
-- A MERN-stack application memorizing shopping items with the
-  back-end side (server and database), user authentication powered by bcrypt and JWT, and basic CRUD operation.
+- MERN-stack application memorizing shopping items with MongoDB, Express, React, and NodeJS.
+
+- Showcasing my skills such as developing a full-stack application with a good understanding of bcrypt and JWT, connecting MongoDB to React App, and styling with Chakra UI.
 
 - Tools: `ReactJS` `NodeJS` `Express` `MongoDB` `ChakraUI` `bcrypt` `JWT`
 
 [StudyLog](https://studylog-three.vercel.app/)
 
-- A simple application recording and analyzing users daily study logs
-  by visualizing the data fetched from database.
+- Helpful web application that analyzes and visualizes users’ daily study records.
+
+- Utilized Ant Design Chart to visualize data with line charts and manipulated users’ data with firebase.
 
 - Tools: `Typescript` `ReactJS` `Firebase` `TailwindCSS` `Ant Design Chart`
 
 [CountryBeen](https://country-been.vercel.app/)
 
-- A useful web application for making appointments with doctors as
-  well as checking out upcoming appointment schedules.
+- Useful web application for remembering countries where users have been before.
+
+- Applied Redux toolkit for state management with Typescript, and a React library (react-simple-map).
 
 - Tools: `Typescript` `ReactJS` `Redux` `Firebase` `TailwindCSS` `DaisyUI`
 
 [FreshMarche](https://freshmarche.vercel.app/home)
 
-- An e-commerce-like application with basic CRUD operations (add,
-  edit, delete items in the cart) and dummy checkout form powered by Stripe API.
+- E-commerce-like application specializing in fruits and vegetables created with ReactJS and MaterialUI.
+
+- Implemented CRUD operations with React-Router, applied Stripe API for the checkout section.
 
 - Tools: `ReactJS` `Firebase` `MaterialUI` `Stripe API`
 
 [Doctor Appointment](https://easydoctorappointment.netlify.app/home)
 
-- A helpful application for booking appointments with doctors as
-  well as checking out upcoming appointment schedules.
+- Group project in school - Practical application for booking doctor appointments.
+
+- Completed connecting React App to MongoDB, as well as utilizing firebase for user authentication.
 
 - Tools: `ReactJS` `Redux` `MongoDB` `Firebase` `Styled-components`
 
@@ -78,7 +83,7 @@ Here is the summary of featured projects on my portfolio website. Please take a 
 ## Approach
 
 - Optimize React components as much as possible to minimize workloads
-- Styled by styled-components, writing CSS codes by myself and not relying on CSS framework in terms of the design.
+- Styled by styled-components, showcasing my CSS skills and not relying on CSS framework in terms of the design.
 
 ## Status
 
