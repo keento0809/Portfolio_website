@@ -27,15 +27,6 @@ const Loader = () => {
   return (
     <div className="">
       <LoaderStyle className={classes.loading}>
-        {/* <div id="load" className={classes.load}>
-          <div>G</div>
-          <div>N</div>
-          <div>I</div>
-          <div>D</div>
-          <div>A</div>
-          <div>O</div>
-          <div>L</div>
-        </div> */}
         <h4 className={`${classes.loader} ${neonClasses.flux}`}>Loading</h4>
       </LoaderStyle>
     </div>
