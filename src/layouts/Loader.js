@@ -14,6 +14,13 @@ const LoaderStyle = styled.div`
     font-size: 6vw;
     line-height: 6vw;
   }
+
+  @media screen and (min-width: 1023px) {
+    & h4 {
+      font-size: 3.5vw;
+      line-height: 3.5vw;
+    }
+  }
 `;
 
 const Loader = () => {

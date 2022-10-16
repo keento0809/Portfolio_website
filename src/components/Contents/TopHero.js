@@ -49,8 +49,8 @@ const TopHeroWrapperStyle = styled.div`
     min-height: 280px;
 
     & h4 {
-      font-size: 7.5vw;
-      line-height: 7.5vw;
+      font-size: 6vw;
+      line-height: 6vw;
     }
 
     & p {
@@ -60,11 +60,6 @@ const TopHeroWrapperStyle = styled.div`
 
   @media screen and (min-width: 1300px) {
     min-height: 300px;
-
-    & h4 {
-      font-size: 8vw;
-      line-height: 8vw;
-    }
 
     & p.nextToTitle {
       padding-bottom: 2rem;

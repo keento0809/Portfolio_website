@@ -56,6 +56,12 @@ const HeaderLeftStyle = styled.div`
     padding-bottom: 1.6px;
     cursor: pointer;
   }
+
+  @media screen and (min-width: 1023px) {
+    & ion-icon {
+      font-size: 20px;
+    }
+  }
 `;
 
 // test span
@@ -70,6 +76,13 @@ const LogoStyle = styled.div`
 
   & img {
     display: block;
+  }
+
+  @media screen and (min-width: 1023px) {
+    & img {
+      width: 28px;
+      height: 28px;
+    }
   }
 `;
 
@@ -237,7 +250,6 @@ const Header = (props) => {
             }}
           >
             <LogoStyle id="logoBtn" className="header__nav__logo">
-              {/* LOGO */}
               <AnchorLink href="#home">
                 <img
                   src={isLightMode ? `${iconUrlLight}` : `${iconUrlDark}`}
