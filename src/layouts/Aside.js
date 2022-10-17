@@ -18,12 +18,10 @@ const AsideStyle = styled.aside`
   transform: translateX(100%);
   transition: all 0.3s ease;
   z-index: 8;
-
   &.show {
     transform: none;
     transition: all 0.3s ease;
   }
-
   &.lightMode {
     background-color: #e5ebff;
   }
@@ -35,20 +33,15 @@ const AsideContainerStyle = styled.div`
   flex-direction: column;
   justify-content: space-between;
   align-items: flex-start;
-
   & .aside-container__title {
     padding-bottom: 56px;
   }
-
   & h4 {
     font-size: 24px;
-    /* padding-left: 20px; */
   }
-
   & li {
     padding-bottom: 32px;
   }
-
   & a {
     font-size: 20px;
   }
@@ -61,50 +54,20 @@ const LiStyle = styled.li`
     justify-content: flex-start;
     align-items: center;
     line-height: 20px;
-
     & ion-icon {
       font-size: 20px;
       margin-right: 1rem;
     }
-
     & span {
       padding-bottom: 1px;
     }
-
     & .resume {
       width: 100%;
       text-align: center;
     }
-
     &.lightMode {
       color: #19224e;
     }
-  }
-`;
-
-const AtagStyle = styled.a`
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  align-items: center;
-  line-height: 20px;
-
-  & ion-icon {
-    font-size: 20px;
-    margin-right: 1rem;
-  }
-
-  & span {
-    padding-bottom: 1px;
-  }
-
-  & .resume {
-    width: 100%;
-    text-align: center;
-  }
-
-  &.lightMode {
-    color: #19224e;
   }
 `;
 
@@ -114,12 +77,10 @@ const ResumeDivStyle = styled.div`
   justify-content: flex-start;
   align-items: center;
   line-height: 20px;
-
   & ion-icon {
     font-size: 20px;
     margin-right: 1rem;
   }
-
   &.lightMode a {
     color: #19224e;
   }
@@ -127,21 +88,17 @@ const ResumeDivStyle = styled.div`
 
 const Aside = (props) => {
   const { isLightMode } = useToggleModeContext();
-
   const handleLinkClick = () => {
     props.setIsAsideShown(false);
   };
-
   useEffect(() => {
     if (props.isAsideShown) {
-      console.log("it's changing!");
       document.body.className = "over";
       return () => {
         document.body.className = "";
       };
     }
   }, [props.isAsideShown]);
-  // const shown = props.isAsideShown ? "show" : "";
   return (
     <AsideStyle
       className={`${props.isAsideShown ? "show" : ""} ${
