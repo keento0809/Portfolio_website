@@ -4,7 +4,7 @@ import AnchorLink from "react-anchor-link-smooth-scroll";
 import styled from "styled-components";
 import iconUrlDark from "../assets/images/icon-32x32.png";
 import iconUrlLight from "../assets/images/icon-32x32-light.png";
-import resumePdf from "../assets/pdf/resume-KENTO-HONDA.pdf";
+import resumePdf from "../assets/pdf/KentoHonda-resume.pdf";
 import "../styles/navBorder.css";
 import useToggleModeContext from "../hooks/useToggleModeContext";
 

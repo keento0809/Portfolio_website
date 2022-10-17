@@ -1,7 +1,7 @@
-import React, { Fragment, useEffect } from "react";
+import React, { useEffect } from "react";
 import AnchorLink from "react-anchor-link-smooth-scroll";
 import styled from "styled-components";
-import resumePdf from "../assets/pdf/resume-KENTO-HONDA.pdf";
+import resumePdf from "../assets/pdf/KentoHonda-resume.pdf";
 import useToggleModeContext from "../hooks/useToggleModeContext";
 
 const AsideStyle = styled.aside`
