@@ -4,7 +4,7 @@ import AnchorLink from "react-anchor-link-smooth-scroll";
 import styled from "styled-components";
 import iconUrlDark from "../assets/images/icon-32x32.png";
 import iconUrlLight from "../assets/images/icon-32x32-light.png";
-import resumePdf from "../assets/pdf/resume-KENTO-HONDA.pdf";
+import resumePdf from "../assets/pdf/KentoHonda-resume.pdf";
 import "../styles/navBorder.css";
 import useToggleModeContext from "../hooks/useToggleModeContext";
 
@@ -19,16 +19,13 @@ const HeaderStyle = styled.header`
   transform: none;
   transition: all 0.3s ease;
   background-color: #050710;
-
   &.hidden {
     transform: translateY(-100%);
     transition: all 0.3s ease;
   }
-
   &.lightMode {
     background-color: #eff3ff;
   }
-
   @media screen and (min-width: 767px) {
     padding: 0 56px;
   }
@@ -40,7 +37,6 @@ const NavStyle = styled.nav`
   align-items: center;
   line-height: 80px;
   height: 80px;
-
   & .header__nav__logo {
     font-size: 24px;
   }
@@ -51,12 +47,10 @@ const HeaderLeftStyle = styled.div`
   flex-direction: row;
   align-items: center;
   justify-content: flex-start;
-
   & ion-icon {
     padding-bottom: 1.6px;
     cursor: pointer;
   }
-
   @media screen and (min-width: 1023px) {
     & ion-icon {
       font-size: 20px;
@@ -64,16 +58,13 @@ const HeaderLeftStyle = styled.div`
   }
 `;
 
-// test span
 const LogoStyle = styled.div`
   display: inline-block;
   padding-right: 20px;
   cursor: pointer;
-
   & a {
     display: block;
   }
-
   & img {
     display: block;
   }

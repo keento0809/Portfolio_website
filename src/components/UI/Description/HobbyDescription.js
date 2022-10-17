@@ -3,19 +3,16 @@ import styled from "styled-components";
 
 const HobbySentenceStyle = styled.p`
   color: #94a3b8;
-
   &.lightMode {
     color: #393e46;
   }
 `;
 
 const UlStyle = styled.ul`
-  /* padding: 1.5rem 0; */
   border: 1px solid;
   border-radius: 8px;
   margin: 2rem 0;
   padding: 1rem 1.5rem;
-
   & li {
     padding-bottom: 1rem;
   }
@@ -26,11 +23,9 @@ const HobbyOutlineStyle = styled.div`
   flex-direction: row;
   justify-content: flex-start;
   align-items: center;
-
   & h3 {
     font-weight: normal;
   }
-
   & ion-icon {
     padding-right: 0.5rem;
   }
@@ -54,14 +49,13 @@ const HobbyDescription = (props) => {
             </h3>
           </HobbyOutlineStyle>
           <HobbySentenceStyle className={props.isLightMode ? "lightMode" : ""}>
-            I've been to 16 countries and regions to explore something new and
-            enjoy the adventures.
+            I've been to 17 countries and regions so far to broaden my horizons
+            and enjoy new adventures.
           </HobbySentenceStyle>
         </li>
         <li>
           <HobbyOutlineStyle className="">
             <ion-icon name="basketball-outline"></ion-icon>
-            {/* <ion-icon name="checkmark-outline"></ion-icon> */}
             <h3>
               I'm a <strong>"Sports lover"</strong>.
             </h3>
