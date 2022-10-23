@@ -119,7 +119,7 @@ const MyProject = () => {
               linkUrl={"https://redux-todo-kappa.vercel.app/"}
               imageUrl={`${reduxTodoImageUrl}`}
             />
-            <Project
+            {/* <Project
               projectTitle={"My2048"}
               summary={
                 "The reproduction of 2048 game with my own styling (tailwind-css) and some additional features."
@@ -129,7 +129,7 @@ const MyProject = () => {
               gitHubUrl={"my2048"}
               linkUrl={"https://my2048-keento0809.netlify.app/"}
               imageUrl={`${my2048ImageUrl}`}
-            />
+            /> */}
             <Project
               projectTitle={"Portfolio website"}
               summary={
