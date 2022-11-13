@@ -9,7 +9,6 @@ import {
   countryBeenPointsArr,
   freshMarchePointsArr,
   reduxTodoPointsArr,
-  my2048PointsArr,
   portfolioWebsitePointsArr,
   doctorAppointmentToolsArr,
   ShoppingListMernToolsArr,
@@ -18,7 +17,6 @@ import {
   countryBeenToolsArr,
   freshMarcheToolsArr,
   reduxTodoToolsArr,
-  my2048ToolsArr,
   portfolioWebsiteToolsArr,
   spotifyReplicaToolsArr,
   spotifyReplicaPointsArr,
@@ -119,17 +117,6 @@ const MyProject = () => {
               linkUrl={"https://redux-todo-kappa.vercel.app/"}
               imageUrl={`${reduxTodoImageUrl}`}
             />
-            {/* <Project
-              projectTitle={"My2048"}
-              summary={
-                "The reproduction of 2048 game with my own styling (tailwind-css) and some additional features."
-              }
-              points={my2048PointsArr}
-              languages={my2048ToolsArr}
-              gitHubUrl={"my2048"}
-              linkUrl={"https://my2048-keento0809.netlify.app/"}
-              imageUrl={`${my2048ImageUrl}`}
-            /> */}
             <Project
               projectTitle={"Portfolio website"}
               summary={
