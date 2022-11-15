@@ -1,4 +1,4 @@
-import { Fragment, useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import Header from "../layouts/Header";
 import ContainerWrapper from "./UI/Wrapper/ContainerWrapper";
 import Loader from "../layouts/Loader";
@@ -16,7 +16,6 @@ const Main = () => {
   const [isScrollingDown, setIsScrollingDown] = useState(false);
   const [isAsideShown, setIsAsideShown] = useState(false);
   const [isTopBtnActive, setIsTopBtnActive] = useState(false);
-
   const { isLightMode, setIsLightMode } = useToggleModeContext();
 
   let lastScrollY;
@@ -43,17 +42,14 @@ const Main = () => {
       lastScrollY = currentScrollY;
     }, 800);
   }
-
   useEffect(() => {
     setTimeout(() => {
       setIsLoading(false);
     }, 3280);
   }, []);
-
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);
   }, [isScrollingDown]);
-
   return (
     <div
       className={`${classes.global} ${isLightMode ? classes.lightMode : ""} ${
