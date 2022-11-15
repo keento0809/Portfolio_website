@@ -7,7 +7,6 @@ import iconUrlLight from "../assets/images/icon-32x32-light.png";
 import resumePdf from "../assets/pdf/KENTO-HONDA-resume-web-developer.pdf";
 import "../styles/navBorder.css";
 import useToggleModeContext from "../hooks/useToggleModeContext";
-import resumePdf from "../assets/pdf/KENTO-HONDA-resume-web-developer.pdf";
 
 const HeaderStyle = styled.header`
   position: fixed;
