@@ -8,6 +8,7 @@ import "../styles/navBorder.css";
 import useToggleModeContext from "../hooks/useToggleModeContext";
 import { useDataContext } from "../context/dataContext";
 import useContentful from "../hooks/useContentful";
+import resumePdf from "../assets/pdf/KENTO-HONDA-resume-frontend.pdf";
 
 const HeaderStyle = styled.header`
   position: fixed;
@@ -346,7 +347,7 @@ const Header = (props) => {
               onMouseOver={handleMouseOVer}
               onMouseOut={handleMouseOut}
             >
-              <a href={resumeUrl && resumeUrl} target="_blank">
+              <a href={resumePdf} target="_blank">
                 <span className="text">Resume</span>
                 <span
                   className={`${isLightMode ? "lightMode" : ""} btnBefore`}
