@@ -103,17 +103,17 @@ const Aside = (props) => {
       };
     }
   }, [props.isAsideShown]);
-  const handleSetResumeUrl = async () => {
-    await getResume()
-      .then((res) => {
-        const url = "https:" + res[0].fields.myResume.fields.file.url;
-        setResumeUrl(url);
-      })
-      .catch((err) => console.log(err));
-  };
-  useEffect(() => {
-    !resumeUrl && handleSetResumeUrl();
-  }, []);
+  // const handleSetResumeUrl = async () => {
+  //   await getResume()
+  //     .then((res) => {
+  //       const url = "https:" + res[0].fields.myResume.fields.file.url;
+  //       setResumeUrl(url);
+  //     })
+  //     .catch((err) => console.log(err));
+  // };
+  // useEffect(() => {
+  //   !resumeUrl && handleSetResumeUrl();
+  // }, []);
   return (
     <AsideStyle
       className={`${props.isAsideShown ? "show" : ""} ${
