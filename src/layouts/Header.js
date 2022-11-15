@@ -1,12 +1,13 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Aside from "./Aside";
 import AnchorLink from "react-anchor-link-smooth-scroll";
 import styled from "styled-components";
 import iconUrlDark from "../assets/images/icon-32x32.png";
 import iconUrlLight from "../assets/images/icon-32x32-light.png";
-import resumePdf from "../assets/pdf/KENTO-HONDA-resume-web-developer.pdf";
 import "../styles/navBorder.css";
 import useToggleModeContext from "../hooks/useToggleModeContext";
+import { useDataContext } from "../context/dataContext";
+import useContentful from "../hooks/useContentful";
 
 const HeaderStyle = styled.header`
   position: fixed;
@@ -182,8 +183,9 @@ const NavUlStyle = styled.ul`
 const Header = (props) => {
   const [isActive, setIsActive] = useState(false);
   const [targetValue, setTargetValue] = useState("");
-
   const { isLightMode, setIsLightMode } = useToggleModeContext();
+  const { resumeUrl, setResumeUrl } = useDataContext();
+  const { getResume } = useContentful();
 
   const handleToggleAside = () => {
     props.setIsAsideShown(!props.isAsideShown);
@@ -222,7 +224,17 @@ const Header = (props) => {
     setIsActive(false);
     setTargetValue("");
   };
-
+  const handleSetResumeUrl = async () => {
+    await getResume()
+      .then((res) => {
+        const url = "https:" + res[0].fields.myResume.fields.file.url;
+        setResumeUrl(url);
+      })
+      .catch((err) => console.log(err));
+  };
+  useEffect(() => {
+    !resumeUrl && handleSetResumeUrl();
+  }, []);
   return (
     <HeaderStyle
       className={`${props.isScrollingDown ? "hidden" : ""} ${
@@ -334,7 +346,7 @@ const Header = (props) => {
               onMouseOver={handleMouseOVer}
               onMouseOut={handleMouseOut}
             >
-              <a href={resumePdf} target="_blank">
+              <a href={resumeUrl && resumeUrl} target="_blank">
                 <span className="text">Resume</span>
                 <span
                   className={`${isLightMode ? "lightMode" : ""} btnBefore`}

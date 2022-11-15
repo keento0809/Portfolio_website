@@ -1,8 +1,9 @@
 import React, { useEffect } from "react";
 import AnchorLink from "react-anchor-link-smooth-scroll";
 import styled from "styled-components";
-import resumePdf from "../assets/pdf/KENTO-HONDA-resume-web-developer.pdf";
 import useToggleModeContext from "../hooks/useToggleModeContext";
+import { useDataContext } from "../context/dataContext";
+import useContentful from "../hooks/useContentful";
 
 const AsideStyle = styled.aside`
   position: fixed;
@@ -88,6 +89,8 @@ const ResumeDivStyle = styled.div`
 
 const Aside = (props) => {
   const { isLightMode } = useToggleModeContext();
+  const { resumeUrl, setResumeUrl } = useDataContext();
+  const { getResume } = useContentful();
   const handleLinkClick = () => {
     props.setIsAsideShown(false);
   };
@@ -99,6 +102,17 @@ const Aside = (props) => {
       };
     }
   }, [props.isAsideShown]);
+  const handleSetResumeUrl = async () => {
+    await getResume()
+      .then((res) => {
+        const url = "https:" + res[0].fields.myResume.fields.file.url;
+        setResumeUrl(url);
+      })
+      .catch((err) => console.log(err));
+  };
+  useEffect(() => {
+    !resumeUrl && handleSetResumeUrl();
+  }, []);
   return (
     <AsideStyle
       className={`${props.isAsideShown ? "show" : ""} ${
@@ -156,7 +170,11 @@ const Aside = (props) => {
         </div>
         <ResumeDivStyle className={isLightMode ? "lightMode" : ""}>
           <ion-icon name="document-text-outline"></ion-icon>
-          <a href={resumePdf} className="resumeLink" target="_blank">
+          <a
+            href={resumeUrl && resumeUrl}
+            className="resumeLink"
+            target="_blank"
+          >
             Resume
           </a>
         </ResumeDivStyle>
