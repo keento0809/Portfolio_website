@@ -4,9 +4,12 @@ export const DataContext = createContext();
 
 const DataContextProvider = ({ children }) => {
   const [resumeUrl, setResumeUrl] = useState("");
+  const [projectImages, setProjectImages] = useState([]);
   const dataContextValue = {
     resumeUrl,
     setResumeUrl,
+    projectImages,
+    setProjectImages,
   };
   return (
     <DataContext.Provider value={dataContextValue}>

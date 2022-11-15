@@ -18,18 +18,20 @@ const useContentful = () => {
     } catch (error) {
       console.log(error);
     }
-    // client
-    //   .getEntries({
-    //     content_type: "resume",
-    //     select: "fields",
-    //   })
-    //   .then((entry) => {
-    //     const resumeUrl = entry.items;
-    //     return resumeUrl;
-    //   })
-    //   .catch((err) => console.log(err));
   };
-  return { getResume };
+  const getProjectImages = async () => {
+    try {
+      const entriesData = await client.getEntries({
+        content_type: "Project_image",
+        select: "fields",
+      });
+      const entries = entriesData.items;
+      return entries;
+    } catch (error) {
+      console.log(error);
+    }
+  };
+  return { getResume, getProjectImages };
 };
 
 export default useContentful;
