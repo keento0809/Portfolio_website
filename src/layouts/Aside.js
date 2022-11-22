@@ -4,7 +4,7 @@ import styled from "styled-components";
 import useToggleModeContext from "../hooks/useToggleModeContext";
 import { useDataContext } from "../context/dataContext";
 import useContentful from "../hooks/useContentful";
-import resumePdf from "../assets/pdf/KENTO-HONDA-resume-frontend.pdf";
+import resumePath from "../assets/pdf/resume-Kento-Honda.pdf";
 
 const AsideStyle = styled.aside`
   position: fixed;
@@ -171,7 +171,12 @@ const Aside = (props) => {
         </div>
         <ResumeDivStyle className={isLightMode ? "lightMode" : ""}>
           <ion-icon name="document-text-outline"></ion-icon>
-          <a href={resumePdf} className="resumeLink" target="_blank">
+          <a
+            // href={resumePath}
+            href={resumeUrl && resumeUrl}
+            className="resumeLink"
+            target="_blank"
+          >
             Resume
           </a>
         </ResumeDivStyle>

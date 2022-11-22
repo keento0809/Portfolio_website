@@ -1,3 +1,4 @@
+import React, { useEffect } from "react";
 import ContentWrapper from "../UI/Wrapper/ContentWrapper";
 import Title from "../UI/Title/Title";
 import Project from "./Project";
@@ -28,12 +29,23 @@ import pokeAppImageUrl from "../../assets/images/pokeApp-lp-revised.png";
 import countryBeenImageUrl from "../../assets/images/countryBeen-lp-revised.png";
 import freshMarcheImageUrl from "../../assets/images/freshMarche-lp.png";
 import reduxTodoImageUrl from "../../assets/images/reduxTodo-lp.png";
-import my2048ImageUrl from "../../assets/images/my2048-lp.png";
 import portfolioImageUrl from "../../assets/images/portfolio-website-lp-revised.png";
 import spotifyReplicaUrl from "../../assets/images/spotify-replica-lp.png";
 import useToggleModeContext from "../../hooks/useToggleModeContext";
+import useContentful from "../../hooks/useContentful";
 
 const MyProject = () => {
+  // const { getProjectImages } = useContentful();
+  // const handleSetProjectImages = async () => {
+  //   await getProjectImages()
+  //     .then((res) => {
+  //       console.log(res);
+  //     })
+  //     .catch((err) => console.log(err));
+  // };
+  // useEffect(() => {
+  //   handleSetProjectImages();
+  // }, []);
   return (
     <div id="myproject">
       <ContentWrapper>
