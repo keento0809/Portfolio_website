@@ -1,4 +1,3 @@
-import React from "react";
 import { createClient } from "contentful";
 
 const useContentful = () => {
@@ -19,19 +18,19 @@ const useContentful = () => {
       console.log(error);
     }
   };
-  const getProjectImages = async () => {
-    try {
-      const entriesData = await client.getEntries({
-        content_type: "Project_image",
-        select: "fields",
-      });
-      const entries = entriesData.items;
-      return entries;
-    } catch (error) {
-      console.log(error);
-    }
-  };
-  return { getResume, getProjectImages };
+  // const getProjectImages = async () => {
+  //   try {
+  //     const entriesData = await client.getEntries({
+  //       content_type: "Project_image",
+  //       select: "fields",
+  //     });
+  //     const entries = entriesData.items;
+  //     return entries;
+  //   } catch (error) {
+  //     console.log(error);
+  //   }
+  // };
+  return { getResume };
 };
 
 export default useContentful;

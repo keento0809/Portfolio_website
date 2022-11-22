@@ -32,8 +32,20 @@ import reduxTodoImageUrl from "../../assets/images/reduxTodo-lp.png";
 import portfolioImageUrl from "../../assets/images/portfolio-website-lp-revised.png";
 import spotifyReplicaUrl from "../../assets/images/spotify-replica-lp.png";
 import useToggleModeContext from "../../hooks/useToggleModeContext";
+import useContentful from "../../hooks/useContentful";
 
 const MyProject = () => {
+  // const { getProjectImages } = useContentful();
+  // const handleSetProjectImages = async () => {
+  //   await getProjectImages()
+  //     .then((res) => {
+  //       console.log(res);
+  //     })
+  //     .catch((err) => console.log(err));
+  // };
+  // useEffect(() => {
+  //   handleSetProjectImages();
+  // }, []);
   return (
     <div id="myproject">
       <ContentWrapper>
