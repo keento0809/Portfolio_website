@@ -225,17 +225,11 @@ const Header = (props) => {
     setIsActive(false);
     setTargetValue("");
   };
-  // const handleSetResumeUrl = async () => {
-  //   await getResume()
-  //     .then((res) => {
-  //       const url = "https:" + res[0].fields.myResume.fields.file.url;
-  //       setResumeUrl(url);
-  //     })
-  //     .catch((err) => console.log(err));
-  // };
-  // useEffect(() => {
-  //   !resumeUrl && handleSetResumeUrl();
-  // }, []);
+  useEffect(() => {
+    getResume()
+      .then((res) => setResumeUrl(res))
+      .catch((err) => console.log(err));
+  }, []);
   return (
     <HeaderStyle
       className={`${props.isScrollingDown ? "hidden" : ""} ${
@@ -348,8 +342,8 @@ const Header = (props) => {
               onMouseOut={handleMouseOut}
             >
               <a
-                href={resumePath}
-                // href={resumeUrl && resumeUrl}
+                // href={resumePath}
+                href={resumeUrl && resumeUrl}
                 target="_blank"
               >
                 <span className="text">Resume</span>
