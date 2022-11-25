@@ -8,12 +8,13 @@ const useContentful = () => {
   });
   const getResume = async () => {
     try {
-      const entryData = await client.getEntries({
+      const entry = await client.getEntries({
         content_type: "resume",
         select: "fields",
       });
-      const entry = entryData.items;
-      return entry;
+      const resumeUrl =
+        "https:" + entry.items[0].fields.myResume.fields.file.url;
+      return resumeUrl;
     } catch (error) {
       console.log(error);
     }

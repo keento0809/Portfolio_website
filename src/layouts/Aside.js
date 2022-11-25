@@ -103,17 +103,11 @@ const Aside = (props) => {
       };
     }
   }, [props.isAsideShown]);
-  // const handleSetResumeUrl = async () => {
-  //   await getResume()
-  //     .then((res) => {
-  //       const url = "https:" + res[0].fields.myResume.fields.file.url;
-  //       setResumeUrl(url);
-  //     })
-  //     .catch((err) => console.log(err));
-  // };
-  // useEffect(() => {
-  //   !resumeUrl && handleSetResumeUrl();
-  // }, []);
+  useEffect(() => {
+    getResume()
+      .then((res) => setResumeUrl(res))
+      .catch((err) => console.log(err));
+  }, []);
   return (
     <AsideStyle
       className={`${props.isAsideShown ? "show" : ""} ${
@@ -172,8 +166,8 @@ const Aside = (props) => {
         <ResumeDivStyle className={isLightMode ? "lightMode" : ""}>
           <ion-icon name="document-text-outline"></ion-icon>
           <a
-            href={resumePath}
-            // href={resumeUrl && resumeUrl}
+            // href={resumePath}
+            href={resumeUrl}
             className="resumeLink"
             target="_blank"
           >
