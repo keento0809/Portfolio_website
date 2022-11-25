@@ -166,8 +166,8 @@ const Aside = (props) => {
         <ResumeDivStyle className={isLightMode ? "lightMode" : ""}>
           <ion-icon name="document-text-outline"></ion-icon>
           <a
-            // href={resumePath}
-            href={resumeUrl}
+            href={resumePath}
+            // href={resumeUrl}
             className="resumeLink"
             target="_blank"
           >
