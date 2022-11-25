@@ -3,7 +3,7 @@ import { createClient } from "contentful";
 const useContentful = () => {
   const client = createClient({
     space: process.env.REACT_APP_CONTENTFUL_SPACE,
-    accessToken: process.env.REACT_APP_CONTENTFUL_API_ACCESS_TOKEN,
+    accessToken: process.env.REACT_APP_CONTENTFUL_ACCESS_TOKEN,
     host: process.env.REACT_APP_CONTENTFUL_HOST,
   });
   const getResume = async () => {
