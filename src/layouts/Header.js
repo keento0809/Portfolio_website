@@ -342,8 +342,8 @@ const Header = (props) => {
               onMouseOut={handleMouseOut}
             >
               <a
-                // href={resumePath}
-                href={resumeUrl && resumeUrl}
+                href={resumePath}
+                // href={resumeUrl && resumeUrl}
                 target="_blank"
               >
                 <span className="text">Resume</span>
