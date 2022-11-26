@@ -24,14 +24,13 @@ import {
 } from "../../data/data";
 import doctorAppointmentImageUrl from "../../assets/images/doctor-appintment-lp.png";
 import shoppingListImageUrl from "../../assets/images/shoppingList-mern-lp.png";
-import studyLogImageUrl from "../../assets/images/studylog-lp.png";
+import studyLogImageUrl from "../../assets/images/studyLog-lp-img.png";
 import pokeAppImageUrl from "../../assets/images/pokeApp-lp-revised.png";
 import countryBeenImageUrl from "../../assets/images/CountryBeen-revised-lp-img.png";
 import freshMarcheImageUrl from "../../assets/images/freshMarche-lp.png";
 import reduxTodoImageUrl from "../../assets/images/reduxTodo-lp.png";
 import portfolioImageUrl from "../../assets/images/portfolio-website-lp-revised.png";
 import spotifyReplicaUrl from "../../assets/images/spotify-replica-lp.png";
-import useToggleModeContext from "../../hooks/useToggleModeContext";
 import useContentful from "../../hooks/useContentful";
 
 const MyProject = () => {
