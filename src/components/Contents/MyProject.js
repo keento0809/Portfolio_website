@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import ContentWrapper from "../UI/Wrapper/ContentWrapper";
 import Title from "../UI/Title/Title";
 import Project from "./Project";
@@ -26,7 +26,7 @@ import doctorAppointmentImageUrl from "../../assets/images/doctor-appintment-lp.
 import shoppingListImageUrl from "../../assets/images/shoppingList-mern-lp.png";
 import studyLogImageUrl from "../../assets/images/studylog-lp.png";
 import pokeAppImageUrl from "../../assets/images/pokeApp-lp-revised.png";
-import countryBeenImageUrl from "../../assets/images/countryBeen-lp-revised.png";
+import countryBeenImageUrl from "../../assets/images/CountryBeen-revised-lp-img.png";
 import freshMarcheImageUrl from "../../assets/images/freshMarche-lp.png";
 import reduxTodoImageUrl from "../../assets/images/reduxTodo-lp.png";
 import portfolioImageUrl from "../../assets/images/portfolio-website-lp-revised.png";
@@ -35,17 +35,18 @@ import useToggleModeContext from "../../hooks/useToggleModeContext";
 import useContentful from "../../hooks/useContentful";
 
 const MyProject = () => {
-  // const { getProjectImages } = useContentful();
-  // const handleSetProjectImages = async () => {
-  //   await getProjectImages()
-  //     .then((res) => {
-  //       console.log(res);
-  //     })
-  //     .catch((err) => console.log(err));
-  // };
-  // useEffect(() => {
-  //   handleSetProjectImages();
-  // }, []);
+  const [projectImages, setProjectImages] = useState([]);
+  const { getProjectImages } = useContentful();
+  const handleSetProjectImages = async () => {
+    await getProjectImages()
+      .then((res) => {
+        console.log("aa");
+      })
+      .catch((err) => console.log(err));
+  };
+  useEffect(() => {
+    handleSetProjectImages();
+  }, []);
   return (
     <div id="myproject">
       <ContentWrapper>

@@ -19,19 +19,22 @@ const useContentful = () => {
       console.log(error);
     }
   };
-  // const getProjectImages = async () => {
-  //   try {
-  //     const entriesData = await client.getEntries({
-  //       content_type: "Project_image",
-  //       select: "fields",
-  //     });
-  //     const entries = entriesData.items;
-  //     return entries;
-  //   } catch (error) {
-  //     console.log(error);
-  //   }
-  // };
-  return { getResume };
+  const getProjectImages = async () => {
+    try {
+      const entries = await client.getEntries({
+        content_type: "thumbnail",
+        select: "fields",
+      });
+      const sanitizedEntries = entries.items.map((item) => {
+        const image = item.fields.img.fields.file.url;
+        return image;
+      });
+      return sanitizedEntries;
+    } catch (error) {
+      console.log(error);
+    }
+  };
+  return { getResume, getProjectImages };
 };
 
 export default useContentful;
