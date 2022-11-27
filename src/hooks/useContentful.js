@@ -25,11 +25,13 @@ const useContentful = () => {
         content_type: "thumbnail",
         select: "fields",
       });
-      const sanitizedEntries = entries.items.map((item) => {
+      const hash = {};
+      entries.items.forEach((item) => {
+        const title = item.fields.img.fields.title;
         const image = item.fields.img.fields.file.url;
-        return image;
+        if (hash[title] === undefined) hash[title] = image;
       });
-      return sanitizedEntries;
+      return hash;
     } catch (error) {
       console.log(error);
     }

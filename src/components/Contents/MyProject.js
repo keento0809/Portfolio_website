@@ -22,24 +22,24 @@ import {
   spotifyReplicaToolsArr,
   spotifyReplicaPointsArr,
 } from "../../data/data";
-import doctorAppointmentImageUrl from "../../assets/images/doctor-appintment-lp.png";
-import shoppingListImageUrl from "../../assets/images/shoppingList-mern-lp.png";
-import studyLogImageUrl from "../../assets/images/studyLog-lp-img.png";
-import pokeAppImageUrl from "../../assets/images/pokeApp-lp-revised.png";
-import countryBeenImageUrl from "../../assets/images/CountryBeen-revised-lp-img.png";
-import freshMarcheImageUrl from "../../assets/images/freshMarche-lp.png";
-import reduxTodoImageUrl from "../../assets/images/reduxTodo-lp.png";
-import portfolioImageUrl from "../../assets/images/portfolio-website-lp-revised.png";
-import spotifyReplicaUrl from "../../assets/images/spotify-replica-lp.png";
+// import doctorAppointmentImageUrl from "../../assets/images/doctor-appintment-lp.png";
+// import shoppingListImageUrl from "../../assets/images/shoppingList-mern-lp.png";
+// import studyLogImageUrl from "../../assets/images/studyLog-lp-img.png";
+// import pokeAppImageUrl from "../../assets/images/pokeApp-lp-revised.png";
+// import countryBeenImageUrl from "../../assets/images/CountryBeen-revised-lp-img.png";
+// import freshMarcheImageUrl from "../../assets/images/freshMarche-lp.png";
+// import reduxTodoImageUrl from "../../assets/images/reduxTodo-lp.png";
+// import portfolioImageUrl from "../../assets/images/portfolio-website-lp-revised.png";
+// import spotifyReplicaUrl from "../../assets/images/spotify-replica-lp.png";
 import useContentful from "../../hooks/useContentful";
 
 const MyProject = () => {
-  const [projectImages, setProjectImages] = useState([]);
+  const [projectImages, setProjectImages] = useState({});
   const { getProjectImages } = useContentful();
   const handleSetProjectImages = async () => {
     await getProjectImages()
       .then((res) => {
-        console.log("aa");
+        setProjectImages(res);
       })
       .catch((err) => console.log(err));
   };
@@ -61,7 +61,8 @@ const MyProject = () => {
               languages={ShoppingListMernToolsArr}
               gitHubUrl={"shoppingList-mern-app"}
               linkUrl={"https://shopping-list-mern-app.vercel.app/"}
-              imageUrl={`${shoppingListImageUrl}`}
+              imageUrl={projectImages && projectImages["shoppingList-mern-app"]}
+              // imageUrl={`${shoppingListImageUrl}`}
             />
             <Project
               projectTitle={"StudyLog"}
@@ -72,7 +73,7 @@ const MyProject = () => {
               languages={studyLogToolsArr}
               gitHubUrl={"studylog"}
               linkUrl={"https://studylog-three.vercel.app/"}
-              imageUrl={`${studyLogImageUrl}`}
+              imageUrl={projectImages && projectImages["studylog"]}
             />
             <Project
               projectTitle={"CountryBeen"}
@@ -83,7 +84,7 @@ const MyProject = () => {
               languages={countryBeenToolsArr}
               gitHubUrl={"CountryBeen"}
               linkUrl={"https://country-been.vercel.app/"}
-              imageUrl={`${countryBeenImageUrl}`}
+              imageUrl={projectImages && projectImages["CountryBeen"]}
             />
             <Project
               projectTitle={"Doctor Appointment"}
@@ -94,7 +95,7 @@ const MyProject = () => {
               languages={doctorAppointmentToolsArr}
               gitHubUrl={"https://github.com/kubilaycakmak/doctor-appointment"}
               linkUrl={"https://easydoctorappointment.netlify.app/"}
-              imageUrl={`${doctorAppointmentImageUrl}`}
+              imageUrl={projectImages && projectImages["doctor-appointment"]}
             />
             <Project
               projectTitle={"FreshMarche"}
@@ -105,7 +106,7 @@ const MyProject = () => {
               languages={freshMarcheToolsArr}
               gitHubUrl={"freshmarche"}
               linkUrl={"https://freshmarche.vercel.app/home"}
-              imageUrl={`${freshMarcheImageUrl}`}
+              imageUrl={projectImages && projectImages["freshmarche"]}
             />
             <Project
               projectTitle={"PokeApp"}
@@ -116,7 +117,7 @@ const MyProject = () => {
               languages={pokeAppToolsArr}
               gitHubUrl={"poke-app"}
               linkUrl={"https://poke-app-three-mu.vercel.app/"}
-              imageUrl={`${pokeAppImageUrl}`}
+              imageUrl={projectImages && projectImages["poke-app"]}
             />
             <Project
               projectTitle={"ReduxTodo"}
@@ -127,7 +128,7 @@ const MyProject = () => {
               languages={reduxTodoToolsArr}
               gitHubUrl={"ReduxTodo"}
               linkUrl={"https://redux-todo-kappa.vercel.app/"}
-              imageUrl={`${reduxTodoImageUrl}`}
+              imageUrl={projectImages && projectImages["ReduxTodo"]}
             />
             <Project
               projectTitle={"Portfolio website"}
@@ -138,7 +139,7 @@ const MyProject = () => {
               languages={portfolioWebsiteToolsArr}
               gitHubUrl={"Portfolio_website"}
               linkUrl={"https://portfolio-website-zeta-five.vercel.app/"}
-              imageUrl={`${portfolioImageUrl}`}
+              imageUrl={projectImages && projectImages["Portfolio_website"]}
             />
             <Project
               projectTitle={"Spotify Replica(Landing Page)"}
@@ -149,7 +150,7 @@ const MyProject = () => {
               languages={spotifyReplicaToolsArr}
               gitHubUrl={"Spotify_replica"}
               linkUrl={"https://keento0809.github.io/Spotify_replica/"}
-              imageUrl={`${spotifyReplicaUrl}`}
+              imageUrl={projectImages && projectImages["Spotify_replica"]}
             />
           </ul>
         </section>
