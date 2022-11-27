@@ -96,7 +96,7 @@ const MyProject = () => {
               points={doctorAppointmentPointsArr}
               languages={doctorAppointmentToolsArr}
               gitHubUrl={"https://github.com/kubilaycakmak/doctor-appointment"}
-              linkUrl={"https://easydoctorappointment.netlify.app/"}
+              linkUrl={""}
               // imageUrl={projectImages && projectImages["doctor-appointment"]}
               imageUrl={`${doctorAppointmentImageUrl}`}
             />
@@ -151,7 +151,7 @@ const MyProject = () => {
             <Project
               projectTitle={"Spotify Replica(Landing Page)"}
               summary={
-                "Simple but user-friendly portfolio website created by react.js and styled-components."
+                "The re-production of Spotify's landing page, showcasing my CSS and Vanilla Javascript skills."
               }
               points={spotifyReplicaPointsArr}
               languages={spotifyReplicaToolsArr}
