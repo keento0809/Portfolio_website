@@ -226,7 +226,7 @@ export const projectsInfoArr = [
     summary:
       "A simple web application that records the data about the daily study histories of users.",
     languages: studyLogToolsArr,
-    points: studyLogToolsArr,
+    points: studyLogPointsArr,
     gitHubUrl: "studylog",
     linkUrl: "https://studylog-three.vercel.app/",
   },
