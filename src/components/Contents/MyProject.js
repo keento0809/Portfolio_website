@@ -32,6 +32,7 @@ import reduxTodoImageUrl from "../../assets/images/reduxTodo-lp.png";
 import portfolioImageUrl from "../../assets/images/portfolio-website-lp-revised.png";
 import spotifyReplicaUrl from "../../assets/images/spotify-replica-lp.png";
 import useContentful from "../../hooks/useContentful";
+import { projectsInfoArr } from "../../data/data";
 
 const MyProject = () => {
   const [projectImages, setProjectImages] = useState({});
@@ -52,7 +53,29 @@ const MyProject = () => {
         <section className="myProject section">
           <Title title="Project" />
           <ul>
-            <Project
+            {projectsInfoArr.map((project, index) => {
+              const {
+                projectTitle,
+                summary,
+                points,
+                languages,
+                gitHubUrl,
+                linkUrl,
+              } = project;
+              return (
+                <Project
+                  key={index + project.projectTitle}
+                  projectTitle={projectTitle}
+                  summary={summary}
+                  points={points}
+                  languages={languages}
+                  gitHubUrl={gitHubUrl}
+                  linkUrl={linkUrl}
+                  imageUrl={projectImages && projectImages[projectTitle]}
+                />
+              );
+            })}
+            {/* <Project
               projectTitle={"ShoppingList-Mern-App"}
               summary={
                 "The shopping list application built by MERN stack tools."
@@ -159,7 +182,7 @@ const MyProject = () => {
               linkUrl={"https://keento0809.github.io/Spotify_replica/"}
               // imageUrl={projectImages && projectImages["Spotify_replica"]}
               imageUrl={`${spotifyReplicaUrl}`}
-            />
+            /> */}
           </ul>
         </section>
       </ContentWrapper>
