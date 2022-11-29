@@ -36,7 +36,10 @@ const useContentful = () => {
       console.log(error);
     }
   };
-  return { getResume, getProjectImages };
+  const getProjectInfo = () => {
+    console.log("img");
+  };
+  return { getResume, getProjectImages, getProjectInfo };
 };
 
 export default useContentful;

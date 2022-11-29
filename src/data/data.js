@@ -27,7 +27,6 @@ export const frontEndLibrariesArr = [
 export const othersArr = [
   { name: "Node.js" },
   { name: "Express.js" },
-  { name: "GraphQL" },
   { name: "Ruby" },
   { name: "Ruby on Rails" },
   { name: "MongoDB" },
@@ -36,6 +35,8 @@ export const othersArr = [
   { name: "Jest" },
   { name: "Heroku" },
   { name: "Git/CLI" },
+  { name: "Contentful" },
+  { name: "GraphQL" },
   { name: "RESTfulAPI" },
   { name: "Figma" },
 ];
@@ -124,6 +125,7 @@ export const my2048PointsArr = [
 
 export const portfolioWebsitePointsArr = [
   { text: "Optimize components to minimize workloads" },
+  { text: "Make use of contentful (headless CMS) to manage data effectively" },
   { text: "Styled by styled-components, not relying on css frameworks" },
   { text: "Enable to switch lightMode and DarkMode" },
 ];

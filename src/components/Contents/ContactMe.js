@@ -72,27 +72,33 @@ const ContactMe = (props) => {
           <div className="contactMe__iconsList">
             <UlStyle className={props.isLightMode ? "lightMode" : ""}>
               <li>
-                <a href="">
+                <a href={`tel:${process.env.REACT_APP_MY_PHONE}`}>
                   <ion-icon name="call-outline"></ion-icon>
                 </a>
               </li>
               <li>
-                <a href="mailto:kentos1112canada@gmail.com">
+                <a
+                  href={`mailto:${process.env.REACT_APP_MY_EMAIL}`}
+                  target="_blank"
+                >
                   <ion-icon name="mail-outline"></ion-icon>
                 </a>
               </li>
               <li>
-                <a href="https://www.linkedin.com/in/kento-honda-342a7a227/">
+                <a
+                  href={`${process.env.REACT_APP_MY_LINKEDIN}`}
+                  target="_blank"
+                >
                   <i className="devicon-linkedin-plain"></i>
                 </a>
               </li>
               <li>
-                <a href="https://github.com/keento0809">
+                <a href={`${process.env.REACT_APP_MY_GITHUB}`} target="_blank">
                   <i className="devicon-github-original"></i>
                 </a>
               </li>
               <li>
-                <a href="">
+                <a href={`${process.env.REACT_APP_MY_TWITTER}`} target="_blank">
                   <i className="devicon-twitter-original"></i>
                 </a>
               </li>
@@ -107,7 +113,7 @@ const ContactMe = (props) => {
           <ButtonContainerStyle className="contactMe__mailButton">
             <ButtonUI
               label={"SAY HELLO"}
-              url={"mailto:kentos1112canada@gmail.com"}
+              url={`mailto:${process.env.REACT_APP_MY_EMAIL}`}
               isLightMode={props.isLightMode}
             />
           </ButtonContainerStyle>
