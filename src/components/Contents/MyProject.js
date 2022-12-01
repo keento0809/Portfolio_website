@@ -3,16 +3,19 @@ import ContentWrapper from "../UI/Wrapper/ContentWrapper";
 import Title from "../UI/Title/Title";
 import Project from "./Project";
 import useContentful from "../../hooks/useContentful";
-import { projectsInfoArr } from "../../data/data";
 
 const MyProject = () => {
   const [projectImages, setProjectImages] = useState({});
-  const { getProjectImages } = useContentful();
+  const [projectInfoArray, setProjectInfoArray] = useState([]);
+  const { getProjectImages, getProjectInfo } = useContentful();
   const handleSetProjectImages = async () => {
     await getProjectImages()
       .then((res) => {
         setProjectImages(res);
       })
+      .catch((err) => console.log(err));
+    await getProjectInfo()
+      .then((res) => setProjectInfoArray(res))
       .catch((err) => console.log(err));
   };
   useEffect(() => {
@@ -24,28 +27,29 @@ const MyProject = () => {
         <section className="myProject section">
           <Title title="Project" />
           <ul>
-            {projectsInfoArr.map((project, index) => {
-              const {
-                projectTitle,
-                summary,
-                points,
-                languages,
-                gitHubUrl,
-                linkUrl,
-              } = project;
-              return (
-                <Project
-                  key={index + project.projectTitle}
-                  projectTitle={projectTitle}
-                  summary={summary}
-                  points={points}
-                  languages={languages}
-                  gitHubUrl={gitHubUrl}
-                  linkUrl={linkUrl}
-                  imageUrl={projectImages && projectImages[projectTitle]}
-                />
-              );
-            })}
+            {projectInfoArray &&
+              projectInfoArray.map((project, index) => {
+                const {
+                  projectTitle,
+                  summary,
+                  points,
+                  languages,
+                  gitHubUrl,
+                  linkUrl,
+                } = project;
+                return (
+                  <Project
+                    key={index + project.projectTitle}
+                    projectTitle={projectTitle}
+                    summary={summary}
+                    points={points}
+                    languages={languages}
+                    gitHubUrl={gitHubUrl}
+                    linkUrl={linkUrl}
+                    imageUrl={projectImages && projectImages[projectTitle]}
+                  />
+                );
+              })}
           </ul>
         </section>
       </ContentWrapper>

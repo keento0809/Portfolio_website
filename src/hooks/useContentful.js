@@ -36,8 +36,20 @@ const useContentful = () => {
       console.log(error);
     }
   };
-  const getProjectInfo = () => {
-    console.log("img");
+  const getProjectInfo = async () => {
+    try {
+      const entries = await client.getEntries({
+        content_type: "project",
+        select: "fields",
+        order: "sys.createdAt",
+      });
+      const sanitizedEntries = entries.items.map((item) => {
+        return item.fields.projectData[0];
+      });
+      return sanitizedEntries;
+    } catch (error) {
+      console.log(error);
+    }
   };
   return { getResume, getProjectImages, getProjectInfo };
 };
