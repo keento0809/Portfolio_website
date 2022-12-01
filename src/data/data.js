@@ -110,7 +110,7 @@ export const freshMarchePointsArr = [
 
 export const reduxTodoPointsArr = [
   { text: "Simple and good-looking design with Material-UI" },
-  { text: "CRUD functions operated by Redux-toolkit " },
+  { text: "CRUD functions operated by Redux-toolkit" },
   {
     text: "Add drop-and-down feature using react-beautiful-dnd(react library)",
   },
@@ -214,85 +214,85 @@ export const spotifyReplicaToolsArr = [
   { name: "javascript" },
 ];
 
-export const projectsInfoArr = [
-  {
-    projectTitle: "ShoppingList-Mern-App",
-    summary: "The shopping list application built by MERN stack tools.",
-    languages: ShoppingListMernToolsArr,
-    points: shoppingListMernPointsArr,
-    gitHubUrl: "shoppingList-mern-app",
-    linkUrl: "https://shopping-list-mern-app.vercel.app/",
-  },
-  {
-    projectTitle: "StudyLog",
-    summary:
-      "A simple web application that records the data about the daily study histories of users.",
-    languages: studyLogToolsArr,
-    points: studyLogPointsArr,
-    gitHubUrl: "studylog",
-    linkUrl: "https://studylog-three.vercel.app/",
-  },
-  {
-    projectTitle: "CountryBeen",
-    summary:
-      "The web application recording countries where you've ever been to and analyze them visually.",
-    languages: countryBeenToolsArr,
-    points: countryBeenPointsArr,
-    gitHubUrl: "CountryBeen",
-    linkUrl: "https://country-been.vercel.app/",
-  },
-  {
-    projectTitle: "Doctor Appointment",
-    summary:
-      "A group project booking doctor appointments easily with CRUD operation and authentication both users and doctors",
-    languages: doctorAppointmentToolsArr,
-    points: doctorAppointmentPointsArr,
-    gitHubUrl: "https://github.com/kubilaycakmak/doctor-appointment",
-    linkUrl: "https://doctor-appointment-dusky.vercel.app/home",
-  },
-  {
-    projectTitle: "FreshMarche",
-    summary:
-      "The E-commerce application for fresh groceries, including authentication form and dummy checkout section.",
-    languages: freshMarcheToolsArr,
-    points: freshMarchePointsArr,
-    gitHubUrl: "freshmarche",
-    linkUrl: "https://freshmarche.vercel.app/home",
-  },
-  {
-    projectTitle: "PokeApp",
-    summary:
-      "The simple web application introducing Poke REST API discovering your favorite pokemon.",
-    languages: pokeAppToolsArr,
-    points: pokeAppPointsArr,
-    gitHubUrl: "poke-app",
-    linkUrl: "https://poke-app-three-mu.vercel.app/",
-  },
-  {
-    projectTitle: "ReduxTodo",
-    summary:
-      "A simple Todo list to manage your task, using React, React-Redux (Redux-toolkit).",
-    languages: reduxTodoToolsArr,
-    points: reduxTodoPointsArr,
-    gitHubUrl: "ReduxTodo",
-    linkUrl: "https://redux-todo-kappa.vercel.app/",
-  },
-  {
-    projectTitle: "Portfolio website",
-    summary:
-      "Simple but user-friendly portfolio website created by react.js and styled-components.",
-    languages: portfolioWebsiteToolsArr,
-    points: portfolioWebsitePointsArr,
-    gitHubUrl: "Portfolio_website",
-    linkUrl: "https://portfolio-website-zeta-five.vercel.app/",
-  },
-  {
-    projectTitle: "Spotify Replica(Landing Page)",
-    summary:
-      "The re-production of Spotify's landing page, showcasing my CSS and Vanilla Javascript skills.",
-    languages: spotifyReplicaToolsArr,
-    points: spotifyReplicaPointsArr,
-    gitHubUrl: "Spotify_replica",
-    linkUrl: "https://keento0809.github.io/Spotify_replica/",
-  },
-];
+// export const projectsInfoArr = [
+//   {
+//     projectTitle: "ShoppingList-Mern-App",
+//     summary: "The shopping list application built by MERN stack tools.",
+//     languages: ShoppingListMernToolsArr,
+//     points: shoppingListMernPointsArr,
+//     gitHubUrl: "shoppingList-mern-app",
+//     linkUrl: "https://shopping-list-mern-app.vercel.app/",
+//   },
+//   {
+//     projectTitle: "StudyLog",
+//     summary:
+//       "A simple web application that records the data about the daily study histories of users.",
+//     languages: studyLogToolsArr,
+//     points: studyLogPointsArr,
+//     gitHubUrl: "studylog",
+//     linkUrl: "https://studylog-three.vercel.app/",
+//   },
+//   {
+//     projectTitle: "CountryBeen",
+//     summary:
+//       "The web application recording countries where you've ever been to and analyze them visually.",
+//     languages: countryBeenToolsArr,
+//     points: countryBeenPointsArr,
+//     gitHubUrl: "CountryBeen",
+//     linkUrl: "https://country-been.vercel.app/",
+//   },
+//   {
+//     projectTitle: "Doctor Appointment",
+//     summary:
+//       "A group project booking doctor appointments easily with CRUD operation and authentication both users and doctors",
+//     languages: doctorAppointmentToolsArr,
+//     points: doctorAppointmentPointsArr,
+//     gitHubUrl: "https://github.com/kubilaycakmak/doctor-appointment",
+//     linkUrl: "https://doctor-appointment-dusky.vercel.app/home",
+//   },
+//   {
+//     projectTitle: "FreshMarche",
+//     summary:
+//       "The E-commerce application for fresh groceries, including authentication form and dummy checkout section.",
+//     languages: freshMarcheToolsArr,
+//     points: freshMarchePointsArr,
+//     gitHubUrl: "freshmarche",
+//     linkUrl: "https://freshmarche.vercel.app/home",
+//   },
+//   {
+//     projectTitle: "PokeApp",
+//     summary:
+//       "The simple web application introducing Poke REST API discovering your favorite pokemon.",
+//     languages: pokeAppToolsArr,
+//     points: pokeAppPointsArr,
+//     gitHubUrl: "poke-app",
+//     linkUrl: "https://poke-app-three-mu.vercel.app/",
+//   },
+//   {
+//     projectTitle: "ReduxTodo",
+//     summary:
+//       "A simple Todo list to manage your task, using React, React-Redux (Redux-toolkit).",
+//     languages: reduxTodoToolsArr,
+//     points: reduxTodoPointsArr,
+//     gitHubUrl: "ReduxTodo",
+//     linkUrl: "https://redux-todo-kappa.vercel.app/",
+//   },
+//   {
+//     projectTitle: "Portfolio website",
+//     summary:
+//       "Simple but user-friendly portfolio website created by react.js and styled-components.",
+//     languages: portfolioWebsiteToolsArr,
+//     points: portfolioWebsitePointsArr,
+//     gitHubUrl: "Portfolio_website",
+//     linkUrl: "https://portfolio-website-zeta-five.vercel.app/",
+//   },
+//   {
+//     projectTitle: "Spotify Replica(Landing Page)",
+//     summary:
+//       "The re-production of Spotify's landing page, showcasing my CSS and Vanilla Javascript skills.",
+//     languages: spotifyReplicaToolsArr,
+//     points: spotifyReplicaPointsArr,
+//     gitHubUrl: "Spotify_replica",
+//     linkUrl: "https://keento0809.github.io/Spotify_replica/",
+//   },
+// ];
