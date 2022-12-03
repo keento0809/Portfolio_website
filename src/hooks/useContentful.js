@@ -51,7 +51,22 @@ const useContentful = () => {
       console.log(error);
     }
   };
-  return { getResume, getProjectImages, getProjectInfo };
+  const getDataArray = async () => {
+    try {
+      const entries = await client.getEntries({
+        content_type: "dataArray",
+        select: "fields",
+        order: "sys.createdAt",
+      });
+      const sanitizedEntries = entries.items.map((item) => {
+        return item.fields;
+      });
+      return sanitizedEntries;
+    } catch (error) {
+      console.log(error);
+    }
+  };
+  return { getResume, getProjectImages, getProjectInfo, getDataArray };
 };
 
 export default useContentful;

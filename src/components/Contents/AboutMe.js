@@ -11,6 +11,8 @@ import {
   frontEndLibrariesArr,
   othersArr,
 } from "../../data/data";
+import useContentful from "../../hooks/useContentful";
+import { useEffect, useState } from "react";
 
 const ProfileDivStyle = styled.div`
   width: 240px;
@@ -31,6 +33,16 @@ const SpecialtiesStyle = styled.div`
 `;
 
 const AboutMe = (props) => {
+  const [dataArray, setDataArray] = useState();
+  const { getDataArray } = useContentful();
+  const handleSetDataArray = async () => {
+    await getDataArray()
+      .then((res) => setDataArray(res))
+      .catch((err) => console.log(err));
+  };
+  useEffect(() => {
+    handleSetDataArray();
+  }, []);
   return (
     <div id="aboutme">
       <ContentWrapper>
@@ -45,27 +57,20 @@ const AboutMe = (props) => {
           <div className="skills">
             <SkillSetList isLightMode={props.isLightMode} />
           </div>
-          <SpecialtiesStyle className="specialties">
-            <SpecialtyList
-              specialties={specialtiesArr}
-              isLightMode={props.isLightMode}
-              title="Specialties"
-            />
-          </SpecialtiesStyle>
-          <SpecialtiesStyle className="specialties">
-            <SpecialtyList
-              specialties={frontEndLibrariesArr}
-              isLightMode={props.isLightMode}
-              title="Front-End Tools"
-            />
-          </SpecialtiesStyle>
-          <SpecialtiesStyle className="specialties">
-            <SpecialtyList
-              specialties={othersArr}
-              isLightMode={props.isLightMode}
-              title="Other Tools"
-            />
-          </SpecialtiesStyle>
+          {dataArray &&
+            dataArray.map((data, index) => {
+              return (
+                <div key={index + data.title}>
+                  <SpecialtiesStyle className="specialties">
+                    <SpecialtyList
+                      specialties={data.array}
+                      isLightMode={props.isLightMode}
+                      title={data.title}
+                    />
+                  </SpecialtiesStyle>
+                </div>
+              );
+            })}
           <HobbyDescription isLightMode={props.isLightMode} />
         </section>
       </ContentWrapper>

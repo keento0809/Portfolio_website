@@ -25,19 +25,20 @@ const SpecialtyListTitleStyle = styled.div`
   }
 `;
 
-const SpecialtyList = (props) => {
-  // test
-  const list = props.specialties.map((skill, index) => (
-    <LiStyle className={props.isLightMode ? "lightMode" : ""} key={index}>
-      {skill.name}
-    </LiStyle>
-  ));
+const SpecialtyList = ({ specialties, isLightMode, title }) => {
+  const list =
+    specialties &&
+    specialties.map((skill, index) => (
+      <LiStyle className={isLightMode ? "lightMode" : ""} key={index}>
+        {skill.name}
+      </LiStyle>
+    ));
 
   return (
     <ProjectSectionWrapper className="">
       <SpecialtyListTitleStyle className="">
         <ion-icon name="checkmark-circle-outline"></ion-icon>
-        <h3>{props.title}</h3>
+        <h3>{title}</h3>
       </SpecialtyListTitleStyle>
       <ul>{list}</ul>
     </ProjectSectionWrapper>
