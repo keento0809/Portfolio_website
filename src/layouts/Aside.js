@@ -11,7 +11,8 @@ const AsideStyle = styled.aside`
   top: 0;
   bottom: 0;
   right: 0;
-  height: 100vh;
+  /* height: 100vh; */
+  height: 100svh;
   display: flex;
   justify-content: center;
   align-items: center;

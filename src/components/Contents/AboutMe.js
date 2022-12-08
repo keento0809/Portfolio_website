@@ -6,11 +6,6 @@ import profileImage from "../../assets/images/prof-pic.jpg";
 import ContentWrapper from "../UI/Wrapper/ContentWrapper";
 import HobbyDescription from "../UI/Description/HobbyDescription";
 import Title from "../UI/Title/Title";
-import {
-  specialtiesArr,
-  frontEndLibrariesArr,
-  othersArr,
-} from "../../data/data";
 import useContentful from "../../hooks/useContentful";
 import { useEffect, useState } from "react";
 
