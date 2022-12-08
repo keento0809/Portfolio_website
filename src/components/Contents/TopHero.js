@@ -11,7 +11,7 @@ const TopHeroStyle = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding-bottom: 40px;
+  padding-bottom: 10px;
   transition: all 0.5s ease;
 `;
 
