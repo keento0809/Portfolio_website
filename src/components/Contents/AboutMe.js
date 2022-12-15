@@ -2,7 +2,7 @@ import styled from "styled-components";
 import AboutMeDescription from "../UI/Description/AboutMeDescription";
 import SkillSetList from "../UI/List/SkillSetList";
 import SpecialtyList from "../UI/List/SpecialtyList";
-import profileImage from "../../assets/images/prof-pic.jpg";
+import profileImage from "../../assets/images/newProfile-img.png";
 import ContentWrapper from "../UI/Wrapper/ContentWrapper";
 import HobbyDescription from "../UI/Description/HobbyDescription";
 import Title from "../UI/Title/Title";
