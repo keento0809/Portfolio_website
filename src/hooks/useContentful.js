@@ -66,7 +66,24 @@ const useContentful = () => {
       console.log(error);
     }
   };
-  return { getResume, getProjectImages, getProjectInfo, getDataArray };
+  const getProfileImage = async () => {
+    try {
+      const entry = await client.getEntry({
+        content_type: "profileImage",
+        select: "fields",
+      });
+      return "https:" + entry.fields.image.fields.file.url;
+    } catch (error) {
+      console.log(error);
+    }
+  };
+  return {
+    getResume,
+    getProjectImages,
+    getProjectInfo,
+    getDataArray,
+    getProfileImage,
+  };
 };
 
 export default useContentful;

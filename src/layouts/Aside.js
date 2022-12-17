@@ -4,7 +4,6 @@ import styled from "styled-components";
 import useToggleModeContext from "../hooks/useToggleModeContext";
 import { useDataContext } from "../context/dataContext";
 import useContentful from "../hooks/useContentful";
-import resumePath from "../assets/pdf/resume-Kento-Honda.pdf";
 
 const AsideStyle = styled.aside`
   position: fixed;

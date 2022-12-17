@@ -2,7 +2,6 @@ import styled from "styled-components";
 import AboutMeDescription from "../UI/Description/AboutMeDescription";
 import SkillSetList from "../UI/List/SkillSetList";
 import SpecialtyList from "../UI/List/SpecialtyList";
-import profileImage from "../../assets/images/newProfile-img.png";
 import ContentWrapper from "../UI/Wrapper/ContentWrapper";
 import HobbyDescription from "../UI/Description/HobbyDescription";
 import Title from "../UI/Title/Title";
@@ -29,14 +28,21 @@ const SpecialtiesStyle = styled.div`
 
 const AboutMe = (props) => {
   const [dataArray, setDataArray] = useState();
-  const { getDataArray } = useContentful();
+  const [profileImgPath, setProfileImgPath] = useState();
+  const { getDataArray, getProfileImage } = useContentful();
   const handleSetDataArray = async () => {
     await getDataArray()
       .then((res) => setDataArray(res))
       .catch((err) => console.log(err));
   };
+  const handleSetProfileImage = async () => {
+    await getProfileImage()
+      .then((res) => setProfileImgPath(res))
+      .catch((err) => console.log(err));
+  };
   useEffect(() => {
     handleSetDataArray();
+    handleSetProfileImage();
   }, []);
   return (
     <div id="aboutme">
@@ -44,7 +50,7 @@ const AboutMe = (props) => {
         <section className="aboutMe section">
           <Title title="About Me" isLightMode={props.isLightMode} />
           <ProfileDivStyle className="aboutMe__picture">
-            <ImageStyle src={profileImage} alt="picture" />
+            <ImageStyle src={profileImgPath} alt="picture" />
           </ProfileDivStyle>
           <div className="aboutMe__description">
             <AboutMeDescription isLightMode={props.isLightMode} />
