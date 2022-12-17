@@ -8,7 +8,6 @@ import "../styles/navBorder.css";
 import useToggleModeContext from "../hooks/useToggleModeContext";
 import { useDataContext } from "../context/dataContext";
 import useContentful from "../hooks/useContentful";
-import resumePath from "../assets/pdf/resume-Kento-Honda.pdf";
 
 const HeaderStyle = styled.header`
   position: fixed;
