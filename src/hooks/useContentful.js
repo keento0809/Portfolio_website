@@ -42,7 +42,6 @@ const useContentful = () => {
       const entries = await client.getEntries({
         content_type: "project",
         select: "fields",
-        order: "sys.createdAt",
       });
       const sanitizedEntries = entries.items.map((item) => {
         return item.fields.projectData[0];
