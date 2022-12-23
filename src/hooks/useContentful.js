@@ -24,6 +24,7 @@ const useContentful = () => {
       const entries = await client.getEntries({
         content_type: "thumbnail",
         select: "fields",
+        order: "sys.createdAt",
       });
       const hash = {};
       entries.items.forEach((item) => {
@@ -68,11 +69,11 @@ const useContentful = () => {
   };
   const getProfileImage = async () => {
     try {
-      const entry = await client.getEntry({
+      const entries = await client.getEntries({
         content_type: "profileImage",
         select: "fields",
       });
-      return "https:" + entry.fields.image.fields.file.url;
+      return "https:" + entries.items[0].fields.image.fields.file.url;
     } catch (error) {
       console.log(error);
     }
