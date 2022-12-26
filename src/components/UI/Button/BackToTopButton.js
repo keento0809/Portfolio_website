@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import ButtonUI from "./Button";
+import useToggleModeContext from "../../../hooks/useToggleModeContext";
 
 const BackToTopBtnStyle = styled.div`
   position: fixed;
@@ -25,13 +26,14 @@ const BackToTopBtnStyle = styled.div`
 `;
 
 const BackToTopButton = (props) => {
+  const { isLightMode } = useToggleModeContext();
   return (
     <BackToTopBtnStyle
       className={`${props.isTopBtnActive ? "active" : ""} ${
-        props.isLightMode ? "lightMode" : ""
+        isLightMode ? "lightMode" : ""
       }`}
     >
-      <ButtonUI isLightMode={props.isLightMode} label={"TOP"} url={"#home"} />
+      <ButtonUI isLightMode={isLightMode} label={"TOP"} url={"#home"} />
     </BackToTopBtnStyle>
   );
 };

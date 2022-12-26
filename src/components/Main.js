@@ -23,7 +23,6 @@ const Main = () => {
 
   function handleScroll() {
     if (timeout) return;
-
     timeout = setTimeout(() => {
       timeout = 0;
       let currentScrollY = window.scrollY;
@@ -67,15 +66,12 @@ const Main = () => {
         isAsideShown={isAsideShown}
         setIsAsideShown={setIsAsideShown}
       >
-        <TopHero isLightMode={isLightMode} />
-        <MyProject isLightMode={isLightMode} />
-        <AboutMe isLightMode={isLightMode} />
-        <ContactMe isLightMode={isLightMode} />
-        <Footer isLightMode={isLightMode} />
-        <BackToTopButton
-          isLightMode={isLightMode}
-          isTopBtnActive={isTopBtnActive}
-        />
+        <TopHero />
+        <MyProject />
+        <AboutMe />
+        <ContactMe />
+        <Footer />
+        <BackToTopButton isTopBtnActive={isTopBtnActive} />
       </ContainerWrapper>
     </div>
   );
