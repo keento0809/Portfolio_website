@@ -7,6 +7,7 @@ import HobbyDescription from "../UI/Description/HobbyDescription";
 import Title from "../UI/Title/Title";
 import useContentful from "../../hooks/useContentful";
 import { useEffect, useState } from "react";
+import useToggleModeContext from "../../hooks/useToggleModeContext";
 
 const ProfileDivStyle = styled.div`
   width: 240px;
@@ -29,6 +30,7 @@ const SpecialtiesStyle = styled.div`
 const AboutMe = (props) => {
   const [dataArray, setDataArray] = useState();
   const [profileImgPath, setProfileImgPath] = useState();
+  const { isLightMode } = useToggleModeContext();
   const { getDataArray, getProfileImage } = useContentful();
   const handleSetDataArray = async () => {
     await getDataArray()
@@ -48,15 +50,15 @@ const AboutMe = (props) => {
     <div id="aboutme">
       <ContentWrapper>
         <section className="aboutMe section">
-          <Title title="About Me" isLightMode={props.isLightMode} />
+          <Title title="About Me" isLightMode={isLightMode} />
           <ProfileDivStyle className="aboutMe__picture">
             <ImageStyle src={profileImgPath} alt="picture" />
           </ProfileDivStyle>
           <div className="aboutMe__description">
-            <AboutMeDescription isLightMode={props.isLightMode} />
+            <AboutMeDescription isLightMode={isLightMode} />
           </div>
           <div className="skills">
-            <SkillSetList isLightMode={props.isLightMode} />
+            <SkillSetList isLightMode={isLightMode} />
           </div>
           {dataArray &&
             dataArray.map((data, index) => {
@@ -65,14 +67,14 @@ const AboutMe = (props) => {
                   <SpecialtiesStyle className="specialties">
                     <SpecialtyList
                       specialties={data.array}
-                      isLightMode={props.isLightMode}
+                      isLightMode={isLightMode}
                       title={data.title}
                     />
                   </SpecialtiesStyle>
                 </div>
               );
             })}
-          <HobbyDescription isLightMode={props.isLightMode} />
+          <HobbyDescription isLightMode={isLightMode} />
         </section>
       </ContentWrapper>
     </div>

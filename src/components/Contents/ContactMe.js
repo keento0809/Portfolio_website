@@ -1,8 +1,8 @@
-import { Fragment } from "react";
 import styled from "styled-components";
 import Title from "../UI/Title/Title";
 import ContentWrapper from "../UI/Wrapper/ContentWrapper";
 import ButtonUI from "../UI/Button/Button";
+import useToggleModeContext from "../../hooks/useToggleModeContext";
 
 const UlStyle = styled.ul`
   margin: 0 auto;
@@ -63,14 +63,15 @@ const ButtonStyle = styled.a`
   }
 `;
 
-const ContactMe = (props) => {
+const ContactMe = () => {
+  const { isLightMode } = useToggleModeContext();
   return (
     <div id="contactme">
       <ContentWrapper>
         <section className="contactMe section">
-          <Title title="Contact" isLightMode={props.isLightMode} />
+          <Title title="Contact" isLightMode={isLightMode} />
           <div className="contactMe__iconsList">
-            <UlStyle className={props.isLightMode ? "lightMode" : ""}>
+            <UlStyle className={isLightMode ? "lightMode" : ""}>
               <li>
                 <a href={`tel:${process.env.REACT_APP_MY_PHONE}`}>
                   <ion-icon name="call-outline"></ion-icon>
@@ -114,7 +115,7 @@ const ContactMe = (props) => {
             <ButtonUI
               label={"SAY HELLO"}
               url={`mailto:${process.env.REACT_APP_MY_EMAIL}`}
-              isLightMode={props.isLightMode}
+              isLightMode={isLightMode}
             />
           </ButtonContainerStyle>
         </section>
