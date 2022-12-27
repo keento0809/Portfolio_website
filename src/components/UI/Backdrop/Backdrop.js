@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import useToggleModeContext from "../../../hooks/useToggleModeContext";
+import useChangeLayoutContext from "../../../hooks/useChangeLayoutContext";
 
 const BackdropStyle = styled.div`
   position: fixed;
@@ -22,21 +23,21 @@ const BackdropStyle = styled.div`
   }
 `;
 
-const Backdrop = (props) => {
+const Backdrop = ({ children }) => {
   const { isLightMode } = useToggleModeContext();
-
+  const { isAsideShown, setIsAsideShown } = useChangeLayoutContext();
   const handleCloseAside = () => {
-    props.setIsAsideShown(false);
+    setIsAsideShown(false);
   };
 
   return (
     <BackdropStyle
-      className={`${props.isAsideShown ? "shown" : ""} ${
+      className={`${isAsideShown ? "shown" : ""} ${
         isLightMode ? "lightMode" : ""
       }`}
       onClick={handleCloseAside}
     >
-      {props.children}
+      {children}
     </BackdropStyle>
   );
 };

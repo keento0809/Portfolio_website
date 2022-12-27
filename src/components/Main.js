@@ -10,13 +10,18 @@ import Footer from "../layouts/Footer";
 import BackToTopButton from "./UI/Button/BackToTopButton";
 import classes from "../styles/base.module.css";
 import useToggleModeContext from "../hooks/useToggleModeContext";
+import useChangeLayoutContext from "../hooks/useChangeLayoutContext";
 
 const Main = () => {
   const [isLoading, setIsLoading] = useState(true);
-  const [isScrollingDown, setIsScrollingDown] = useState(false);
-  const [isAsideShown, setIsAsideShown] = useState(false);
-  const [isTopBtnActive, setIsTopBtnActive] = useState(false);
-  const { isLightMode, setIsLightMode } = useToggleModeContext();
+  const { isLightMode } = useToggleModeContext();
+  const {
+    isScrollingDown,
+    setIsScrollingDown,
+    isAsideShown,
+    isTopBtnActive,
+    setIsTopBtnActive,
+  } = useChangeLayoutContext();
 
   let lastScrollY;
   let timeout;
@@ -56,22 +61,14 @@ const Main = () => {
       } ${isAsideShown ? classes.asideOpen : ""}`}
     >
       {isLoading && <Loader />}
-      <Header
-        isScrollingDown={isScrollingDown}
-        setIsScrollingDown={setIsScrollingDown}
-        isAsideShown={isAsideShown}
-        setIsAsideShown={setIsAsideShown}
-      />
-      <ContainerWrapper
-        isAsideShown={isAsideShown}
-        setIsAsideShown={setIsAsideShown}
-      >
+      <Header />
+      <ContainerWrapper>
         <TopHero />
         <MyProject />
         <AboutMe />
         <ContactMe />
         <Footer />
-        <BackToTopButton isTopBtnActive={isTopBtnActive} />
+        <BackToTopButton />
       </ContainerWrapper>
     </div>
   );

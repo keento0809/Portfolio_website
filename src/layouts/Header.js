@@ -8,6 +8,7 @@ import "../styles/navBorder.css";
 import useToggleModeContext from "../hooks/useToggleModeContext";
 import { useDataContext } from "../context/dataContext";
 import useContentful from "../hooks/useContentful";
+import useChangeLayoutContext from "../hooks/useChangeLayoutContext";
 
 const HeaderStyle = styled.header`
   position: fixed;
@@ -180,15 +181,17 @@ const NavUlStyle = styled.ul`
   }
 `;
 
-const Header = (props) => {
+const Header = () => {
   const [isActive, setIsActive] = useState(false);
   const [targetValue, setTargetValue] = useState("");
   const { isLightMode, setIsLightMode } = useToggleModeContext();
   const { resumeUrl, setResumeUrl } = useDataContext();
+  const { isScrollingDown, isAsideShown, setIsScrollingDown, setIsAsideShown } =
+    useChangeLayoutContext();
   const { getResume } = useContentful();
 
   const handleToggleAside = () => {
-    props.setIsAsideShown(!props.isAsideShown);
+    setIsAsideShown(!isAsideShown);
   };
 
   const handleToggleMode = () => {
@@ -231,7 +234,7 @@ const Header = (props) => {
   }, []);
   return (
     <HeaderStyle
-      className={`${props.isScrollingDown ? "hidden" : ""} ${
+      className={`${isScrollingDown ? "hidden" : ""} ${
         isLightMode ? "lightMode" : ""
       }`}
     >
@@ -263,7 +266,7 @@ const Header = (props) => {
         <MenuButtonStyle
           id="menuBtn"
           className={`${isLightMode ? "lightMode" : ""} ${
-            props.isAsideShown ? "active" : ""
+            isAsideShown ? "active" : ""
           }`}
           onClick={handleToggleAside}
         >
@@ -358,10 +361,10 @@ const Header = (props) => {
         </NavMenuStyle>
       </NavStyle>
       <Aside
-        isAsideShown={props.isAsideShown}
-        setIsAsideShown={props.setIsAsideShown}
-        setIsScrollingDown={props.setIsScrollingDown}
-        // isLightMode={isLightMode}
+      // isAsideShown={isAsideShown}
+      // setIsAsideShown={setIsAsideShown}
+      // setIsScrollingDown={setIsScrollingDown}
+      // isLightMode={isLightMode}
       />
     </HeaderStyle>
   );
