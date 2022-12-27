@@ -4,6 +4,7 @@ import styled from "styled-components";
 import useToggleModeContext from "../hooks/useToggleModeContext";
 import { useDataContext } from "../context/dataContext";
 import useContentful from "../hooks/useContentful";
+import useChangeLayoutContext from "../hooks/useChangeLayoutContext";
 
 const AsideStyle = styled.aside`
   position: fixed;
@@ -88,21 +89,22 @@ const ResumeDivStyle = styled.div`
   }
 `;
 
-const Aside = (props) => {
+const Aside = () => {
   const { isLightMode } = useToggleModeContext();
   const { resumeUrl, setResumeUrl } = useDataContext();
+  const { isAsideShown, setIsAsideShown } = useChangeLayoutContext();
   const { getResume } = useContentful();
   const handleLinkClick = () => {
-    props.setIsAsideShown(false);
+    setIsAsideShown(false);
   };
   useEffect(() => {
-    if (props.isAsideShown) {
+    if (isAsideShown) {
       document.body.className = "over";
       return () => {
         document.body.className = "";
       };
     }
-  }, [props.isAsideShown]);
+  }, [isAsideShown]);
   useEffect(() => {
     getResume()
       .then((res) => setResumeUrl(res))
@@ -110,7 +112,7 @@ const Aside = (props) => {
   }, []);
   return (
     <AsideStyle
-      className={`${props.isAsideShown ? "show" : ""} ${
+      className={`${isAsideShown ? "show" : ""} ${
         isLightMode ? "lightMode" : ""
       }`}
     >

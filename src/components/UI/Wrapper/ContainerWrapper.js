@@ -1,9 +1,9 @@
 import styled from "styled-components";
 import Backdrop from "../Backdrop/Backdrop";
+import useChangeLayoutContext from "../../../hooks/useChangeLayoutContext";
 
 const ContainerWrapperStyle = styled.div`
   padding: 0 24px;
-  /* test */
   &.shown {
     opacity: 0.5;
   }
@@ -12,16 +12,13 @@ const ContainerWrapperStyle = styled.div`
   }
 `;
 
-const ContainerWrapper = (props) => {
+const ContainerWrapper = ({ children }) => {
+  const { isAsideShown, setIsAsideShown } = useChangeLayoutContext();
   return (
-    <div className="">
-      {/* test */}
-      <Backdrop
-        isAsideShown={props.isAsideShown}
-        setIsAsideShown={props.setIsAsideShown}
-      />
-      <ContainerWrapperStyle className={props.isAsideShown ? "shown" : ""}>
-        {props.children}
+    <div>
+      <Backdrop isAsideShown={isAsideShown} setIsAsideShown={setIsAsideShown} />
+      <ContainerWrapperStyle className={isAsideShown ? "shown" : ""}>
+        {children}
       </ContainerWrapperStyle>
     </div>
   );
