@@ -10,8 +10,6 @@ const UlStyle = styled.ul`
 `;
 
 const ContactIconsList = (props) => {
-  //   const ionIconsList =
-
   const devIconsList = props.languages.map((lan, index) => {
     return (
       <li key={index}>
@@ -23,23 +21,10 @@ const ContactIconsList = (props) => {
       </li>
     );
   });
-
   return (
     <ProjectSectionWrapper>
       <div className="contactIcons">
-        <UlStyle className="skill-icons">
-          {/* <li>
-            <a href="">
-              <ion-icon name="call-outline"></ion-icon>
-            </a>
-          </li>
-          <li>
-            <a href="">
-              <ion-icon name="mail-outline"></ion-icon>
-            </a>
-          </li> */}
-          {devIconsList}
-        </UlStyle>
+        <UlStyle className="skill-icons">{devIconsList}</UlStyle>
       </div>
     </ProjectSectionWrapper>
   );

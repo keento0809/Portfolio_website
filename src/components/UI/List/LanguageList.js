@@ -1,6 +1,4 @@
-import { Fragment } from "react";
 import React from "react";
-import ReactTooltip from "react-tooltip";
 import styled from "styled-components";
 import ProjectSectionWrapper from "../Wrapper/ProjectSectionWrapper";
 import { Tooltip } from "@mui/material";
