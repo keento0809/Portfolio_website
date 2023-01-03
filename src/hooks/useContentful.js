@@ -66,6 +66,21 @@ const useContentful = () => {
       console.log(error);
     }
   };
+  const getSkillSetList = async () => {
+    try {
+      const entries = await client.getEntries({
+        content_type: "skillSetList",
+        select: "fields",
+        order: "sys.createdAt",
+      });
+      const sanitizedEntries = entries.items.map((item) => {
+        return item.fields;
+      });
+      return sanitizedEntries;
+    } catch (error) {
+      console.log(error);
+    }
+  };
   const getProfileImage = async () => {
     try {
       const entries = await client.getEntries({
@@ -82,6 +97,7 @@ const useContentful = () => {
     getProjectImages,
     getProjectInfo,
     getDataArray,
+    getSkillSetList,
     getProfileImage,
   };
 };

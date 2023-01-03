@@ -1,7 +1,7 @@
-import { Fragment } from "react";
 import styled from "styled-components";
 import ProjectSectionWrapper from "../Wrapper/ProjectSectionWrapper";
-import { Tooltip } from "@mui/material";
+import useContentful from "../../../hooks/useContentful";
+import { useEffect, useState } from "react";
 
 const SkillIconsStyle = styled.div`
   color: #fff;
@@ -22,6 +22,20 @@ const SkillIconsStyle = styled.div`
 `;
 
 const SkillSetList = (props) => {
+  const { getSkillSetList } = useContentful();
+  const [skillSetList, setSkillSetList] = useState();
+  const handleGetSkillSetList = async () => {
+    await getSkillSetList()
+      .then((res) => setSkillSetList(res[0].skillSetList))
+      .catch((err) => console.log(err));
+  };
+  const skillSetRender = skillSetList?.map((skill) => {
+    const { name } = skill;
+    return <i className={`devicon-${name}`}></i>;
+  });
+  useEffect(() => {
+    handleGetSkillSetList();
+  }, []);
   return (
     <ProjectSectionWrapper>
       <h2>SKILL SETS</h2>
@@ -30,30 +44,7 @@ const SkillSetList = (props) => {
           props.isLightMode ? "lightMode" : ""
         } aboutMe__skillicons`}
       >
-        <i className="devicon-html5-plain"></i>
-        <i className="devicon-css3-plain"></i>
-        <i className="devicon-javascript-plain"></i>
-        <i className="devicon-typescript-plain"></i>
-        <i className="devicon-react-original"></i>
-        <i className="devicon-redux-original"></i>
-        <i className="devicon-nextjs-plain"></i>
-        <i className="devicon-jquery-plain"></i>
-        <i className="devicon-bootstrap-plain"></i>
-        <i className="devicon-sass-original"></i>
-        <i className="devicon-materialui-plain"></i>
-        <i className="devicon-tailwindcss-plain"></i>
-        <i className="devicon-nodejs-plain"></i>
-        <i className="devicon-express-original"></i>
-        <i className="devicon-graphql-plain"></i>
-        <i className="devicon-ruby-plain"></i>
-        <i className="devicon-rails-plain"></i>
-        <i className="devicon-mongodb-plain"></i>
-        <i className="devicon-postgresql-plain"></i>
-        <i className="devicon-firebase-plain"></i>
-        <i className="devicon-jest-plain"></i>
-        <i className="devicon-heroku-plain"></i>
-        <i className="devicon-git-plain"></i>
-        <i className="devicon-figma-plain"></i>
+        {skillSetRender}
       </SkillIconsStyle>
     </ProjectSectionWrapper>
   );
