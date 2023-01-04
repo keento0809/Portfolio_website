@@ -11,7 +11,6 @@ const AsideStyle = styled.aside`
   top: 0;
   bottom: 0;
   right: 0;
-  /* height: 100vh; */
   height: 100svh;
   display: flex;
   justify-content: center;
@@ -117,8 +116,7 @@ const Aside = () => {
       }`}
     >
       <AsideContainerStyle className="aside-container">
-        {/* test */}
-        <div className="">
+        <div>
           <div className="aside-container__title">
             <h4>Menu</h4>
           </div>

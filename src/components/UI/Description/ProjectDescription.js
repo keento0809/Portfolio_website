@@ -49,10 +49,6 @@ const ImageDivStyle = styled.div`
     width: 848px;
     height: 400px;
   }
-  @media screen and (min-width: 1300px) {
-    /* width: 1124px; */
-    /* height: 340px; */
-  }
 `;
 
 const LiStyle = styled.li`
@@ -86,7 +82,6 @@ const ProjectDescription = (props) => {
   return (
     <ProjectSectionWrapper>
       <div>
-        {/* test */}
         <ImageDivStyle>
           <div
             className={`${props.isLightMode ? "lightMode" : ""} imageBackdrop`}

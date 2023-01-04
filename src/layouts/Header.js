@@ -281,8 +281,6 @@ const Header = () => {
               onMouseOver={handleMouseOVer}
               onMouseOut={handleMouseOut}
             >
-              {/* original code */}
-              {/* <AnchorLink href="#home">Home</AnchorLink> */}
               <AnchorLink href="#home">
                 <span className="text">Home</span>
                 <span
