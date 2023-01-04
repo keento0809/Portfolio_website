@@ -5,7 +5,6 @@ import ButtonUI from "../UI/Button/Button";
 import useToggleModeContext from "../../hooks/useToggleModeContext";
 
 const TopHeroStyle = styled.div`
-  /* min-height: 100vh; */
   min-height: 100svh;
   display: flex;
   flex-direction: column;

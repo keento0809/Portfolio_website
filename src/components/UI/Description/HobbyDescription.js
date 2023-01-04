@@ -43,7 +43,6 @@ const HobbyDescription = (props) => {
         <li>
           <HobbyOutlineStyle className="">
             <ion-icon name="airplane-outline"></ion-icon>
-            {/* <ion-icon name="checkmark-outline"></ion-icon> */}
             <h3>
               I'm a <strong>"Travel lover"</strong>.
             </h3>
@@ -68,7 +67,6 @@ const HobbyDescription = (props) => {
         <li>
           <HobbyOutlineStyle className="">
             <ion-icon name="tv-outline"></ion-icon>
-            {/* <ion-icon name="checkmark-outline"></ion-icon> */}
             <h3>
               I'm a <strong>"Movie lover"</strong>.
             </h3>

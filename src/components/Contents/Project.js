@@ -7,20 +7,14 @@ import useToggleModeContext from "../../hooks/useToggleModeContext";
 
 const ListStyle = styled.li`
   margin-bottom: 24px;
-  /* min-height: 900px; */
   background-color: #1b1f29;
   display: flex;
   justify-content: center;
   align-items: flex-start;
   padding-top: 1rem;
   border-radius: 8px;
-
   &.lightMode {
     background-color: #e7edff;
-  }
-
-  @media screen and (min-width: 768px) {
-    /* min-height: 800px; */
   }
 `;
 

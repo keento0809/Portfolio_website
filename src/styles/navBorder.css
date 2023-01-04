@@ -1,13 +1,7 @@
 a {
-  /* float: left; */
-  /* border-radius: 5px; */
-  /* margin-top: 10px; */
   position: relative;
   z-index: 1;
   overflow: hidden;
-  /* min-width: 50px; */
-  /* display: table; */
-  /* padding: 5px 10px; */
   border: none;
   -webkit-transition: all 0.5s ease-out;
   -moz-transition: all 0.5s ease-out;
@@ -15,25 +9,17 @@ a {
   -o-transition: all 0.5s ease-out;
   transition: all 0.5s ease-out;
   text-align: center;
-  /* color: #777; */
   text-decoration: none;
-}
-a:hover {
-  /* background-color: #f1f1f1 !important; */
 }
 
 span {
   position: relative;
   z-index: 1;
-  /* line-height: 24px; */
   transition: 0.3s ease;
   -webkit-transition: 0.3s ease;
   -moz-transition: 0.3s ease;
   -o-transition: 0.3s ease;
   -ms-transition: 0.3s ease;
-}
-a:hover span {
-  /* color: #5a5a5a; */
 }
 .btnBefore,
 .btnAfter {
