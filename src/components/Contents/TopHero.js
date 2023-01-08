@@ -21,12 +21,10 @@ const TopHeroWrapperStyle = styled.div`
   justify-content: space-between;
   min-height: 240px;
   max-width: 350px;
-
   & p {
     font-weight: bold;
     font-size: 18px;
   }
-
   & p.nextToTitle {
     padding-bottom: 1rem;
   }
@@ -34,12 +32,10 @@ const TopHeroWrapperStyle = styled.div`
   @media screen and (min-width: 767px) {
     max-width: none;
     min-height: 260px;
-
     & h4 {
       font-size: 9vw;
       line-height: 9vw;
     }
-
     & p.nextToTitle {
       padding-bottom: 1.5rem;
     }
@@ -47,12 +43,10 @@ const TopHeroWrapperStyle = styled.div`
 
   @media screen and (min-width: 1023px) {
     min-height: 280px;
-
     & h4 {
       font-size: 6vw;
       line-height: 6vw;
     }
-
     & p {
       font-size: 24px;
     }
@@ -60,7 +54,6 @@ const TopHeroWrapperStyle = styled.div`
 
   @media screen and (min-width: 1300px) {
     min-height: 300px;
-
     & p.nextToTitle {
       padding-bottom: 2rem;
     }
