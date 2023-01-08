@@ -27,7 +27,7 @@ const SpecialtiesStyle = styled.div`
   padding-bottom: 1rem;
 `;
 
-const AboutMe = (props) => {
+const AboutMe = () => {
   const [dataArray, setDataArray] = useState();
   const [profileImgPath, setProfileImgPath] = useState();
   const { isLightMode } = useToggleModeContext();
