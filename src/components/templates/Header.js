@@ -227,14 +227,11 @@ const Header = () => {
     setIsActive(false);
     setTargetValue("");
   };
-<<<<<<< HEAD:src/layouts/Header.js
-=======
   useEffect(() => {
     getResume()
       .then((res) => setResumeUrl(res))
       .catch((err) => console.log(err));
   }, []);
->>>>>>> 1c884c4076a7a5e8c843eda41d8a84658055fc79:src/components/templates/Header.js
   return (
     <HeaderStyle
       className={`${isScrollingDown ? "hidden" : ""} ${

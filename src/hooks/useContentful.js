@@ -1,9 +1,6 @@
 import { createClient } from "contentful";
 
 const useContentful = () => {
-<<<<<<< HEAD
-  return "aa";
-=======
   const client = createClient({
     space: process.env.REACT_APP_CONTENTFUL_SPACE,
     accessToken: process.env.REACT_APP_CONTENTFUL_ACCESS_TOKEN,
@@ -103,7 +100,6 @@ const useContentful = () => {
     getSkillSetList,
     getProfileImage,
   };
->>>>>>> 1c884c4076a7a5e8c843eda41d8a84658055fc79
 };
 
 export default useContentful;

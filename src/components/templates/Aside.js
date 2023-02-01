@@ -103,16 +103,12 @@ const Aside = () => {
         document.body.className = "";
       };
     }
-<<<<<<< HEAD:src/layouts/Aside.js
-  }, [props.isAsideShown]);
-=======
   }, [isAsideShown]);
   useEffect(() => {
     getResume()
       .then((res) => setResumeUrl(res))
       .catch((err) => console.log(err));
   }, []);
->>>>>>> 1c884c4076a7a5e8c843eda41d8a84658055fc79:src/components/templates/Aside.js
   return (
     <AsideStyle
       className={`${isAsideShown ? "show" : ""} ${
