@@ -20,7 +20,6 @@
   height: 36px;
   left: 50%;
   top: 45%;
-  /* transform: translate(-50%, -50%); */
   margin-left: -300px;
   overflow: visible;
   -webkit-user-select: none;
@@ -31,8 +30,6 @@
 }
 
 .load div {
-  /* will-change: animation, -o-animation, -moz-animation, -webkit-animation,
-    transform, -o-transform, -moz-transform, -webkit-transform; */
   font-size: 20px;
   position: absolute;
   width: 20px;

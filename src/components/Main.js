@@ -1,29 +1,33 @@
 import { useState, useEffect } from "react";
-import Header from "../layouts/Header";
-import ContainerWrapper from "./UI/Wrapper/ContainerWrapper";
-import Loader from "../layouts/Loader";
-import TopHero from "./Contents/TopHero";
-import AboutMe from "./Contents/AboutMe";
-import MyProject from "./Contents/MyProject";
-import ContactMe from "./Contents/ContactMe";
-import Footer from "../layouts/Footer";
-import BackToTopButton from "./UI/Button/BackToTopButton";
+import Header from "./templates/Header";
+import ContainerWrapper from "./Wrapper/ContainerWrapper";
+import Loader from "./templates/Loader";
+import TopHero from "../Contents/TopHero";
+import AboutMe from "../Contents/AboutMe";
+import MyProject from "../Contents/MyProject";
+import ContactMe from "../Contents/ContactMe";
+import Footer from "./templates/Footer";
+import BackToTopButton from "./Button/BackToTopButton";
 import classes from "../styles/base.module.css";
 import useToggleModeContext from "../hooks/useToggleModeContext";
+import useChangeLayoutContext from "../hooks/useChangeLayoutContext";
 
 const Main = () => {
   const [isLoading, setIsLoading] = useState(true);
-  const [isScrollingDown, setIsScrollingDown] = useState(false);
-  const [isAsideShown, setIsAsideShown] = useState(false);
-  const [isTopBtnActive, setIsTopBtnActive] = useState(false);
-  const { isLightMode, setIsLightMode } = useToggleModeContext();
+  const { isLightMode } = useToggleModeContext();
+  const {
+    isScrollingDown,
+    setIsScrollingDown,
+    isAsideShown,
+    isTopBtnActive,
+    setIsTopBtnActive,
+  } = useChangeLayoutContext();
 
   let lastScrollY;
   let timeout;
 
   function handleScroll() {
     if (timeout) return;
-
     timeout = setTimeout(() => {
       timeout = 0;
       let currentScrollY = window.scrollY;
@@ -57,25 +61,14 @@ const Main = () => {
       } ${isAsideShown ? classes.asideOpen : ""}`}
     >
       {isLoading && <Loader />}
-      <Header
-        isScrollingDown={isScrollingDown}
-        setIsScrollingDown={setIsScrollingDown}
-        isAsideShown={isAsideShown}
-        setIsAsideShown={setIsAsideShown}
-      />
-      <ContainerWrapper
-        isAsideShown={isAsideShown}
-        setIsAsideShown={setIsAsideShown}
-      >
-        <TopHero isLightMode={isLightMode} />
-        <MyProject isLightMode={isLightMode} />
-        <AboutMe isLightMode={isLightMode} />
-        <ContactMe isLightMode={isLightMode} />
-        <Footer isLightMode={isLightMode} />
-        <BackToTopButton
-          isLightMode={isLightMode}
-          isTopBtnActive={isTopBtnActive}
-        />
+      <Header />
+      <ContainerWrapper>
+        <TopHero />
+        <MyProject />
+        <AboutMe />
+        <ContactMe />
+        <Footer />
+        <BackToTopButton />
       </ContainerWrapper>
     </div>
   );
