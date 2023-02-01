@@ -1,6 +1,5 @@
-import { Fragment } from "react";
 import styled from "styled-components";
-import ProjectSectionWrapper from "../Wrapper/ProjectSectionWrapper";
+import ProjectSectionWrapper from "../../components/Wrapper/ProjectSectionWrapper";
 
 const LiStyle = styled.li`
   display: inline-block;

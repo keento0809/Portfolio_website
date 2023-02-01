@@ -1,6 +1,5 @@
-import { Fragment } from "react";
 import styled from "styled-components";
-import ProjectSectionWrapper from "../Wrapper/ProjectSectionWrapper";
+import ProjectSectionWrapper from "../../components/Wrapper/ProjectSectionWrapper";
 import { Tooltip } from "@mui/material";
 
 const UlStyle = styled.ul`

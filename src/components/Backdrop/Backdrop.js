@@ -1,6 +1,6 @@
 import styled from "styled-components";
-import useToggleModeContext from "../../../hooks/useToggleModeContext";
-import useChangeLayoutContext from "../../../hooks/useChangeLayoutContext";
+import useToggleModeContext from "../../hooks/useToggleModeContext";
+import useChangeLayoutContext from "../../hooks/useChangeLayoutContext";
 
 const BackdropStyle = styled.div`
   position: fixed;

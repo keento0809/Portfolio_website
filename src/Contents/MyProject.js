@@ -1,8 +1,8 @@
-import React, { useEffect, useState } from "react";
-import ContentWrapper from "../UI/Wrapper/ContentWrapper";
-import Title from "../UI/Title/Title";
+import { useEffect, useState } from "react";
+import ContentWrapper from "../components/Wrapper/ContentWrapper";
+import Title from "../components/Title/Title";
 import Project from "./Project";
-import useContentful from "../../hooks/useContentful";
+import useContentful from "../hooks/useContentful";
 
 const MyProject = () => {
   const [projectImages, setProjectImages] = useState({});

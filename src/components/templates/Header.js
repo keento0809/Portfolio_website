@@ -2,13 +2,13 @@ import { useEffect, useState } from "react";
 import Aside from "./Aside";
 import AnchorLink from "react-anchor-link-smooth-scroll";
 import styled from "styled-components";
-import iconUrlDark from "../assets/images/icon-32x32.png";
-import iconUrlLight from "../assets/images/icon-32x32-light.png";
-import "../styles/navBorder.css";
-import useToggleModeContext from "../hooks/useToggleModeContext";
-import { useDataContext } from "../context/dataContext";
-import useContentful from "../hooks/useContentful";
-import useChangeLayoutContext from "../hooks/useChangeLayoutContext";
+import iconUrlDark from "../../assets/images/icon-32x32.png";
+import iconUrlLight from "../../assets/images/icon-32x32-light.png";
+import "../../styles/navBorder.css";
+import useToggleModeContext from "../../hooks/useToggleModeContext";
+import { useDataContext } from "../../context/dataContext";
+import useContentful from "../../hooks/useContentful";
+import useChangeLayoutContext from "../../hooks/useChangeLayoutContext";
 
 const HeaderStyle = styled.header`
   position: fixed;

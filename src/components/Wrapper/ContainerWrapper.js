@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import Backdrop from "../Backdrop/Backdrop";
-import useChangeLayoutContext from "../../../hooks/useChangeLayoutContext";
+import useChangeLayoutContext from "../../hooks/useChangeLayoutContext";
 
 const ContainerWrapperStyle = styled.div`
   padding: 0 24px;

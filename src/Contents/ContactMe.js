@@ -1,8 +1,8 @@
 import styled from "styled-components";
-import Title from "../UI/Title/Title";
-import ContentWrapper from "../UI/Wrapper/ContentWrapper";
-import ButtonUI from "../UI/Button/Button";
-import useToggleModeContext from "../../hooks/useToggleModeContext";
+import Title from "../components/Title/Title";
+import ContentWrapper from "../components/Wrapper/ContentWrapper";
+import ButtonUI from "../components/Button/Button";
+import useToggleModeContext from "../hooks/useToggleModeContext";
 
 const UlStyle = styled.ul`
   margin: 0 auto;
