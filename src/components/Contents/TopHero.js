@@ -1,4 +1,3 @@
-import { Fragment } from "react";
 import styled from "styled-components";
 import classes from "../../styles/NeonText.module.css";
 import ButtonUI from "../UI/Button/Button";
@@ -23,21 +22,25 @@ const TopHeroWrapperStyle = styled.div`
   max-width: 350px;
   & p {
     font-weight: bold;
-    font-size: 18px;
+    padding-bottom: 0.5rem;
+    letter-spacing: 0.8px;
+    font-size: 1.5rem;
   }
   & p.nextToTitle {
-    padding-bottom: 1rem;
+    font-size: 1.25rem;
+    padding-bottom: 2rem;
+    letter-spacing: 1px;
+  }
+  & h4 {
+    padding-bottom: 3rem;
   }
 
   @media screen and (min-width: 767px) {
     max-width: none;
     min-height: 260px;
     & h4 {
-      font-size: 9vw;
-      line-height: 9vw;
-    }
-    & p.nextToTitle {
-      padding-bottom: 1.5rem;
+      font-size: 8vw;
+      line-height: 8vw;
     }
   }
 
@@ -54,25 +57,34 @@ const TopHeroWrapperStyle = styled.div`
 
   @media screen and (min-width: 1300px) {
     min-height: 300px;
+    & p {
+      font-size: 1.7rem;
+      padding-bottom: 1rem;
+    }
     & p.nextToTitle {
-      padding-bottom: 2rem;
+      padding-bottom: 2.5rem;
+    }
+    & h4 {
+      font-size: 5vw;
+      line-height: 5vw;
     }
   }
 `;
 
 const MainDescStyle = styled.div`
+  padding-bottom: 2rem;
   @media screen and (min-width: 1600px) {
     padding: 1.5rem 0;
   }
 `;
 
-const TopHero = (props) => {
+const TopHero = () => {
   const { isLightMode } = useToggleModeContext();
   return (
     <TopHeroStyle id="home">
       <TopHeroWrapperStyle className="topHero__wrapper">
         <div>
-          <p className="nextToTitle">Hello, I'm</p>
+          <p className="nextToTitle">Hi, I'm</p>
           <h4
             className={`${
               isLightMode ? `${classes.fluxLight}` : `${classes.flux}`
