@@ -29,9 +29,9 @@ const SkillSetList = (props) => {
       .then((res) => setSkillSetList(res[0].skillSetList))
       .catch((err) => console.log(err));
   };
-  const skillSetRender = skillSetList?.map((skill) => {
+  const skillSetRender = skillSetList?.map((skill, index) => {
     const { name } = skill;
-    return <i className={`devicon-${name}`}></i>;
+    return <i className={`devicon-${name}`} key={name + index}></i>;
   });
   useEffect(() => {
     handleGetSkillSetList();
