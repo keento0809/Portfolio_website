@@ -1,7 +1,7 @@
 import styled from "styled-components";
-import classes from "../../styles/NeonText.module.css";
-import ButtonUI from "../UI/Button/Button";
-import useToggleModeContext from "../../hooks/useToggleModeContext";
+import classes from "../styles/NeonText.module.css";
+import ButtonUI from "../components/Button/Button";
+import useToggleModeContext from "../hooks/useToggleModeContext";
 
 const TopHeroStyle = styled.div`
   min-height: 100svh;

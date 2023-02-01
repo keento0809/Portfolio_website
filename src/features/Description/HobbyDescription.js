@@ -1,4 +1,4 @@
-import ProjectSectionWrapper from "../Wrapper/ProjectSectionWrapper";
+import ProjectSectionWrapper from "../../components/Wrapper/ProjectSectionWrapper";
 import styled from "styled-components";
 
 const HobbySentenceStyle = styled.p`

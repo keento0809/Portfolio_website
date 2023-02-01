@@ -1,9 +1,9 @@
-import MyProjectContainer from "../UI/Container/MyProjectContainer";
-import ProjectDescription from "../UI/Description/ProjectDescription";
-import LanguageList from "../UI/List/LanguageList";
-import LinkIconsList from "../UI/List/LinkIconsList";
+import MyProjectContainer from "../components/Container/MyProjectContainer";
+import ProjectDescription from "../features/Description/ProjectDescription";
+import LanguageList from "../features/List/LanguageList";
+import LinkIconsList from "../features/List/LinkIconsList";
 import styled from "styled-components";
-import useToggleModeContext from "../../hooks/useToggleModeContext";
+import useToggleModeContext from "../hooks/useToggleModeContext";
 
 const ListStyle = styled.li`
   margin-bottom: 24px;

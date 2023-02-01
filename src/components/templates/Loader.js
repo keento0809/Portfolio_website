@@ -1,5 +1,5 @@
-import classes from "../styles/Loader.module.css";
-import neonClasses from "../styles/NeonText.module.css";
+import classes from "../../styles/Loader.module.css";
+import neonClasses from "../../styles/NeonText.module.css";
 import styled from "styled-components";
 
 const LoaderStyle = styled.div`

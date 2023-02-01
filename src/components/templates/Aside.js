@@ -1,10 +1,10 @@
 import React, { useEffect } from "react";
 import AnchorLink from "react-anchor-link-smooth-scroll";
 import styled from "styled-components";
-import useToggleModeContext from "../hooks/useToggleModeContext";
-import { useDataContext } from "../context/dataContext";
-import useContentful from "../hooks/useContentful";
-import useChangeLayoutContext from "../hooks/useChangeLayoutContext";
+import useToggleModeContext from "../../hooks/useToggleModeContext";
+import { useDataContext } from "../../context/dataContext";
+import useContentful from "../../hooks/useContentful";
+import useChangeLayoutContext from "../../hooks/useChangeLayoutContext";
 
 const AsideStyle = styled.aside`
   position: fixed;

@@ -1,7 +1,6 @@
-import { Fragment } from "react";
 import styled from "styled-components";
-import useToggleModeContext from "../../../hooks/useToggleModeContext";
-import classes from "../../../styles/NeonText.module.css";
+import useToggleModeContext from "../../hooks/useToggleModeContext";
+import classes from "../../styles/NeonText.module.css";
 
 const TitleStyle = styled.div`
   padding: 24px 0;

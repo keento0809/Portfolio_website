@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import ButtonUI from "./Button";
-import useToggleModeContext from "../../../hooks/useToggleModeContext";
-import useChangeLayoutContext from "../../../hooks/useChangeLayoutContext";
+import useToggleModeContext from "../../hooks/useToggleModeContext";
+import useChangeLayoutContext from "../../hooks/useChangeLayoutContext";
 
 const BackToTopBtnStyle = styled.div`
   position: fixed;

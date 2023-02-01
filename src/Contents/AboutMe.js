@@ -1,13 +1,13 @@
 import styled from "styled-components";
-import AboutMeDescription from "../UI/Description/AboutMeDescription";
-import SkillSetList from "../UI/List/SkillSetList";
-import SpecialtyList from "../UI/List/SpecialtyList";
-import ContentWrapper from "../UI/Wrapper/ContentWrapper";
-import HobbyDescription from "../UI/Description/HobbyDescription";
-import Title from "../UI/Title/Title";
-import useContentful from "../../hooks/useContentful";
+import AboutMeDescription from "../features/Description/AboutMeDescription";
+import SkillSetList from "../features/List/SkillSetList";
+import SpecialtyList from "../features/List/SpecialtyList";
+import ContentWrapper from "../components/Wrapper/ContentWrapper";
+import HobbyDescription from "../features/Description/HobbyDescription";
+import Title from "../components/Title/Title";
+import useContentful from "../hooks/useContentful";
 import { useEffect, useState } from "react";
-import useToggleModeContext from "../../hooks/useToggleModeContext";
+import useToggleModeContext from "../hooks/useToggleModeContext";
 
 const ProfileDivStyle = styled.div`
   width: 240px;
