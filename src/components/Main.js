@@ -46,11 +46,11 @@ const Main = () => {
       lastScrollY = currentScrollY;
     }, 800);
   }
-  useEffect(() => {
-    setTimeout(() => {
-      setIsLoading(false);
-    }, 3280);
-  }, []);
+  // useEffect(() => {
+  //   setTimeout(() => {
+  //     setIsLoading(false);
+  //   }, 3280);
+  // }, []);
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);
   }, [isScrollingDown]);
@@ -60,7 +60,7 @@ const Main = () => {
         !isLoading && classes.testingOpacity
       } ${isAsideShown ? classes.asideOpen : ""}`}
     >
-      {isLoading && <Loader />}
+      {/* {isLoading && <Loader />} */}
       <Header />
       <ContainerWrapper>
         <TopHero />

@@ -1,3 +1,4 @@
+import { useState, useEffect } from "react";
 import styled from "styled-components";
 import classes from "../styles/NeonText.module.css";
 import ButtonUI from "../components/Button/Button";
@@ -20,6 +21,35 @@ const TopHeroWrapperStyle = styled.div`
   justify-content: space-between;
   min-height: 240px;
   max-width: 350px;
+  & .topHero {
+    &__title {
+      transform: translateX(-100px);
+      opacity: 0;
+      transition: all 0.6s ease;
+      &.move {
+        transform: none;
+        opacity: 1;
+      }
+    }
+    &__mainDescription {
+      transform: translateX(-100px);
+      opacity: 0;
+      transition: all 0.6s ease;
+      &.another {
+        transform: none;
+        opacity: 1;
+      }
+    }
+  }
+  & .toHero__button {
+    transform: translateX(-100px);
+    opacity: 0;
+    transition: all 0.6s ease;
+    &.other {
+      transform: none;
+      opacity: 1;
+    }
+  }
   & p {
     font-weight: bold;
     padding-bottom: 0.5rem;
@@ -80,10 +110,24 @@ const MainDescStyle = styled.div`
 
 const TopHero = () => {
   const { isLightMode } = useToggleModeContext();
+  const [t, setT] = useState(false);
+  const [m, setM] = useState(false);
+  const [a, setA] = useState(false);
+  useEffect(() => {
+    setTimeout(() => {
+      setT(true);
+    }, 50);
+    setTimeout(() => {
+      setM(true);
+    }, 850);
+    setTimeout(() => {
+      setA(true);
+    }, 950);
+  }, []);
   return (
     <TopHeroStyle id="home">
-      <TopHeroWrapperStyle className="topHero__wrapper">
-        <div>
+      <TopHeroWrapperStyle className={`topHero__wrapper`}>
+        <div className={`topHero__title ${t ? "move" : ""}`}>
           <p className="nextToTitle">Hi, I'm</p>
           <h4
             className={`${
@@ -93,11 +137,13 @@ const TopHero = () => {
             KENTO
           </h4>
         </div>
-        <MainDescStyle className="topHero__mainDescription">
+        <MainDescStyle
+          className={`topHero__mainDescription ${m ? "another" : ""}`}
+        >
           <p>Web Developer</p>
           <p>Based in Vancouver</p>
         </MainDescStyle>
-        <div className="toHero__button">
+        <div className={`toHero__button ${a ? "other" : ""}`}>
           <ButtonUI label={"Explore"} url={"#myproject"} />
         </div>
       </TopHeroWrapperStyle>
