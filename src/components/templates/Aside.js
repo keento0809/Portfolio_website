@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import { useEffect, useState } from "react";
 import AnchorLink from "react-anchor-link-smooth-scroll";
 import styled from "styled-components";
 import useToggleModeContext from "../../hooks/useToggleModeContext";
@@ -35,6 +35,13 @@ const AsideContainerStyle = styled.div`
   flex-direction: column;
   justify-content: space-between;
   align-items: flex-start;
+  transform: translateX(-100px);
+  opacity: 0;
+  transition: all 0.6s ease;
+  &.move {
+    transform: none;
+    opacity: 1;
+  }
   & .aside-container__title {
     padding-bottom: 56px;
   }
@@ -89,6 +96,7 @@ const ResumeDivStyle = styled.div`
 `;
 
 const Aside = () => {
+  const [m, setM] = useState(false);
   const { isLightMode } = useToggleModeContext();
   const { resumeUrl, setResumeUrl } = useDataContext();
   const { isAsideShown, setIsAsideShown } = useChangeLayoutContext();
@@ -99,6 +107,9 @@ const Aside = () => {
   useEffect(() => {
     if (isAsideShown) {
       document.body.className = "over";
+      setTimeout(() => {
+        setM(true);
+      }, 160);
       return () => {
         document.body.className = "";
       };
@@ -115,7 +126,7 @@ const Aside = () => {
         isLightMode ? "lightMode" : ""
       }`}
     >
-      <AsideContainerStyle className="aside-container">
+      <AsideContainerStyle className={`aside-container ${m ? "move" : ""}`}>
         <div>
           <div className="aside-container__title">
             <h4>Menu</h4>

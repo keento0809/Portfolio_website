@@ -97,6 +97,13 @@ const MenuButtonStyle = styled.div`
   z-index: 20;
   padding-bottom: 2px;
   cursor: pointer;
+  transform: translateX(-100px);
+  opacity: 0;
+  transition: all 0.6s ease;
+  &.rightMove {
+    transform: none;
+    opacity: 1;
+  }
 
   &.lightMode span {
     background-color: #19224e;
@@ -290,9 +297,9 @@ const Header = () => {
         </div>
         <MenuButtonStyle
           id="menuBtn"
-          className={`${isLightMode ? "lightMode" : ""} ${
-            isAsideShown ? "active" : ""
-          }`}
+          className={`${right ? "rightMove" : ""} ${
+            isLightMode ? "lightMode" : ""
+          } ${isAsideShown ? "active" : ""}`}
           onClick={handleToggleAside}
         >
           <span></span>
