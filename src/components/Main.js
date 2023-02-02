@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react";
 import Header from "./templates/Header";
 import ContainerWrapper from "./Wrapper/ContainerWrapper";
-import Loader from "./templates/Loader";
 import TopHero from "../Contents/TopHero";
 import AboutMe from "../Contents/AboutMe";
 import MyProject from "../Contents/MyProject";
@@ -46,11 +45,6 @@ const Main = () => {
       lastScrollY = currentScrollY;
     }, 800);
   }
-  // useEffect(() => {
-  //   setTimeout(() => {
-  //     setIsLoading(false);
-  //   }, 3280);
-  // }, []);
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);
   }, [isScrollingDown]);
@@ -60,7 +54,6 @@ const Main = () => {
         !isLoading && classes.testingOpacity
       } ${isAsideShown ? classes.asideOpen : ""}`}
     >
-      {/* {isLoading && <Loader />} */}
       <Header />
       <ContainerWrapper>
         <TopHero />
