@@ -44,20 +44,6 @@ const ButtonContainerStyle = styled.div`
   padding: 1rem 0;
 `;
 
-// const ButtonStyle = styled.a`
-//   display: inline-block;
-//   background-color: transparent;
-//   cursor: pointer;
-//   color: #8bfdfe;
-//   padding: 0.6rem 1.7rem;
-//   border: 1px solid #8bfdfe;
-//   border-radius: 8px;
-//   &.lightMode {
-//     color: #1b1f29;
-//     border-color: #1b1f29;
-//   }
-// `;
-
 const ContactMe = () => {
   const { isLightMode } = useToggleModeContext();
   return (

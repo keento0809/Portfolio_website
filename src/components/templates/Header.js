@@ -39,6 +39,15 @@ const NavStyle = styled.nav`
   align-items: center;
   line-height: 80px;
   height: 80px;
+  & .header__nav__left {
+    transform: translateX(-100px);
+    opacity: 0;
+    transition: all 0.6s ease;
+    &.leftMove {
+      transform: none;
+      opacity: 1;
+    }
+  }
   & .header__nav__logo {
     font-size: 24px;
   }
@@ -102,7 +111,6 @@ const MenuButtonStyle = styled.div`
     background-color: #fff;
     transition: all 0.3s ease;
   }
-  // test
   & span:nth-of-type(1) {
     width: 40px;
   }
@@ -142,6 +150,13 @@ const NavMenuStyle = styled.nav`
     display: flex;
     justify-content: center;
     align-items: center;
+    transform: translateX(-100px);
+    opacity: 0;
+    transition: all 0.6s ease;
+    &.rightMove {
+      transform: none;
+      opacity: 1;
+    }
   }
 `;
 
@@ -184,6 +199,8 @@ const NavUlStyle = styled.ul`
 const Header = () => {
   const [isActive, setIsActive] = useState(false);
   const [targetValue, setTargetValue] = useState("");
+  const [left, setLeft] = useState(false);
+  const [right, setRight] = useState(false);
   const { isLightMode, setIsLightMode } = useToggleModeContext();
   const { resumeUrl, setResumeUrl } = useDataContext();
   const { isScrollingDown, isAsideShown, setIsScrollingDown, setIsAsideShown } =
@@ -227,11 +244,19 @@ const Header = () => {
     setIsActive(false);
     setTargetValue("");
   };
+
   useEffect(() => {
     getResume()
       .then((res) => setResumeUrl(res))
       .catch((err) => console.log(err));
+    setTimeout(() => {
+      setLeft(true);
+    }, 850);
+    setTimeout(() => {
+      setRight(true);
+    }, 950);
   }, []);
+
   return (
     <HeaderStyle
       className={`${isScrollingDown ? "hidden" : ""} ${
@@ -239,7 +264,7 @@ const Header = () => {
       }`}
     >
       <NavStyle className="header__nav">
-        <div className="header__nav__left">
+        <div className={`header__nav__left ${left ? "leftMove" : ""}`}>
           <HeaderLeftStyle
             className="test"
             style={{
@@ -274,7 +299,7 @@ const Header = () => {
           <span></span>
           <span></span>
         </MenuButtonStyle>
-        <NavMenuStyle className="header-nav">
+        <NavMenuStyle className={`header-nav ${right ? "rightMove" : ""}`}>
           <NavUlStyle className={isLightMode ? "lightMode" : ""}>
             <li
               className={isActive && targetValue === "Home" ? "active" : ""}
@@ -341,11 +366,7 @@ const Header = () => {
               onMouseOver={handleMouseOVer}
               onMouseOut={handleMouseOut}
             >
-              <a
-                // href={resumePath}
-                href={resumeUrl && resumeUrl}
-                target="_blank"
-              >
+              <a href={resumeUrl && resumeUrl} target="_blank">
                 <span className="text">Resume</span>
                 <span
                   className={`${isLightMode ? "lightMode" : ""} btnBefore`}
@@ -358,12 +379,7 @@ const Header = () => {
           </NavUlStyle>
         </NavMenuStyle>
       </NavStyle>
-      <Aside
-      // isAsideShown={isAsideShown}
-      // setIsAsideShown={setIsAsideShown}
-      // setIsScrollingDown={setIsScrollingDown}
-      // isLightMode={isLightMode}
-      />
+      <Aside />
     </HeaderStyle>
   );
 };
