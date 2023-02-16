@@ -210,7 +210,7 @@ const Header = () => {
   const [right, setRight] = useState(false);
   const { isLightMode, setIsLightMode } = useToggleModeContext();
   const { resumeUrl, setResumeUrl } = useDataContext();
-  const { isScrollingDown, isAsideShown, setIsScrollingDown, setIsAsideShown } =
+  const { isScrollingDown, isAsideShown, setIsAsideShown } =
     useChangeLayoutContext();
   const { getResume } = useContentful();
 
