@@ -16,10 +16,24 @@ const MockAside = () => {
   );
 };
 
-it("renders", async () => {
-  render(<MockAside />);
-  const arr = screen.getAllByRole("link");
-  arr.forEach((txt) => {
-    expect(txt).toContainHTML("a");
+describe("Aside component", () => {
+  it("The text 'Menu' should be rendered", async () => {
+    render(<MockAside />);
+    const text = screen.getByText(/Menu/i);
+    expect(text).toBeTruthy();
+  });
+
+  it("All links in Aside should be rendered", async () => {
+    render(<MockAside />);
+    const arr = screen.getAllByRole("link");
+    arr.forEach((txt) => {
+      expect(txt).toContainHTML("a");
+    });
+  });
+
+  it("Page transition should be implemented", async () => {
+    render(<MockAside />);
+    const resumeLink = await screen.findByRole("link", { name: "Resume" });
+    expect(resumeLink).toHaveAttribute("href");
   });
 });
