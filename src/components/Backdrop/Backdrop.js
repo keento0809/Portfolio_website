@@ -26,6 +26,7 @@ const BackdropStyle = styled.div`
 const Backdrop = ({ children }) => {
   const { isLightMode } = useToggleModeContext();
   const { isAsideShown, setIsAsideShown } = useChangeLayoutContext();
+
   const handleCloseAside = () => {
     setIsAsideShown(false);
   };
