@@ -16,7 +16,7 @@ const MockAside = () => {
   );
 };
 
-describe("Aside component", () => {
+describe("Aside", () => {
   it("The text 'Menu' should be rendered", async () => {
     render(<MockAside />);
     const text = screen.getByText(/Menu/i);

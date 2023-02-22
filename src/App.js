@@ -1,4 +1,4 @@
-import Main from "./components/Main";
+import Main from "./pages/Main";
 import ToggleModeProvider from "./context/ToggleModeContext";
 import DataContextProvider from "./context/dataContext";
 import ChangeLayoutProvider from "./context/changeLayoutContext";

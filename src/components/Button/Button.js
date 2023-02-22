@@ -25,22 +25,15 @@ const ButtonWrapperStyle = styled.div`
   }
 `;
 
-const ButtonUI = (props) => {
+const Button = (props) => {
   const { isLightMode } = useToggleModeContext();
   return (
     <ButtonWrapperStyle>
-      {props.label === "SAY HELLO" && (
-        <a href={props.url} className={isLightMode ? "lightMode" : ""}>
-          {props.label}
-        </a>
-      )}
-      {props.label !== "SAY HELLO" && (
-        <AnchorLink href={props.url} className={isLightMode ? "lightMode" : ""}>
-          {props.label}
-        </AnchorLink>
-      )}
+      <AnchorLink href={props.url} className={isLightMode ? "lightMode" : ""}>
+        {props.label}
+      </AnchorLink>
     </ButtonWrapperStyle>
   );
 };
 
-export default ButtonUI;
+export default Button;
