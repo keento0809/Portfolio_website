@@ -1,18 +1,17 @@
-import { useState, useEffect } from "react";
-import Header from "./templates/Header";
-import ContainerWrapper from "./Wrapper/ContainerWrapper";
+import { useEffect } from "react";
+import Header from "../components/templates/Header";
+import ContainerWrapper from "../components/Wrapper/ContainerWrapper";
 import TopHero from "../Contents/TopHero";
 import AboutMe from "../Contents/AboutMe";
 import MyProject from "../Contents/MyProject";
 import ContactMe from "../Contents/ContactMe";
-import Footer from "./templates/Footer";
-import BackToTopButton from "./Button/BackToTopButton";
+import Footer from "../components/templates/Footer";
+import BackToTopButton from "../components/Button/BackToTopButton";
 import classes from "../styles/base.module.css";
 import useToggleModeContext from "../hooks/useToggleModeContext";
 import useChangeLayoutContext from "../hooks/useChangeLayoutContext";
 
 const Main = () => {
-  const [isLoading, setIsLoading] = useState(true);
   const { isLightMode } = useToggleModeContext();
   const {
     isScrollingDown,
@@ -45,13 +44,15 @@ const Main = () => {
       lastScrollY = currentScrollY;
     }, 800);
   }
+
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);
   }, [isScrollingDown]);
+
   return (
     <div
       className={`${classes.global} ${isLightMode ? classes.lightMode : ""} ${
-        !isLoading && classes.testingOpacity
+        classes.testingOpacity
       } ${isAsideShown ? classes.asideOpen : ""}`}
     >
       <Header />

@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import ButtonUI from "./Button";
+import Button from "./Button";
 import useToggleModeContext from "../../hooks/useToggleModeContext";
 import useChangeLayoutContext from "../../hooks/useChangeLayoutContext";
 
@@ -35,7 +35,7 @@ const BackToTopButton = () => {
         isLightMode ? "lightMode" : ""
       }`}
     >
-      <ButtonUI isLightMode={isLightMode} label={"TOP"} url={"#home"} />
+      <Button label={"TOP"} url={"#home"} />
     </BackToTopBtnStyle>
   );
 };
