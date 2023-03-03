@@ -46,6 +46,12 @@ const Main = () => {
   }
 
   useEffect(() => {
+    window.onbeforeunload = function () {
+      window.scrollTo(0, 0);
+    };
+  }, []);
+
+  useEffect(() => {
     window.addEventListener("scroll", handleScroll);
   }, [isScrollingDown]);
 

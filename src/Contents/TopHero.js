@@ -113,6 +113,7 @@ const TopHero = () => {
   const [t, setT] = useState(false);
   const [m, setM] = useState(false);
   const [a, setA] = useState(false);
+  console.log(window.scrollY);
 
   useEffect(() => {
     setTimeout(() => {
