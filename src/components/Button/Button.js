@@ -26,6 +26,7 @@ const ButtonWrapperStyle = styled.div`
 `;
 
 const Button = (props) => {
+  console.log(props);
   const { isLightMode } = useToggleModeContext();
   return (
     <ButtonWrapperStyle>
