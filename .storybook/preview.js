@@ -1,3 +1,74 @@
+import { withThemeFromJSXProvider } from "@storybook/addon-styling";
+import { createGlobalStyle } from "styled-components";
+
+const GlobalStyles = createGlobalStyle`
+  * {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  min-height: 100svh;
+}
+
+body.over {
+  overflow: hidden;
+  position: relative;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+h1,
+h2,
+h3,
+h4,
+p {
+  margin: 0;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding-left: 0;
+}
+
+a {
+  text-decoration: none;
+  color: #8bfdfe;
+}
+
+p {
+  font-size: 16px;
+  line-height: 24px;
+}
+
+i,
+ion-icon {
+  font-size: 24px;
+}
+
+h3,
+h2 {
+  padding: 1rem 0;
+}
+`;
+
 /** @type { import('@storybook/react').Preview } */
 const preview = {
   parameters: {
@@ -12,3 +83,9 @@ const preview = {
 };
 
 export default preview;
+
+export const decorators = [
+  withThemeFromJSXProvider({
+    GlobalStyles,
+  }),
+];
