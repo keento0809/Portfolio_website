@@ -1,10 +1,10 @@
 import { useEffect } from "react";
 import Header from "../components/templates/Header";
 import ContainerWrapper from "../components/Wrapper/ContainerWrapper";
-import TopHero from "../Contents/TopHero";
-import AboutMe from "../Contents/AboutMe";
-import MyProject from "../Contents/MyProject";
-import ContactMe from "../Contents/ContactMe";
+import TopHero from "../features/TopHero";
+import AboutMe from "../features/AboutMe";
+import Projects from "../features/Projects";
+import ContactMe from "../features/ContactMe";
 import Footer from "../components/templates/Footer";
 import BackToTopButton from "../components/Button/BackToTopButton";
 import classes from "../styles/base.module.css";
@@ -64,7 +64,7 @@ const Main = () => {
       <Header />
       <ContainerWrapper>
         <TopHero />
-        <MyProject />
+        <Projects />
         <AboutMe />
         <ContactMe />
         <Footer />

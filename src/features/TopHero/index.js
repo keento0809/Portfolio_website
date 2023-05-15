@@ -1,8 +1,8 @@
 import { useState, useEffect } from "react";
 import styled from "styled-components";
-import classes from "../styles/NeonText.module.css";
-import Button from "../components/Button/Button";
-import useToggleModeContext from "../hooks/useToggleModeContext";
+import classes from "../../styles/NeonText.module.css";
+import Button from "../../components/Button/Button";
+import useToggleModeContext from "../../hooks/useToggleModeContext";
 
 const TopHeroStyle = styled.div`
   min-height: 100svh;

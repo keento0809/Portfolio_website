@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import ProjectSectionWrapper from "../../components/Wrapper/ProjectSectionWrapper";
+import ProjectSectionWrapper from "../../../../components/Wrapper/ProjectSectionWrapper";
 
 const ProjectSummaryWrapper = styled.div`
   padding-bottom: 1rem;
