@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import styled from "styled-components";
-import useContentful from "../../hooks/useContentful";
+import useContentful from "../../../../hooks/useContentful";
 
 const AboutMeDescriptionWrapper = styled.div`
   padding: 20px 0;
