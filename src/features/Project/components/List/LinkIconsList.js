@@ -56,7 +56,7 @@ const LinkIconsList = (props) => {
           <li>
             <Tooltip title="GitHub" arrow>
               <a
-                href={`https://github.com/keento0809/${props.gitHubUrl}`}
+                href={`https://github.com/${props.gitHubUrl}`}
                 target="_blank"
                 rel="noreferrer"
               >
