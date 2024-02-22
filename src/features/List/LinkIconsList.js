@@ -56,8 +56,9 @@ const LinkIconsList = (props) => {
           <li>
             <Tooltip title="GitHub" arrow>
               <a
-                href={`https://github.com/keento0809/${props.gitHubUrl}`}
+                href={`https://github.com/${props.gitHubUrl}`}
                 target="_blank"
+                rel="noreferrer"
               >
                 <i className="devicon-github-original"></i>
               </a>
@@ -65,7 +66,7 @@ const LinkIconsList = (props) => {
           </li>
           <li>
             <Tooltip title="Link" arrow>
-              <a href={props.linkUrl} target="_blank">
+              <a href={props.linkUrl} target="_blank" rel="noreferrer">
                 <ion-icon name="link-outline"></ion-icon>
               </a>
             </Tooltip>
