@@ -1,8 +1,8 @@
 import { useState, useEffect } from "react";
 import styled from "styled-components";
-import classes from "../styles/NeonText.module.css";
-import ButtonUI from "../components/Button/Button";
-import useToggleModeContext from "../hooks/useToggleModeContext";
+import classes from "../../styles/NeonText.module.css";
+import Button from "../../components/Button/Button";
+import useToggleModeContext from "../../hooks/useToggleModeContext";
 
 const TopHeroStyle = styled.div`
   min-height: 100svh;
@@ -113,6 +113,7 @@ const TopHero = () => {
   const [t, setT] = useState(false);
   const [m, setM] = useState(false);
   const [a, setA] = useState(false);
+
   useEffect(() => {
     setTimeout(() => {
       setT(true);
@@ -124,6 +125,7 @@ const TopHero = () => {
       setA(true);
     }, 950);
   }, []);
+
   return (
     <TopHeroStyle id="home">
       <TopHeroWrapperStyle className={`topHero__wrapper`}>
@@ -140,11 +142,11 @@ const TopHero = () => {
         <MainDescStyle
           className={`topHero__mainDescription ${m ? "another" : ""}`}
         >
-          <p>Web Developer</p>
-          <p>Based in Vancouver</p>
+          <p data-testid="subtitle_text">Web Developer</p>
+          <p data-testid="subtitle_text">Based in Vancouver</p>
         </MainDescStyle>
         <div className={`toHero__button ${a ? "other" : ""}`}>
-          <ButtonUI label={"Explore"} url={"#myproject"} />
+          <Button label={"Explore"} url={"#myproject"} />
         </div>
       </TopHeroWrapperStyle>
     </TopHeroStyle>

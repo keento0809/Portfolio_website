@@ -1,11 +1,13 @@
 import { createClient } from "contentful";
 
 const useContentful = () => {
+  // declare client
   const client = createClient({
     space: process.env.REACT_APP_CONTENTFUL_SPACE,
     accessToken: process.env.REACT_APP_CONTENTFUL_ACCESS_TOKEN,
     host: process.env.REACT_APP_CONTENTFUL_HOST,
   });
+
   const getResume = async () => {
     try {
       const entry = await client.getEntries({
@@ -19,6 +21,7 @@ const useContentful = () => {
       console.log(error);
     }
   };
+
   const getProjectImages = async () => {
     try {
       const entries = await client.getEntries({
@@ -37,6 +40,7 @@ const useContentful = () => {
       console.log(error);
     }
   };
+
   const getProjectInfo = async () => {
     try {
       const entries = await client.getEntries({
@@ -51,6 +55,7 @@ const useContentful = () => {
       console.log(error);
     }
   };
+
   const getDataArray = async () => {
     try {
       const entries = await client.getEntries({
@@ -66,6 +71,7 @@ const useContentful = () => {
       console.log(error);
     }
   };
+
   const getSkillSetList = async () => {
     try {
       const entries = await client.getEntries({
@@ -81,6 +87,7 @@ const useContentful = () => {
       console.log(error);
     }
   };
+
   const getProfileImage = async () => {
     try {
       const entries = await client.getEntries({
@@ -92,6 +99,22 @@ const useContentful = () => {
       console.log(error);
     }
   };
+
+  const getAboutMeDescription = async () => {
+    try {
+      const entries = await client.getEntries({
+        content_type: "descriptions",
+        select: "fields",
+      });
+      const sanitizedEntries = entries.items.map((item) => {
+        return item.fields;
+      });
+      return sanitizedEntries;
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
   return {
     getResume,
     getProjectImages,
@@ -99,6 +122,7 @@ const useContentful = () => {
     getDataArray,
     getSkillSetList,
     getProfileImage,
+    getAboutMeDescription,
   };
 };
 

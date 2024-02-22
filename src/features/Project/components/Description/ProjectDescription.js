@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import ProjectSectionWrapper from "../../components/Wrapper/ProjectSectionWrapper";
+import ProjectSectionWrapper from "../../../../components/Wrapper/ProjectSectionWrapper";
 
 const ProjectSummaryWrapper = styled.div`
   padding-bottom: 1rem;
@@ -16,7 +16,6 @@ const ProjectSummaryWrapper = styled.div`
 const ImageDivStyle = styled.div`
   position: relative;
   margin: 0.1rem 0 1rem;
-  width: 302px;
   height: 220px;
 
   & .imageBackdrop {
@@ -42,11 +41,9 @@ const ImageDivStyle = styled.div`
   }
 
   @media screen and (min-width: 768px) {
-    width: 592px;
     height: 320px;
   }
   @media screen and (min-width: 1023px) {
-    width: 848px;
     height: 400px;
   }
 `;

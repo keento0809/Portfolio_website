@@ -1,6 +1,6 @@
 import styled from "styled-components";
-import ProjectSectionWrapper from "../../components/Wrapper/ProjectSectionWrapper";
-import useContentful from "../../hooks/useContentful";
+import ProjectSectionWrapper from "../../../../components/Wrapper/ProjectSectionWrapper";
+import useContentful from "../../../../hooks/useContentful";
 import { useEffect, useState } from "react";
 
 const SkillIconsStyle = styled.div`

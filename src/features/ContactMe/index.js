@@ -1,8 +1,8 @@
 import styled from "styled-components";
-import Title from "../components/Title/Title";
-import ContentWrapper from "../components/Wrapper/ContentWrapper";
-import ButtonUI from "../components/Button/Button";
-import useToggleModeContext from "../hooks/useToggleModeContext";
+import Title from "../../components/Title/Title";
+import ContentWrapper from "../../components/Wrapper/ContentWrapper";
+import Button from "../../components/Button/Button";
+import useToggleModeContext from "../../hooks/useToggleModeContext";
 
 const UlStyle = styled.ul`
   margin: 0 auto;
@@ -93,7 +93,7 @@ const ContactMe = () => {
             </p>
           </ContactMeDescriptionStyle>
           <ButtonContainerStyle className="contactMe__mailButton">
-            <ButtonUI
+            <Button
               label={"SAY HELLO"}
               url={`mailto:${process.env.REACT_APP_MY_EMAIL}`}
               isLightMode={isLightMode}
